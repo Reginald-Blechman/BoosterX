@@ -1,0 +1,15 @@
+﻿using System;
+
+namespace ns0
+{
+	// Token: 0x0200075A RID: 1882
+	public enum dje_z86S8XV2DDV78XFY565BN8SUY2CHCDY5HXZ6KACAZL3MUCWTXPVBXSNQWECYT32F2CBB3TELU_ejd
+	{
+		// Token: 0x04001F1E RID: 7966
+		Enum,
+		// Token: 0x04001F1F RID: 7967
+		Int,
+		// Token: 0x04001F20 RID: 7968
+		Edit
+	}
+}

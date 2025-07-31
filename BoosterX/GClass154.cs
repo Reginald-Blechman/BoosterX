@@ -1,0 +1,116 @@
+﻿using System;
+using NvidiaX.NVIDIA.Native.NVAPI;
+
+// Token: 0x02000434 RID: 1076
+public sealed class GClass154
+{
+	// Token: 0x06001BEB RID: 7147 RVA: 0x000773BC File Offset: 0x000755BC
+	internal static bool smethod_0(NVDRS_SETTING nvdrs_SETTING_0, dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd_0)
+	{
+		dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd = GClass154.smethod_1(nvdrs_SETTING_0);
+		return dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd_0.String_1.Equals(dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd.String_1);
+	}
+
+	// Token: 0x06001BEC RID: 7148 RVA: 0x00012AEB File Offset: 0x00010CEB
+	internal static dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd smethod_1(NVDRS_SETTING nvdrs_SETTING_0)
+	{
+		return new dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd
+		{
+			UInt32_0 = nvdrs_SETTING_0.settingId,
+			String_0 = nvdrs_SETTING_0.settingName,
+			String_1 = GClass154.smethod_2(nvdrs_SETTING_0),
+			Dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd_0 = GClass154.smethod_3(nvdrs_SETTING_0.settingType)
+		};
+	}
+
+	// Token: 0x06001BED RID: 7149 RVA: 0x000773E4 File Offset: 0x000755E4
+	private static string smethod_2(NVDRS_SETTING nvdrs_SETTING_0)
+	{
+		NVDRS_SETTING_UNION nvdrs_SETTING_UNION = nvdrs_SETTING_0.currentValue;
+		if (nvdrs_SETTING_0.isCurrentPredefined == 1U)
+		{
+			nvdrs_SETTING_UNION = nvdrs_SETTING_0.predefinedValue;
+		}
+		switch (nvdrs_SETTING_0.settingType)
+		{
+		case 0:
+			return nvdrs_SETTING_UNION.dwordValue.ToString();
+		case 1:
+			return Convert.ToBase64String(nvdrs_SETTING_UNION.binaryValue);
+		case 2:
+			return nvdrs_SETTING_UNION.ansiStringValue;
+		case 3:
+			return nvdrs_SETTING_UNION.stringValue;
+		default:
+			throw new Exception("invalid setting type");
+		}
+	}
+
+	// Token: 0x06001BEE RID: 7150 RVA: 0x00012B27 File Offset: 0x00010D27
+	private static dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd smethod_3(NVDRS_SETTING_TYPE nvdrs_SETTING_TYPE_0)
+	{
+		switch (nvdrs_SETTING_TYPE_0)
+		{
+		case 1:
+			return (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)3;
+		case 2:
+			return (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)1;
+		case 3:
+			return (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)2;
+		default:
+			return (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)0;
+		}
+	}
+
+	// Token: 0x06001BEF RID: 7151 RVA: 0x00077460 File Offset: 0x00075660
+	internal static NVDRS_SETTING smethod_4(dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd_0)
+	{
+		NVDRS_SETTING result = default(NVDRS_SETTING);
+		result.version = NVAPIDrsWrapper.NVDRS_SETTING_VER;
+		result.settingId = dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd_0.UInt32_0;
+		result.settingType = GClass154.smethod_6(dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd_0.Dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd_0);
+		result.settingLocation = 0;
+		result.currentValue = GClass154.smethod_5(dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd_0.Dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd_0, dje_zAA4BYQ5QMGN4SQKAJLF7X3XG6Z8XVF7MJUQDQ9ZC9L8F8RYWHH5CR_ejd_0.String_1);
+		return result;
+	}
+
+	// Token: 0x06001BF0 RID: 7152 RVA: 0x000774C4 File Offset: 0x000756C4
+	private static NVDRS_SETTING_UNION smethod_5(dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd_0, string string_0)
+	{
+		NVDRS_SETTING_UNION result = default(NVDRS_SETTING_UNION);
+		switch (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd_0)
+		{
+		case (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)0:
+			result.dwordValue = uint.Parse(string_0);
+			break;
+		case (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)1:
+			result.ansiStringValue = string_0;
+			break;
+		case (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)2:
+			result.stringValue = string_0;
+			break;
+		case (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)3:
+			result.binaryValue = Convert.FromBase64String(string_0);
+			break;
+		default:
+			throw new Exception("invalid value type");
+		}
+		return result;
+	}
+
+	// Token: 0x06001BF1 RID: 7153 RVA: 0x00012B44 File Offset: 0x00010D44
+	private static NVDRS_SETTING_TYPE smethod_6(dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd_0)
+	{
+		switch (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd_0)
+		{
+		case (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)1:
+			return 2;
+		case (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)2:
+			return 3;
+		case (dje_zYUP69W6MGZY5FYTUATS9VDLTFFESDZZ237ZGRWJX_ejd)3:
+			return 1;
+		default:
+			return 0;
+		}
+	}
+}

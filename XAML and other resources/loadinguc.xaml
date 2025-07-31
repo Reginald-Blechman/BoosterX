@@ -1,0 +1,129 @@
+﻿<liiil1:dje_z8KE4Q3J29T2VV4CKAXXUTUV9Z5P2A6TCX9PKSCGFF3HW2RZ_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Grid>
+		<Border
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Grid
+			Height="30"
+			Margin="15">
+			<StackPanel
+				HorizontalAlignment="Left"
+				Orientation="Horizontal">
+				<Border
+					Width="24"
+					Height="24"
+					Panel.ZIndex="-1"
+					CornerRadius="15">
+					<Border.Background>
+						<LinearGradientBrush
+							StartPoint="0.5,0"
+							EndPoint="0.5,1">
+							<Brush.RelativeTransform>
+								<TransformGroup>
+									<ScaleTransform
+										CenterX="0.5"
+										CenterY="0.5" />
+									<SkewTransform
+										CenterX="0.5"
+										CenterY="0.5" />
+									<RotateTransform
+										Angle="90"
+										CenterX="0.5"
+										CenterY="0.5" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Brush.RelativeTransform>
+							<GradientStop
+								liil1il:Name="MovingAnim"
+								Offset="1"
+								Color="#BF20263B" />
+							<GradientStop
+								Offset="1"
+								Color="#BF20263B" />
+							<GradientStop
+								Offset="0"
+								Color="#BF20263B" />
+						</LinearGradientBrush>
+					</Border.Background>
+				</Border>
+				<Border
+					Name="RandomWidth"
+					Height="20"
+					Margin="10,0,0,0"
+					Panel.ZIndex="-1"
+					CornerRadius="10">
+					<Border.Background>
+						<LinearGradientBrush
+							StartPoint="0.5,0"
+							EndPoint="0.5,1">
+							<Brush.RelativeTransform>
+								<TransformGroup>
+									<ScaleTransform
+										CenterX="0.5"
+										CenterY="0.5" />
+									<SkewTransform
+										CenterX="0.5"
+										CenterY="0.5" />
+									<RotateTransform
+										Angle="90"
+										CenterX="0.5"
+										CenterY="0.5" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Brush.RelativeTransform>
+							<GradientStop
+								liil1il:Name="MovingAnim2"
+								Offset="1"
+								Color="#BF20263B" />
+							<GradientStop
+								Offset="1"
+								Color="#BF20263B" />
+							<GradientStop
+								Offset="0"
+								Color="#BF20263B" />
+						</LinearGradientBrush>
+					</Border.Background>
+				</Border>
+			</StackPanel>
+			<Border
+				Width="100"
+				Height="20"
+				HorizontalAlignment="Right"
+				Panel.ZIndex="-1"
+				CornerRadius="10">
+				<Border.Background>
+					<LinearGradientBrush
+						StartPoint="0.5,0"
+						EndPoint="0.5,1">
+						<Brush.RelativeTransform>
+							<TransformGroup>
+								<ScaleTransform
+									CenterX="0.5"
+									CenterY="0.5" />
+								<SkewTransform
+									CenterX="0.5"
+									CenterY="0.5" />
+								<RotateTransform
+									Angle="90"
+									CenterX="0.5"
+									CenterY="0.5" />
+								<TranslateTransform />
+							</TransformGroup>
+						</Brush.RelativeTransform>
+						<GradientStop
+							liil1il:Name="MovingAnim3"
+							Offset="0.5"
+							Color="#BF20263B" />
+						<GradientStop
+							Offset="1"
+							Color="#BF20263B" />
+						<GradientStop
+							Offset="0"
+							Color="#BF20263B" />
+					</LinearGradientBrush>
+				</Border.Background>
+			</Border>
+		</Grid>
+	</Grid>
+</liiil1:dje_z8KE4Q3J29T2VV4CKAXXUTUV9Z5P2A6TCX9PKSCGFF3HW2RZ_ejd>

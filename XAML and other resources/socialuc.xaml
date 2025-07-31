@@ -1,0 +1,39 @@
+﻿<liiil1:dje_zJRX6PD6DM6UZ4PU26LQ2SY7Y6V38GWNWMRR4VDD9JWB8WCT6GF4MQYK65NHJTQJH8S_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Grid>
+		<Border
+			Height="40"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<StackPanel
+			Height="40"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Orientation="Horizontal">
+			<Button
+				Name="DiscordButton"
+				Margin="15,0,15,0"
+				Style="{DynamicResource GraySimpleTextBtn}">
+				<ContentControl.Content>
+					<Image
+						Width="30"
+						Height="30"
+						RenderOptions.BitmapScalingMode="Fant">
+						<Image.Source>
+							<DrawingImage>
+								<DrawingImage.Drawing>
+									<DrawingGroup
+										ClipGeometry="M0,0 L0,14 L20,14 L20,0 L0,0">
+										<GeometryDrawing
+											Brush="#FFFFFFFF"
+											Geometry="F1 M20,14 M0,0 M16.5948,1.17248 C15.3649,0.62474 14.0498,0.22665 12.675,0 C12.5061,0.290577 12.3088,0.681403 12.1728,0.99232 C10.7113,0.783105 9.26322,0.783105 7.82859,0.99232 C7.69259,0.681403 7.49085,0.290577 7.32048,0 C5.94413,0.22665 4.62755,0.626193 3.39765,1.17538 C0.916927,4.74367 0.244441,8.22333 0.580684,11.6536 C2.22603,12.8232 3.82057,13.5336 5.38821,13.9985 C5.77526,13.4915 6.12047,12.9525 6.41786,12.3844 C5.85148,12.1795 5.30901,11.9267 4.79642,11.6333 C4.93241,11.5374 5.06542,11.4371 5.19394,11.334 C8.32025,12.7258 11.717,12.7258 14.806,11.334 C14.936,11.4371 15.069,11.5374 15.2035,11.6333 C14.6894,11.9282 14.1455,12.181 13.5791,12.3858 C13.8765,12.9525 14.2202,13.4929 14.6087,14 C16.1779,13.5351 17.7739,12.8246 19.4192,11.6536 C19.8138,7.67704 18.7453,4.22935 16.5948,1.17248 M6.84377,9.544 C5.90528,9.544 5.13565,8.71004 5.13565,7.69448 C5.13565,6.67891 5.88884,5.8435 6.84377,5.8435 C7.7987,5.8435 8.56832,6.67746 8.55188,7.69448 C8.55338,8.71004 7.7987,9.544 6.84377,9.544 M13.1562,9.544 C12.2177,9.544 11.4481,8.71004 11.4481,7.69448 C11.4481,6.67891 12.2012,5.8435 13.1562,5.8435 C14.1111,5.8435 14.8807,6.67746 14.8643,7.69448 C14.8643,8.71004 14.1111,9.544 13.1562,9.544" />
+									</DrawingGroup>
+								</DrawingImage.Drawing>
+							</DrawingImage>
+						</Image.Source>
+					</Image>
+				</ContentControl.Content>
+			</Button>
+		</StackPanel>
+	</Grid>
+</liiil1:dje_zJRX6PD6DM6UZ4PU26LQ2SY7Y6V38GWNWMRR4VDD9JWB8WCT6GF4MQYK65NHJTQJH8S_ejd>

@@ -1,0 +1,357 @@
+﻿<liiil1:dje_zNSNRFVQUMVAUHL755A6AUDYMMNJH23EVJCGPYZ2RUJFWZZTMJCPX4_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+	Page.Title="BackUpPage">
+	<Grid
+		Width="890"
+		Margin="0,20,20,0">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Orientation="Horizontal">
+			<TextBlock
+				Grid.Row="0"
+				Margin="10,5,0,0"
+				VerticalAlignment="Center"
+				FontSize="20"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource profiles}"
+				TextAlignment="Left" />
+		</StackPanel>
+		<Grid
+			Row="1"
+			Column="0">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="50" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<Grid
+				Row="0">
+				<Border
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<Grid
+					Margin="7">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition />
+						<ColumnDefinition />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					<Button
+						Grid.Column="0"
+						Height="36"
+						Margin="0,0,0,0"
+						Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+						Style="{DynamicResource TweakingTopButton}"
+						Command="{Binding TakeSnapshotCmd}">
+						<ContentControl.Content>
+							<StackPanel
+								Margin="10,0,10,0"
+								Orientation="Horizontal">
+								<li1ii:MaterialIcon
+									FrameworkElement.Width="15"
+									FrameworkElement.Margin="0,0,8,0"
+									Control.Foreground="#FFFFFFFF"
+									MaterialIcon.Kind="FilePlusOutline" />
+								<TextBlock
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource TakeSnapshot}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+					<Button
+						Grid.Column="1"
+						Margin="7,0,0,0"
+						Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+						Style="{DynamicResource TweakingTopButton}"
+						Command="{Binding ImportFileCmd}">
+						<ContentControl.Content>
+							<StackPanel
+								Margin="10,0,10,0"
+								Orientation="Horizontal">
+								<Image
+									Width="15"
+									Margin="0,0,8,0"
+									Source="{DynamicResource ImportSvg}" />
+								<TextBlock
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource ImportFile}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+					<Button
+						Grid.Column="2"
+						Margin="7,0,0,0"
+						Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+						Style="{DynamicResource TweakingTopButton}"
+						Command="{Binding ImportFromKey}">
+						<ContentControl.Content>
+							<StackPanel
+								Margin="10,0,10,0"
+								Orientation="Horizontal">
+								<Image
+									Width="15"
+									Margin="0,0,8,0"
+									Source="{DynamicResource ImportSvg}" />
+								<TextBlock
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource ImportFromKey}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+					<TextBlock
+						Grid.Column="3"
+						Margin="7,0,0,0"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						TextTrimming="CharacterEllipsis"
+						TextWrapping="Wrap"
+						Foreground="{Binding StatusColor}"
+						Opacity="{Binding StatusOpacity}"
+						Text="{Binding StatusText}" />
+					<Button
+						Grid.Column="4"
+						Margin="7,0,0,0"
+						Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+						Style="{DynamicResource TweakingTopButton}"
+						Command="{Binding Update}">
+						<ContentControl.Content>
+							<StackPanel
+								Margin="10,0,10,0"
+								Orientation="Horizontal">
+								<Image
+									Width="15"
+									Margin="0,0,8,0"
+									Source="{DynamicResource RefreshIcon}" />
+								<TextBlock
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource Update}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+				</Grid>
+			</Grid>
+			<Grid
+				Row="1">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="40" />
+					<RowDefinition />
+					<RowDefinition
+						Height="40" />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<TextBlock
+					Grid.Row="0"
+					HorizontalAlignment="Left"
+					Style="{DynamicResource TitleStyle}"
+					Text="{DynamicResource Local}" />
+				<ScrollViewer
+					Grid.Row="1"
+					VerticalScrollBarVisibility="Auto">
+					<StackPanel>
+						<ItemsControl
+							Name="LocalItems"
+							Margin="0,10,0,0"
+							ItemsSource="{Binding LocalProfiles}">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<liiil1:dje_z7GQ8CY5Z2XS4Y64HBD4P8B5PHSDDDFUF6BZCQG89LBTBJZUD4P5V5B2PR8ESF49VB2_ejd
+										FrameworkElement.Margin="0,0,0,10"
+										FrameworkElement.DataContext="{Binding}" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+						<Grid>
+							<Border
+								Grid.ColumnSpan="4"
+								Background="#FF000000"
+								CornerRadius="20"
+								Opacity="0.6" />
+							<Grid
+								Margin="15">
+								<Grid.RowDefinitions>
+									<RowDefinition />
+									<RowDefinition />
+								</Grid.RowDefinitions>
+								<TextBlock
+									Grid.Row="0"
+									Margin="0,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Opacity="1"
+									Text="{DynamicResource ItsEmptyHere}"
+									TextTrimming="CharacterEllipsis" />
+								<TextBlock
+									Grid.Row="1"
+									Margin="0,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+									Opacity="1"
+									Text="{DynamicResource CreateFirstProfile}"
+									TextTrimming="CharacterEllipsis" />
+							</Grid>
+							<FrameworkElement.Style>
+								<Style
+									TargetType="{liil1il:Type Grid}">
+									<Style.Triggers>
+										<DataTrigger
+											Value="True"
+											Binding="{Binding ElementName=LocalItems, Path=HasItems}">
+											<Setter
+												Property="Visibility"
+												Value="Collapsed" />
+										</DataTrigger>
+										<DataTrigger
+											Value="False"
+											Binding="{Binding ElementName=LocalItems, Path=HasItems}">
+											<Setter
+												Property="Visibility"
+												Value="Visible" />
+										</DataTrigger>
+									</Style.Triggers>
+								</Style>
+							</FrameworkElement.Style>
+						</Grid>
+					</StackPanel>
+				</ScrollViewer>
+				<StackPanel
+					Grid.Row="2"
+					Orientation="Horizontal">
+					<TextBlock
+						Grid.Row="2"
+						HorizontalAlignment="Left"
+						Style="{DynamicResource TitleStyle}"
+						Text="{DynamicResource Cloud}" />
+					<TextBlock
+						Grid.Row="0"
+						Margin="0,0,10,0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Regular"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+						Text="{Binding CloudCount}" />
+					<Image
+						Name="ProImage"
+						Height="20"
+						VerticalAlignment="Center"
+						Source="pack://application:,,,/BoosterX;component/Resources\Images\ProLabel.png" />
+				</StackPanel>
+				<ScrollViewer
+					Grid.Row="3"
+					VerticalScrollBarVisibility="Auto">
+					<StackPanel>
+						<ItemsControl
+							Name="CloudItems"
+							Margin="0,10,0,0"
+							ItemsSource="{Binding CloudProfiles}">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<liiil1:dje_z3WP2HW8PSZP86YNKWKFVYFTNVZ7QN4XXLNK5RUJYR3TNLMUFK33XJG29KMSABCQPSZ_ejd
+										FrameworkElement.Margin="0,0,0,10"
+										FrameworkElement.DataContext="{Binding}" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+						<Grid>
+							<Border
+								Grid.ColumnSpan="4"
+								Background="#FF000000"
+								CornerRadius="20"
+								Opacity="0.6" />
+							<Grid
+								Margin="15">
+								<Grid.RowDefinitions>
+									<RowDefinition />
+									<RowDefinition />
+								</Grid.RowDefinitions>
+								<TextBlock
+									Grid.Row="0"
+									Margin="0,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Opacity="1"
+									Text="{DynamicResource ItsEmptyHere}"
+									TextTrimming="CharacterEllipsis" />
+								<TextBlock
+									Grid.Row="1"
+									Margin="0,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+									Opacity="1"
+									Text="{DynamicResource UploadFirstProfile}"
+									TextTrimming="CharacterEllipsis" />
+							</Grid>
+							<FrameworkElement.Style>
+								<Style
+									TargetType="{liil1il:Type Grid}">
+									<Style.Triggers>
+										<DataTrigger
+											Value="True"
+											Binding="{Binding ElementName=CloudItems, Path=HasItems}">
+											<Setter
+												Property="Visibility"
+												Value="Collapsed" />
+										</DataTrigger>
+										<DataTrigger
+											Value="False"
+											Binding="{Binding ElementName=CloudItems, Path=HasItems}">
+											<Setter
+												Property="Visibility"
+												Value="Visible" />
+										</DataTrigger>
+									</Style.Triggers>
+								</Style>
+							</FrameworkElement.Style>
+						</Grid>
+					</StackPanel>
+				</ScrollViewer>
+			</Grid>
+		</Grid>
+	</Grid>
+</liiil1:dje_zNSNRFVQUMVAUHL755A6AUDYMMNJH23EVJCGPYZ2RUJFWZZTMJCPX4_ejd>

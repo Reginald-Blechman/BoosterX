@@ -1,0 +1,85 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-">
+	<Style
+		TargetType="{liil1il:Type ToolTip}"
+		liil1il:Key="{liil1il:Type ToolTip}">
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="ToolTipService.InitialShowDelay"
+			Value="0" />
+		<Setter
+			Property="ToolTipService.BetweenShowDelay"
+			Value="0" />
+		<Setter
+			Property="ToolTip.HasDropShadow"
+			Value="True" />
+		<Setter
+			Property="FontSize"
+			Value="16" />
+		<Setter
+			Property="FontWeight"
+			Value="Regular" />
+		<Setter
+			Property="MaxWidth"
+			Value="600" />
+		<Setter
+			Property="Foreground"
+			Value="#FFFFFFFF" />
+		<Setter
+			Property="TextOptions.TextRenderingMode"
+			Value="ClearType" />
+		<Setter
+			Property="TextOptions.TextFormattingMode"
+			Value="Ideal" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type ToolTip}">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="*" />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<Border
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zD9QMZWCV58NG45A_ejd}"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zY99EWG67ABS6GW2_ejd}"
+							BorderThickness="2"
+							CornerRadius="12"
+							Opacity="1" />
+						<StackPanel
+							Margin="20,15,20,15"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center">
+							<ContentPresenter
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center">
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{liil1il:Type ContentPresenter}">
+										<Style.Resources>
+											<ResourceDictionary>
+												<Style
+													TargetType="{liil1il:Type TextBlock}"
+													liil1il:Key="{liil1il:Type TextBlock}">
+													<Setter
+														Property="TextWrapping"
+														Value="Wrap" />
+												</Style>
+											</ResourceDictionary>
+										</Style.Resources>
+									</Style>
+								</FrameworkElement.Style>
+							</ContentPresenter>
+						</StackPanel>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

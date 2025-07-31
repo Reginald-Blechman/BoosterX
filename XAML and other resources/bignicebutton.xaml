@@ -1,0 +1,194 @@
+﻿<liiil1:dje_zGT4UHYGTELKVM67RST8485D8ZPEKN5KC57D8CEUBY89DJ98NDUUR6M7ANSQA_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	UIElement.RenderTransformOrigin="0.5,0.5">
+	<Grid
+		ClipToBounds="False">
+		<Border
+			Name="BackgroundBorder"
+			Width="306"
+			Height="191"
+			BorderThickness="4"
+			CornerRadius="32"
+			Opacity="0">
+			<Border.BorderBrush>
+				<RadialGradientBrush
+					liil1il:Name="Gradient"
+					Center="0,0"
+					GradientOrigin="0,0"
+					MappingMode="RelativeToBoundingBox"
+					Opacity="1"
+					RadiusX="0.5"
+					SpreadMethod="Pad">
+					<GradientStop
+						Offset="1"
+						Color="#00000000" />
+					<GradientStop
+						Offset="0.329"
+						Color="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSM85V9F8UX4VG5BQNPS2F_ejd}" />
+				</RadialGradientBrush>
+			</Border.BorderBrush>
+		</Border>
+		<Button
+			Name="MainButton"
+			ClipToBounds="False"
+			Command="{Binding NavigateTo}">
+			<FrameworkElement.Style>
+				<Style
+					TargetType="{liil1il:Type Button}">
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{liil1il:Type Button}">
+								<Border>
+									<Grid
+										Name="MainGrid"
+										Width="306"
+										Height="191"
+										ClipToBounds="False">
+										<Image
+											Name="BluredBack"
+											Margin="0,0,0,-50"
+											ClipToBounds="False"
+											FlowDirection="LeftToRight"
+											Opacity="0"
+											Source="pack://application:,,,/BoosterX;component/Resources/Images/Glow.png"
+											Stretch="Fill" />
+										<Border
+											Name="MainBorder"
+											Width="286"
+											Height="171"
+											HorizontalAlignment="Center"
+											VerticalAlignment="Center"
+											CornerRadius="28"
+											FlowDirection="LeftToRight"
+											RenderOptions.BitmapScalingMode="Fant"
+											SnapsToDevicePixels="True">
+											<Border.Background>
+												<ImageBrush
+													ImageSource="{Binding Background}" />
+											</Border.Background>
+										</Border>
+										<Border
+											HorizontalAlignment="Center"
+											VerticalAlignment="Center"
+											BorderThickness="2"
+											CornerRadius="26"
+											FlowDirection="LeftToRight"
+											Opacity="1"
+											RenderOptions.BitmapScalingMode="Fant"
+											SnapsToDevicePixels="True"
+											Width="{Binding ElementName=MainBorder, Path=Width}"
+											Height="{Binding ElementName=MainBorder, Path=Height}">
+											<Border.BorderBrush>
+												<ImageBrush
+													ImageSource="{Binding Stroke}" />
+											</Border.BorderBrush>
+										</Border>
+									</Grid>
+								</Border>
+								<ControlTemplate.Triggers>
+									<EventTrigger
+										RoutedEvent="MouseEnter">
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													DesiredFrameRate="24"
+													Storyboard.TargetName="BluredBack"
+													Storyboard.TargetProperty="Opacity"
+													To="0.8"
+													Duration="0:0:0.2" />
+												<DoubleAnimationUsingKeyFrames
+													DesiredFrameRate="24"
+													Storyboard.TargetName="MainBorder"
+													Storyboard.TargetProperty="Width"
+													Duration="0:0:0.2">
+													<LinearDoubleKeyFrame
+														KeyTime="0:0:0.0"
+														Value="286" />
+													<LinearDoubleKeyFrame
+														KeyTime="0:0:0.1"
+														Value="296" />
+													<LinearDoubleKeyFrame
+														KeyTime="0:0:0.2"
+														Value="291" />
+												</DoubleAnimationUsingKeyFrames>
+												<DoubleAnimationUsingKeyFrames
+													DesiredFrameRate="24"
+													Storyboard.TargetName="MainBorder"
+													Storyboard.TargetProperty="Height"
+													Duration="0:0:0.2">
+													<LinearDoubleKeyFrame
+														KeyTime="0:0:0.0"
+														Value="171" />
+													<LinearDoubleKeyFrame
+														KeyTime="0:0:0.1"
+														Value="181" />
+													<LinearDoubleKeyFrame
+														KeyTime="0:0:0.2"
+														Value="176" />
+												</DoubleAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</EventTrigger>
+									<EventTrigger
+										RoutedEvent="MouseLeave">
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													DesiredFrameRate="24"
+													Storyboard.TargetName="BluredBack"
+													Storyboard.TargetProperty="Opacity"
+													To="0"
+													Duration="0:0:0.2" />
+												<DoubleAnimation
+													DesiredFrameRate="24"
+													Storyboard.TargetName="MainBorder"
+													Storyboard.TargetProperty="Width"
+													To="286"
+													Duration="0:0:0.2" />
+												<DoubleAnimation
+													DesiredFrameRate="24"
+													Storyboard.TargetName="MainBorder"
+													Storyboard.TargetProperty="Height"
+													To="171"
+													Duration="0:0:0.2" />
+											</Storyboard>
+										</BeginStoryboard>
+									</EventTrigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</FrameworkElement.Style>
+		</Button>
+		<FrameworkElement.Triggers>
+			<EventTrigger
+				RoutedEvent="MouseEnter">
+				<BeginStoryboard>
+					<Storyboard>
+						<DoubleAnimation
+							DesiredFrameRate="24"
+							Storyboard.TargetName="BackgroundBorder"
+							Storyboard.TargetProperty="Opacity"
+							To="0.8"
+							Duration="0:0:0.2" />
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+			<EventTrigger
+				RoutedEvent="MouseLeave">
+				<BeginStoryboard>
+					<Storyboard>
+						<DoubleAnimation
+							DesiredFrameRate="24"
+							Storyboard.TargetName="BackgroundBorder"
+							Storyboard.TargetProperty="Opacity"
+							To="0"
+							Duration="0:0:0.2" />
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+		</FrameworkElement.Triggers>
+	</Grid>
+</liiil1:dje_zGT4UHYGTELKVM67RST8485D8ZPEKN5KC57D8CEUBY89DJ98NDUUR6M7ANSQA_ejd>

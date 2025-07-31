@@ -1,0 +1,134 @@
+﻿<liiil1:dje_zUZZX3JW5QK5ZY7D9QWJXC9J4FXAPG9NMXDBFG2XK73CRK7V37GKQKABJZ549PMDY4X_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	Page.Title="ILTMethods">
+	<Grid
+		Row="1"
+		Width="880"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Center">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Border
+			Grid.Row="0"
+			Grid.Column="0"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<ScrollViewer
+			Grid.Row="0"
+			Grid.Column="0"
+			Margin="20"
+			VerticalScrollBarVisibility="Auto">
+			<StackPanel>
+				<TextBlock
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					FontSize="20"
+					FontWeight="SemiBold"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource ILMethodTitle}"
+					TextAlignment="Left" />
+				<TextBlock
+					Margin="0,10,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Opacity="0.95"
+					Text="{DynamicResource ILMethodText}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,40,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="20"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource ILMethodTitle2}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,0,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Opacity="0.95"
+					Text="{DynamicResource ILMethodText2}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,40,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="20"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource ILMethodTitle3}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,0,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Opacity="0.95"
+					Text="{DynamicResource ILMethodText3}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,40,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="20"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource ILMethodTitle4}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,0,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Opacity="0.95"
+					Text="{DynamicResource ILMethodText4}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,40,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="20"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource ILMethodTitle5}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,0,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Opacity="0.95"
+					Text="{DynamicResource ILMethodContact}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</liiil1:dje_zUZZX3JW5QK5ZY7D9QWJXC9J4FXAPG9NMXDBFG2XK73CRK7V37GKQKABJZ549PMDY4X_ejd>

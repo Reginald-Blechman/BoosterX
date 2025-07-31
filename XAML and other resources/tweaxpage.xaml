@@ -1,0 +1,282 @@
+﻿<liiil1:dje_zDS9TTFNE363ZWXZZNLVGXCSGVEH3WZ97G35688NSQDTUU67X396394XZJURA_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="TweaX">
+	<Grid
+		Margin="-20,20,0,0">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="auto" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Width="910"
+			Orientation="Horizontal">
+			<TextBlock
+				Margin="10,5,0,0"
+				VerticalAlignment="Center"
+				FontSize="20"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource AiAssistant2}"
+				TextAlignment="Left" />
+			<Button
+				Name="RestartButton"
+				Height="20"
+				Margin="10,0,0,0"
+				RenderOptions.BitmapScalingMode="Fant"
+				Style="{DynamicResource VioletSimpleTextBtn}"
+				ToolTip="{DynamicResource Restart}"
+				ToolTipService.BetweenShowDelay="5">
+				<StackPanel
+					Orientation="Horizontal">
+					<Image
+						RenderOptions.BitmapScalingMode="Fant"
+						Source="{DynamicResource RefreshIcon}" />
+				</StackPanel>
+			</Button>
+			<Button
+				Name="OpenInNewWindowButton"
+				Height="20"
+				Margin="10,0,0,0"
+				RenderOptions.BitmapScalingMode="Fant"
+				Style="{DynamicResource VioletSimpleTextBtn}"
+				ToolTip="{DynamicResource OpenInNewWindow}"
+				ToolTipService.BetweenShowDelay="5">
+				<StackPanel
+					Orientation="Horizontal">
+					<Image
+						RenderOptions.BitmapScalingMode="Fant"
+						Source="{DynamicResource OpenNewSvg}" />
+				</StackPanel>
+			</Button>
+		</StackPanel>
+		<Grid
+			Row="1"
+			Column="0"
+			Width="910">
+			<ScrollViewer
+				Name="ScrollViewerMain"
+				Width="910"
+				VerticalAlignment="Bottom"
+				VerticalContentAlignment="Bottom">
+				<ItemsControl
+					Name="ChatItems">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<liiil1:dje_zL59VMWHZK2CDBEB93NW9M59LKX6CBK357V9ZE3FFMG7QK8D2BCZ685LZ42359USE72_ejd
+								FrameworkElement.DataContext="{Binding}" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<StackPanel
+								Width="890"
+								HorizontalAlignment="Left" />
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+				</ItemsControl>
+			</ScrollViewer>
+		</Grid>
+		<Grid
+			Row="3"
+			Width="910"
+			Margin="0,5,0,0">
+			<StackPanel
+				Orientation="Horizontal">
+				<CheckBox
+					Name="GenCHB"
+					HorizontalAlignment="Left"
+					Style="{DynamicResource TweaXSwitcher}" />
+				<ComboBox
+					Name="ModelCB"
+					Height="30"
+					Margin="20,0,0,0"
+					FlowDirection="LeftToRight"
+					ItemContainerStyle="{DynamicResource theComboBoxItem}"
+					Style="{DynamicResource theComboBoxAi}">
+					<ComboBoxItem
+						FontSize="16"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						ToolTip="{DynamicResource BasicAITip}"
+						ToolTipService.BetweenShowDelay="50"
+						ToolTipService.InitialShowDelay="50">
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Width="18"
+								Height="18"
+								RenderOptions.BitmapScalingMode="Fant"
+								Source="{DynamicResource BasicAISvg}" />
+							<TextBlock
+								Margin="5,0,0,0"
+								VerticalAlignment="Center"
+								Text="Basic"
+								TextTrimming="CharacterEllipsis" />
+						</StackPanel>
+					</ComboBoxItem>
+					<ComboBoxItem
+						FontSize="16"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						ToolTip="{DynamicResource EliteAITip}"
+						ToolTipService.BetweenShowDelay="50"
+						ToolTipService.InitialShowDelay="50">
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Width="18"
+								RenderOptions.BitmapScalingMode="Fant"
+								Source="{DynamicResource EliteAISvg}" />
+							<TextBlock
+								Margin="5,0,0,0"
+								VerticalAlignment="Center"
+								Text="Elite"
+								TextTrimming="CharacterEllipsis" />
+							<Image
+								Height="20"
+								Margin="5,0,0,0"
+								Source="pack://application:,,,/BoosterX;component/Resources/Images/ProLabel.png" />
+						</StackPanel>
+					</ComboBoxItem>
+					<ComboBoxItem
+						FontSize="16"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						ToolTip="{DynamicResource ReasonerAITip}"
+						ToolTipService.BetweenShowDelay="50"
+						ToolTipService.InitialShowDelay="50">
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Width="18"
+								Height="18"
+								RenderOptions.BitmapScalingMode="Fant"
+								Source="{DynamicResource ReasonerAISvg}" />
+							<TextBlock
+								Margin="5,0,0,0"
+								VerticalAlignment="Center"
+								Text="Reasoner"
+								TextTrimming="CharacterEllipsis" />
+							<Image
+								Height="20"
+								Margin="5,0,0,0"
+								Source="pack://application:,,,/BoosterX;component/Resources/Images/ProLabel.png" />
+						</StackPanel>
+					</ComboBoxItem>
+				</ComboBox>
+				<TextBlock
+					Grid.Row="2"
+					Margin="20,0,0,0"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					FontSize="12"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Opacity="0.6"
+					Text="{DynamicResource AICanMistake}"
+					TextAlignment="Left" />
+			</StackPanel>
+		</Grid>
+		<Grid
+			Row="4"
+			Width="910"
+			Margin="0,5,0,20"
+			AllowDrop="True">
+			<Border
+				Width="910"
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="auto" />
+						<RowDefinition
+							Height="auto" />
+					</Grid.RowDefinitions>
+					<Button
+						Name="ImageButton"
+						Style="{DynamicResource InvisibleButton}">
+						<li1ii:MaterialIcon
+							FrameworkElement.Margin="16,0,10,0"
+							Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+							MaterialIcon.Kind="Image" />
+					</Button>
+					<TextBox
+						Name="lll"
+						Grid.Column="1"
+						Margin="0,13,10,13"
+						VerticalContentAlignment="Center"
+						AcceptsReturn="False"
+						AcceptsTab="True"
+						AllowDrop="True"
+						Background="#00FFFFFF"
+						CaretBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+						FontSize="18"
+						FontWeight="Regular"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+						Template="{StaticResource TextBoxTranparentControlTemplate}"
+						Text="{DynamicResource AskSomething}"
+						TextWrapping="Wrap" />
+					<Button
+						Name="SendButton"
+						Grid.Column="2"
+						Width="20"
+						Margin="10"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Center"
+						BorderThickness="3"
+						Style="{DynamicResource VioletSimpleTextBtn}">
+						<Image
+							Source="{StaticResource SamaletSvg}" />
+					</Button>
+					<Grid
+						Name="TempImageGrid"
+						Row="1"
+						Column="0"
+						ColumnSpan="5"
+						MaxWidth="320"
+						MaxHeight="180"
+						Margin="18,0,10,13"
+						HorizontalAlignment="Left"
+						Visibility="Collapsed">
+						<Image
+							Name="TempImage"
+							Stretch="Uniform" />
+						<Button
+							Name="TempImageClearButton"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Top"
+							Style="{DynamicResource InvisibleButton}">
+							<li1ii:MaterialIcon
+								FrameworkElement.Width="16"
+								FrameworkElement.Height="16"
+								Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+								MaterialIcon.Kind="CloseCircle" />
+						</Button>
+					</Grid>
+				</Grid>
+			</Border>
+		</Grid>
+	</Grid>
+</liiil1:dje_zDS9TTFNE363ZWXZZNLVGXCSGVEH3WZ97G35688NSQDTUU67X396394XZJURA_ejd>

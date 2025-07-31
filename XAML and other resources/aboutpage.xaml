@@ -1,0 +1,59 @@
+﻿<liiil1:dje_zLFSGH5KYHJRQPXET2N9ABADYJDL4E7XV97Z9EPCAAAVTUY2_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+	Page.Title="AboutPage">
+	<Grid
+		Margin="0,20,20,20">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Border
+			Grid.Row="1"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<StackPanel
+			Grid.Row="0"
+			Orientation="Horizontal">
+			<Button
+				Name="BackButton"
+				Width="30"
+				Height="30"
+				Margin="10,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Grid.Row="0"
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="20"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource aboutbtn}"
+				TextAlignment="Left" />
+		</StackPanel>
+		<TextBlock
+			Grid.Row="1"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			FontSize="24"
+			FontWeight="SemiBold"
+			Foreground="#FFFFFFFF"
+			Text="{DynamicResource ThisPageUnderDevelopment}"
+			TextAlignment="Center" />
+	</Grid>
+</liiil1:dje_zLFSGH5KYHJRQPXET2N9ABADYJDL4E7XV97Z9EPCAAAVTUY2_ejd>

@@ -1,0 +1,83 @@
+﻿<liiil1:dje_z3WP2HW8PSZP86YNKWKFVYFTNVZ7QN4XXLNK5RUJYR3TNLMUFK33XJG29KMSABCQPSZ_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF">
+	<Grid>
+		<Border
+			Grid.ColumnSpan="4"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Grid
+			Margin="15">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="auto" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<TextBlock
+				Grid.Row="0"
+				Grid.Column="0"
+				Margin="0,0,0,0"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FontSize="18"
+				FontWeight="Regular"
+				Foreground="#FFFFFFFF"
+				Opacity="1"
+				TextTrimming="CharacterEllipsis"
+				Text="{Binding Name}" />
+			<TextBlock
+				Grid.Row="1"
+				Grid.Column="0"
+				Margin="0,0,0,0"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FontSize="16"
+				FontWeight="Regular"
+				Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+				Opacity="0.5"
+				TextTrimming="CharacterEllipsis"
+				Text="{Binding DateCreated}" />
+			<StackPanel
+				Grid.Row="0"
+				Grid.RowSpan="2"
+				Grid.Column="1"
+				Height="40"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Center"
+				Orientation="Horizontal">
+				<TextBlock
+					Margin="10,0,10,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="16"
+					FontWeight="Regular"
+					TextTrimming="CharacterEllipsis"
+					Foreground="{Binding StatusColor}"
+					Opacity="{Binding StatusOpacity}"
+					Text="{Binding StatusText}" />
+				<Button
+					Margin="10,0,10,0"
+					Style="{DynamicResource BorderOutlineButtonStyle}"
+					ToolTip="{DynamicResource Delete}"
+					ToolTipService.BetweenShowDelay="100"
+					ToolTipService.InitialShowDelay="100"
+					Command="{Binding Delete}"
+					Visibility="{Binding DeleteVisibility}">
+					<li1ii:MaterialIcon
+						FrameworkElement.Margin="5"
+						Control.Foreground="#FFFFFFFF"
+						MaterialIcon.Kind="TrashCanOutline" />
+				</Button>
+				<Button
+					Margin="10,5,0,5"
+					Content="{DynamicResource download}"
+					Style="{DynamicResource MediumRoundedButtonBlue}"
+					Command="{Binding Download}" />
+			</StackPanel>
+		</Grid>
+	</Grid>
+</liiil1:dje_z3WP2HW8PSZP86YNKWKFVYFTNVZ7QN4XXLNK5RUJYR3TNLMUFK33XJG29KMSABCQPSZ_ejd>

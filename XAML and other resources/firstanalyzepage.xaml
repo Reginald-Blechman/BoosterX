@@ -1,0 +1,281 @@
+﻿<liiil1:dje_z3SDD3EJ37KH8ETZLMBBL2PTEK24QR22ANY9DD7LT3F5HACLAJQ2UBWRELYKQ_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+	Page.Title="FirstAnalyzePage">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundRed">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(LinearGradientBrush.GradientStops)[1].Color"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundYellow">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(LinearGradientBrush.GradientStops)[1].Color"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zH2C6P3HHD4TV29CYHNS73_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundGreen">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(LinearGradientBrush.GradientStops)[1].Color"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z4B4MF4E2S86TX7RGPTDHZ_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid
+		Margin="0,20,20,20">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Grid.Column="0"
+			Orientation="Horizontal">
+			<Button
+				Name="BackButton"
+				Width="30"
+				Height="30"
+				Margin="10,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="23"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource FAAnalize}"
+				TextAlignment="Left" />
+		</StackPanel>
+		<Grid
+			Row="1"
+			Width="880"
+			Height="660"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="2*" />
+				<RowDefinition
+					Height="3.5*" />
+			</Grid.RowDefinitions>
+			<Grid
+				Row="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="3.5*" />
+					<ColumnDefinition
+						Width="2.5*" />
+				</Grid.ColumnDefinitions>
+				<Border
+					Grid.ColumnSpan="2"
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<Border
+					Name="SmoothBorderGradient"
+					Margin="5"
+					CornerRadius="18"
+					Opacity="0.3">
+					<Border.Background>
+						<LinearGradientBrush
+							StartPoint="0.5,0"
+							EndPoint="0.5,1">
+							<Brush.RelativeTransform>
+								<TransformGroup>
+									<ScaleTransform
+										CenterX="0.5"
+										CenterY="0.5" />
+									<SkewTransform
+										CenterX="0.5"
+										CenterY="0.5" />
+									<RotateTransform
+										Angle="-90"
+										CenterX="0.5"
+										CenterY="0.5" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Brush.RelativeTransform>
+							<GradientStop
+								Color="#00000000" />
+							<GradientStop
+								Offset="1"
+								Color="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z4B4MF4E2S86TX7RGPTDHZ_ejd}" />
+						</LinearGradientBrush>
+					</Border.Background>
+				</Border>
+				<Grid
+					Margin="20">
+					<Grid
+						Column="0"
+						ColumnSpan="2">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="1*" />
+							<ColumnDefinition
+								Width="2.5*" />
+						</Grid.ColumnDefinitions>
+						<liiil1:dje_zH7SBHE869SWB4CTH5A3Q99ANXY3X7WCCU63XWP78ZCSCE5E2URD3YZ4FJETTBPND5PKZQJUQACVJ4XWYBWRTV_ejd
+							dje_zH7SBHE869SWB4CTH5A3Q99ANXY3X7WCCU63XWP78ZCSCE5E2URD3YZ4FJETTBPND5PKZQJUQACVJ4XWYBWRTV_ejd.BatteryLevel="{Binding BottleneckPercent}" />
+						<StackPanel
+							Grid.Column="1"
+							Margin="20,0,10,0">
+							<StackPanel
+								Orientation="Horizontal">
+								<TextBlock
+									VerticalAlignment="Center"
+									FontSize="24"
+									FontWeight="Bold"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Left"
+									Text="{Binding BottleneckMainText}" />
+								<Image
+									Width="18"
+									Margin="10,0,0,2"
+									VerticalAlignment="Center"
+									Source="{StaticResource iSvg}"
+									ToolTipService.BetweenShowDelay="0"
+									ToolTipService.InitialShowDelay="0"
+									ToolTip="{Binding BLToolTip}" />
+							</StackPanel>
+							<TextBlock
+								Margin="0,5,0,0"
+								FontSize="14"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								TextAlignment="Left"
+								TextWrapping="Wrap"
+								Text="{Binding BottleneckComment}" />
+						</StackPanel>
+					</Grid>
+				</Grid>
+				<StackPanel
+					Grid.Column="1"
+					Margin="20,18,20,20">
+					<StackPanel
+						Grid.Column="1">
+						<Grid>
+							<StackPanel
+								HorizontalAlignment="Left"
+								Orientation="Horizontal">
+								<TextBlock
+									VerticalAlignment="Center"
+									FontSize="20"
+									FontWeight="Bold"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource BoostPossibility}"
+									TextAlignment="Left" />
+								<Image
+									Width="18"
+									Margin="10,0,0,0"
+									VerticalAlignment="Center"
+									Source="{StaticResource iSvg}"
+									ToolTip="{DynamicResource BoostPossibilityTip}"
+									ToolTipService.BetweenShowDelay="0"
+									ToolTipService.InitialShowDelay="0" />
+							</StackPanel>
+							<TextBlock
+								Margin="0,0,10,0"
+								HorizontalAlignment="Right"
+								VerticalAlignment="Center"
+								FlowDirection="LeftToRight"
+								FontSize="26"
+								FontWeight="Bold"
+								Foreground="#FFFFFFFF"
+								TextAlignment="Left"
+								Text="{Binding BoostEstimatePercent}" />
+						</Grid>
+						<TextBlock
+							Margin="0,5,0,0"
+							FontSize="14"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Left"
+							TextWrapping="Wrap"
+							Text="{Binding BoostEstimateComment}" />
+					</StackPanel>
+				</StackPanel>
+			</Grid>
+			<Grid
+				Row="1"
+				Margin="0,20,0,0">
+				<Border
+					Grid.RowSpan="1"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<Grid
+					Margin="20"
+					VerticalAlignment="Top">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="1*" />
+						<ColumnDefinition
+							Width="10" />
+						<ColumnDefinition
+							Width="1*" />
+						<ColumnDefinition
+							Width="10" />
+						<ColumnDefinition
+							Width="1*" />
+					</Grid.ColumnDefinitions>
+					<liiil1:dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd
+						Grid.Column="0"
+						dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd.LevelName="OptimizationLevel"
+						dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd.PercentLevel="{Binding OptimizationLevel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+					<liiil1:dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd
+						Grid.Column="2"
+						dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd.LevelName="PrivacyLevel"
+						dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd.PercentLevel="{Binding PrivacyPercent, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+					<liiil1:dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd
+						Grid.Column="4"
+						dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd.LevelName="FutureProofLevel"
+						dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd.PercentLevel="{Binding FutureProofPercent, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+				</Grid>
+				<Button
+					Name="ContinueButton"
+					Width="200"
+					Height="45"
+					Margin="20"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Bottom"
+					Style="{DynamicResource ApplyButtonStyle}">
+					<ContentControl.Content>
+						<StackPanel
+							Orientation="Horizontal">
+							<li1ii:MaterialIcon
+								FrameworkElement.Width="18"
+								FrameworkElement.Margin="0,0,5,0"
+								Control.Foreground="#FFFFFFFF"
+								MaterialIcon.Kind="SkipNext" />
+							<TextBlock
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="16"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource continue}" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+			</Grid>
+		</Grid>
+	</Grid>
+</liiil1:dje_z3SDD3EJ37KH8ETZLMBBL2PTEK24QR22ANY9DD7LT3F5HACLAJQ2UBWRELYKQ_ejd>

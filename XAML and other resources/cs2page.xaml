@@ -1,0 +1,151 @@
+﻿<liiil1:dje_zCZLXJ8BUMUPBA7GD2P6GQUVCQM6VZX3RP3337SDZQMA9UAE249HTC_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+	Page.Title="CS2Page">
+	<Grid>
+		<Grid
+			Name="MainGrid"
+			Margin="0,20,20,20">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="50" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="250" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<StackPanel
+				Grid.Row="0"
+				Grid.Column="0"
+				Orientation="Horizontal">
+				<Button
+					Name="BackButton"
+					Width="30"
+					Height="30"
+					Margin="10,0,0,0"
+					Style="{DynamicResource BorderOutlineButtonStyle}"
+					ToolTip="{DynamicResource Back}"
+					ToolTipService.BetweenShowDelay="500"
+					ToolTipService.InitialShowDelay="500"
+					Command="{Binding BackCommand}">
+					<li1ii:MaterialIcon
+						FrameworkElement.Width="25"
+						FrameworkElement.Height="25"
+						Control.Foreground="#FFFFFFFF"
+						MaterialIcon.Kind="ArrowLeft"
+						RenderOptions.BitmapScalingMode="Fant" />
+				</Button>
+				<TextBlock
+					Margin="10,0,0,0"
+					VerticalAlignment="Center"
+					FontSize="20"
+					FontWeight="SemiBold"
+					Foreground="#FFFFFFFF"
+					Text="CS2 Optimizer"
+					TextAlignment="Left" />
+			</StackPanel>
+			<Grid
+				Row="1"
+				Column="0"
+				VerticalAlignment="Top">
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Border
+					Grid.Row="0"
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<ScrollViewer
+					Grid.Row="0"
+					Margin="10,10,0,10"
+					HorizontalScrollBarVisibility="Disabled"
+					VerticalScrollBarVisibility="Auto">
+					<Grid
+						Name="ButtonsGrid">
+						<StackPanel>
+							<RadioButton
+								Name="ConfigButton"
+								Width="230"
+								Height="35"
+								Margin="0,0,0,5"
+								HorizontalAlignment="Left"
+								GroupName="CsgoButtons"
+								Style="{StaticResource TweakingButtonStyleViolet}"
+								Command="{Binding AutoexecCommand}">
+								<ContentControl.Content>
+									<StackPanel
+										Margin="10,0,10,0"
+										Orientation="Horizontal">
+										<li1ii:MaterialIcon
+											FrameworkElement.Width="18"
+											FrameworkElement.Height="18"
+											Control.Foreground="#FFFFFFFF"
+											MaterialIcon.Kind="Code"
+											RenderOptions.BitmapScalingMode="Fant" />
+										<TextBlock
+											Margin="8,0,0,0"
+											VerticalAlignment="Center"
+											FontSize="18"
+											FontWeight="Regular"
+											Foreground="#FFFFFFFF"
+											Text="{DynamicResource AutoexecEditor}" />
+									</StackPanel>
+								</ContentControl.Content>
+							</RadioButton>
+							<RadioButton
+								Name="LaunchOptsButton"
+								Width="230"
+								Height="35"
+								Margin="0,0,0,5"
+								HorizontalAlignment="Left"
+								GroupName="CsgoButtons"
+								Style="{StaticResource TweakingButtonStyleViolet}"
+								Command="{Binding LauchOptionsCommand}">
+								<ContentControl.Content>
+									<StackPanel
+										Margin="10,0,10,0"
+										Orientation="Horizontal">
+										<li1ii:MaterialIcon
+											FrameworkElement.Width="18"
+											FrameworkElement.Height="18"
+											Control.Foreground="#FFFFFFFF"
+											MaterialIcon.Kind="RocketLaunchOutline"
+											RenderOptions.BitmapScalingMode="Fant" />
+										<TextBlock
+											Margin="8,0,0,0"
+											VerticalAlignment="Center"
+											FontSize="18"
+											FontWeight="Regular"
+											Foreground="#FFFFFFFF"
+											Text="{DynamicResource LaunchOptions}" />
+									</StackPanel>
+								</ContentControl.Content>
+							</RadioButton>
+						</StackPanel>
+					</Grid>
+				</ScrollViewer>
+				<TextBlock
+					Grid.Row="2"
+					Margin="0,20,0,0"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource UnderDevelopment}"
+					TextWrapping="Wrap" />
+			</Grid>
+			<Frame
+				Name="CS2Frame"
+				Grid.Row="0"
+				Grid.RowSpan="2"
+				Grid.Column="1"
+				Margin="15,0,0,0"
+				NavigationUIVisibility="Hidden"
+				DataContext="{Binding}" />
+		</Grid>
+	</Grid>
+</liiil1:dje_zCZLXJ8BUMUPBA7GD2P6GQUVCQM6VZX3RP3337SDZQMA9UAE249HTC_ejd>

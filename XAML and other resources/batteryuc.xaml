@@ -1,0 +1,139 @@
+﻿<liiil1:dje_zH7SBHE869SWB4CTH5A3Q99ANXY3X7WCCU63XWP78ZCSCE5E2URD3YZ4FJETTBPND5PKZQJUQACVJ4XWYBWRTV_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<liiil1:dje_zMUPCW6EVSKF56LMYACAN6NPURV6QCDTL36BMAV8M2JCSASA_ejd
+				liil1il:Key="DivideByTwoConverter" />
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundRed">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundYellow">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zH2C6P3HHD4TV29CYHNS73_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundGreen">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zXB2DAXC99XZ65RJTVNH3E_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundGreen2">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z4B4MF4E2S86TX7RGPTDHZ_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelStrokeRed">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelStrokeYellow">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zH2C6P3HHD4TV29CYHNS73_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelStrokeGreen">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zXB2DAXC99XZ65RJTVNH3E_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelStrokeGreen2">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z4B4MF4E2S86TX7RGPTDHZ_ejd}"
+					Duration="0:0:2.5" />
+			</Storyboard>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid
+		Name="RootGrid">
+		<Border
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Border
+			Name="StrokeBorder"
+			BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zCFLBYXMGSL7H8BQ_ejd}"
+			BorderThickness="2"
+			CornerRadius="20"
+			Opacity="0.3" />
+		<Border
+			Name="LineBorder"
+			Height="3"
+			Margin="0,12,0,0"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Top"
+			Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zCFLBYXMGSL7H8BQ_ejd}"
+			CornerRadius="1"
+			Opacity="0.3"
+			Width="{Binding ElementName=RootGrid, Path=ActualWidth, Converter={StaticResource DivideByTwoConverter}}" />
+		<Grid
+			Margin="12">
+			<Border
+				Height="20"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Bottom"
+				Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGEEN2XWKB2ZUBQ_ejd}"
+				CornerRadius="10"
+				Opacity="1" />
+			<Border
+				Name="MainProgress"
+				Height="20"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Bottom"
+				Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGEEN2XWKB2ZUBQ_ejd}"
+				CornerRadius="10"
+				Opacity="1"
+				RenderTransformOrigin="0.5,1">
+				<UIElement.RenderTransform>
+					<SkewTransform
+						liil1il:Name="SloshTransform"
+						AngleY="0" />
+				</UIElement.RenderTransform>
+			</Border>
+			<UIElement.Clip>
+				<RectangleGeometry
+					RadiusX="10"
+					RadiusY="10"
+					Rect="0,0,112,176" />
+			</UIElement.Clip>
+		</Grid>
+		<StackPanel
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			FlowDirection="LeftToRight"
+			Orientation="Horizontal">
+			<TextBlock
+				Name="PercentTextBlock"
+				FontSize="26"
+				FontWeight="Bold"
+				Foreground="#FFFFFFFF"
+				Text="0"
+				TextAlignment="Left" />
+			<TextBlock
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				FontSize="26"
+				FontWeight="Bold"
+				Foreground="#FFFFFFFF"
+				Text="%"
+				TextAlignment="Left" />
+		</StackPanel>
+	</Grid>
+</liiil1:dje_zH7SBHE869SWB4CTH5A3Q99ANXY3X7WCCU63XWP78ZCSCE5E2URD3YZ4FJETTBPND5PKZQJUQACVJ4XWYBWRTV_ejd>

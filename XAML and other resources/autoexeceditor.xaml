@@ -1,0 +1,137 @@
+﻿<liiil1:dje_zRG7M2VFCRP7RM6XYKG5ZABP7DAP3LGZCX4MTQBNQJNPQZPSRAKJ9ECE3PFKRGPG4KW_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="AutoexecEditor">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Orientation="Horizontal">
+			<TextBlock
+				Grid.Row="0"
+				HorizontalAlignment="Left"
+				Style="{DynamicResource TitleStyle}"
+				Text="{DynamicResource ConfigEditor}" />
+		</StackPanel>
+		<StackPanel
+			Grid.Row="1"
+			HorizontalAlignment="Left"
+			Orientation="Horizontal">
+			<RadioButton
+				Name="AEGenButton"
+				Margin="0,0,5,0"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				Content="{DynamicResource Autoexec}"
+				GroupName="LeftMenu"
+				Style="{StaticResource MainColorBorderedRadioButton}" />
+			<RadioButton
+				Margin="0,0,5,0"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				Content="{DynamicResource RawEditor}"
+				GroupName="LeftMenu"
+				Style="{StaticResource MainColorBorderedRadioButton}" />
+		</StackPanel>
+		<Grid
+			Name="AutoexecGrid"
+			Row="2">
+			<ScrollViewer
+				VerticalAlignment="Top"
+				VerticalContentAlignment="Top"
+				VerticalScrollBarVisibility="Auto">
+				<StackPanel>
+					<ItemsControl
+						Name="CSGOSetsItems"
+						DataContext="{Binding SelectedProfile}"
+						ItemsSource="{Binding GroupCommands}">
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<liiil1:dje_zBPV4E4PT3BXKLKQU3WTJVXXGM9VA5DAC6N9ZJZE7LYGP2CR9L7EWB4TNPCZA_ejd
+									FrameworkElement.DataContext="{Binding}" />
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ItemsControl>
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+		<Grid
+			Name="RawEditGrid"
+			Row="2"
+			Visibility="Collapsed">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<StackPanel
+				Grid.Row="0"
+				Margin="10"
+				Orientation="Horizontal">
+				<TextBlock
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource Autoexeccfg}"
+					TextTrimming="CharacterEllipsis" />
+				<Button
+					Name="SaveButton"
+					Grid.Row="1"
+					Margin="10,0,0,0"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Top"
+					IsEnabled="False"
+					Style="{DynamicResource ApplyButtonStyle}">
+					<StackPanel
+						Margin="8,2,8,2"
+						Orientation="Horizontal">
+						<li1ii:MaterialIcon
+							FrameworkElement.Width="23"
+							FrameworkElement.Height="23"
+							FrameworkElement.Margin="0,0,5,0"
+							Control.Foreground="#FFFFFFFF"
+							MaterialIcon.Kind="ContentSaveOutline"
+							RenderOptions.BitmapScalingMode="Fant" />
+						<TextBlock
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource save}"
+							TextTrimming="CharacterEllipsis" />
+					</StackPanel>
+				</Button>
+			</StackPanel>
+			<Border
+				Grid.Row="1"
+				Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUQZKBFFY5A4QNKC2YZ2EV_ejd}"
+				CornerRadius="20" />
+			<TextBox
+				Name="ConfigTextBox"
+				Grid.Row="1"
+				Margin="20"
+				HorizontalContentAlignment="Left"
+				VerticalContentAlignment="Top"
+				AcceptsReturn="True"
+				AcceptsTab="True"
+				Background="#00FFFFFF"
+				CaretBrush="#FFFFFFFF"
+				FontSize="16"
+				FontWeight="Medium"
+				Foreground="#FFFFFFFF"
+				Template="{DynamicResource TextBoxTranparentControlTemplate}"
+				TextSearch.Text=""
+				TextWrapping="Wrap"
+				VerticalScrollBarVisibility="Auto" />
+		</Grid>
+	</Grid>
+</liiil1:dje_zRG7M2VFCRP7RM6XYKG5ZABP7DAP3LGZCX4MTQBNQJNPQZPSRAKJ9ECE3PFKRGPG4KW_ejd>

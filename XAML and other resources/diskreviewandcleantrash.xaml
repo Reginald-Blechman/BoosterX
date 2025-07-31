@@ -1,0 +1,256 @@
+﻿<liiil1:dje_zPQJSB9QFCXBATTQDF8P5Y898QRGF695CU8Y3WZUZWD93V6LVJ7ATVDWF6QC8T73MPQ_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiii1l="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing"
+	FrameworkElement.Width="406"
+	FrameworkElement.Height="198">
+	<Grid>
+		<Border
+			Width="406"
+			Height="198"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Grid
+			Name="EnableGrid2">
+			<StackPanel
+				Width="406"
+				Height="198"
+				Orientation="Horizontal">
+				<StackPanel
+					Orientation="Vertical">
+					<StackPanel
+						Orientation="Horizontal">
+						<TextBlock
+							Margin="20,10,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="24"
+							FontWeight="Bold"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource Disk}" />
+						<ComboBox
+							Name="DisksCombo"
+							Width="42"
+							Height="24"
+							Margin="5,10,0,0"
+							Style="{DynamicResource theComboBox}"
+							ItemsSource="{Binding}">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<TextBlock
+										FontSize="14"
+										FontWeight="Medium"
+										Foreground="#FFFFFFFF"
+										Text="{Binding DiskName}" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ComboBox>
+					</StackPanel>
+					<Grid>
+						<Ellipse
+							Width="120"
+							Height="120"
+							Margin="20,10,0,0"
+							HorizontalAlignment="Left"
+							Opacity="1"
+							Stroke="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							StrokeThickness="20"
+							Visibility="Visible" />
+						<liiii1l:Arc
+							Arc.Name="progressPathTrash"
+							FrameworkElement.Width="120"
+							FrameworkElement.Height="120"
+							FrameworkElement.Margin="80,-40,0,0"
+							FrameworkElement.HorizontalAlignment="Left"
+							Arc.ArcThickness="20"
+							Arc.ArcThicknessUnit="Pixel"
+							Arc.EndAngle="180"
+							Shape.Fill="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+							Shape.Stretch="None">
+							<UIElement.RenderTransform>
+								<RotateTransform
+									Angle="45" />
+							</UIElement.RenderTransform>
+						</liiii1l:Arc>
+						<liiii1l:Arc
+							Arc.Name="progressPathAvailable"
+							FrameworkElement.Width="120"
+							FrameworkElement.Height="120"
+							FrameworkElement.Margin="80,-40,0,0"
+							FrameworkElement.HorizontalAlignment="Left"
+							Arc.ArcThickness="20"
+							Arc.ArcThicknessUnit="Pixel"
+							Arc.EndAngle="60"
+							Shape.Fill="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+							Shape.Stretch="None">
+							<UIElement.RenderTransform>
+								<RotateTransform
+									Angle="45" />
+							</UIElement.RenderTransform>
+						</liiii1l:Arc>
+						<Grid
+							Margin="-40,20,0,0"
+							VerticalAlignment="Center">
+							<StackPanel
+								Name="CurrentUploadStackPanel"
+								Margin="0,-10,0,0"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Top"
+								Opacity="1">
+								<TextBlock
+									Name="PercentageUsedTextBlock"
+									Margin="0,0,0,-5"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FlowDirection="LeftToRight"
+									FontSize="20"
+									FontWeight="Bold"
+									Foreground="#FFFFFFFF"
+									RenderOptions.BitmapScalingMode="Fant"
+									Text="80%" />
+								<TextBlock
+									Margin="0,0,0,0"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+									RenderOptions.BitmapScalingMode="Fant"
+									Text="{DynamicResource Used}" />
+							</StackPanel>
+						</Grid>
+					</Grid>
+				</StackPanel>
+			</StackPanel>
+			<WrapPanel
+				Width="250"
+				Margin="0,55,0,0"
+				HorizontalAlignment="Right">
+				<StackPanel
+					Orientation="Vertical">
+					<StackPanel
+						Orientation="Horizontal">
+						<Border
+							Width="6"
+							Height="6"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							CornerRadius="3" />
+						<TextBlock
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="15"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource Total}" />
+					</StackPanel>
+					<TextBlock
+						Name="TotalSizeTextBlock"
+						Margin="11,0,0,0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FlowDirection="LeftToRight"
+						FontSize="15"
+						FontWeight="Medium"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+						RenderOptions.BitmapScalingMode="Fant"
+						Text="Analysing" />
+				</StackPanel>
+				<StackPanel
+					Margin="20,0,0,0"
+					Orientation="Vertical">
+					<StackPanel
+						Orientation="Horizontal">
+						<Border
+							Width="6"
+							Height="6"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+							CornerRadius="3" />
+						<TextBlock
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FlowDirection="LeftToRight"
+							FontSize="15"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource Trash}" />
+					</StackPanel>
+					<TextBlock
+						Name="TrashSizeTextBlock"
+						Margin="11,0,0,0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FontSize="15"
+						FontWeight="Medium"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+						RenderOptions.BitmapScalingMode="Fant"
+						Text="Analysing" />
+				</StackPanel>
+				<StackPanel
+					Width="120"
+					Margin="0,20,0,0"
+					Orientation="Vertical">
+					<StackPanel
+						Orientation="Horizontal">
+						<Border
+							Width="6"
+							Height="6"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+							CornerRadius="3" />
+						<TextBlock
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="15"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource Available}" />
+					</StackPanel>
+					<TextBlock
+						Name="AvailableSizeTextBlock"
+						Margin="11,0,0,0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FlowDirection="LeftToRight"
+						FontSize="15"
+						FontWeight="Medium"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+						RenderOptions.BitmapScalingMode="Fant"
+						Text="Analysing" />
+				</StackPanel>
+			</WrapPanel>
+			<Button
+				Name="TrashCleanButton"
+				Width="50"
+				Height="50"
+				Margin="40"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Bottom"
+				Style="{DynamicResource CircleYellowButton}" />
+			<UIElement.Effect>
+				<BlurEffect
+					liil1il:Name="EnableGrid"
+					Radius="0" />
+			</UIElement.Effect>
+		</Grid>
+		<TextBlock
+			Name="EnableGrid3"
+			Margin="5,0,0,0"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			FontSize="16"
+			FontWeight="Medium"
+			Foreground="#FFFFFFFF"
+			Opacity="0"
+			RenderOptions.BitmapScalingMode="Fant"
+			Text="{DynamicResource ShowDISKMetricsEnable}"
+			TextAlignment="Center"
+			TextWrapping="Wrap"
+			Visibility="Collapsed" />
+	</Grid>
+</liiil1:dje_zPQJSB9QFCXBATTQDF8P5Y898QRGF695CU8Y3WZUZWD93V6LVJ7ATVDWF6QC8T73MPQ_ejd>

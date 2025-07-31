@@ -1,0 +1,88 @@
+﻿<ResourceDictionary xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<DrawingImage
+		liil1il:Key="Union1">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,119 L221,119 L221,0 L0,0">
+				<GeometryDrawing
+					Brush="#FF3562D6"
+					Geometry="F1 M221,119 M0,0 M27.0632,0.5 C18.7789,0.5 12.0632,7.21573 12.0632,15.5 L12.0632,50.5799 C12.0632,51.6509 11.4922,52.6406 10.5651,53.1768 L1.24368,58.5679 C-0.414558,59.7653 -0.414558,62.2347 1.24368,63.4321 L10.5651,68.8232 C11.4922,69.3594 12.0632,70.3491 12.0632,71.4201 L12.0632,103.5 C12.0632,111.784 18.7789,118.5 27.0632,118.5 L206,118.5 C214.284,118.5 221,111.784 221,103.5 L221,15.5 C221,7.21573 214.284,0.5 206,0.5 L27.0632,0.5" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+	<DrawingImage
+		liil1il:Key="Union2">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,84 L221,84 L221,0 L0,0">
+				<GeometryDrawing
+					Brush="#FF3562D6"
+					Geometry="F1 M221,84 M0,0 M27.0632,0 C18.7789,0 12.0632,5.58536 12.0632,12.4752 L12.0632,15.614 C12.0632,16.7669 11.4025,17.8178 10.3636,18.3175 L1.24368,22.7042 C-0.414558,23.7001 -0.414558,25.7538 1.24368,26.7497 L10.3636,31.1364 C11.4025,31.6362 12.0632,32.6871 12.0632,33.8399 L12.0632,71.5247 C12.0632,78.4146 18.7789,84 27.0632,84 L206,84 C214.284,84 221,78.4146 221,71.5247 L221,12.4752 C221,5.58536 214.284,0 206,0 L27.0632,0" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+	<DrawingImage
+		liil1il:Key="Union3">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,95 L261,95 L261,0 L0,0">
+				<DrawingGroup.Transform>
+					<TranslateTransform
+						X="0"
+						Y="9.7833199106389657E-06" />
+				</DrawingGroup.Transform>
+				<GeometryDrawing
+					Brush="#FF3562D6"
+					Geometry="F1 M261,95 M0,0 M4.14964E-05,68.0785 C4.11361E-05,76.3194 6.33929,83 14.1592,83 L115.629,83 C116.724,83 117.732,83.5966 118.259,84.5566 L123.312,93.7628 C124.442,95.4124 126.773,95.4124 127.903,93.7628 L132.955,84.5566 C133.482,83.5966 134.49,83 135.585,83 L246.841,83 C254.661,83 261,76.3194 261,68.0785 L261,14.9215 C261,6.68057 254.661,7.29348E-07 246.841,3.8753E-07 L14.1591,-9.78332E-06 C6.33926,-1.01251E-05 3.86057E-06,6.68056 3.50034E-06,14.9215 L4.14964E-05,68.0785" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+	<DrawingImage
+		liil1il:Key="Union4">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,96 L276,96 L276,0 L0,0">
+				<DrawingGroup.Transform>
+					<TranslateTransform
+						X="3.5187599678465631E-06"
+						Y="5.5134296417236328E-06" />
+				</DrawingGroup.Transform>
+				<GeometryDrawing
+					Brush="#FF3562D6"
+					Geometry="F1 M276,96 M0,0 M276,27.0631 C276,18.7789 269.296,12.0631 261.027,12.0631 L153.58,12.0632 C152.508,12.0632 151.518,11.4914 150.982,10.5631 L145.602,1.24367 C144.406,-0.414564 141.941,-0.414564 140.746,1.24367 L135.366,10.5631 C134.83,11.4914 133.84,12.0632 132.768,12.0632 L14.9727,12.0631 C6.70346,12.0631 -8.20851E-07,18.7789 -1.18297E-06,27.0631 L-3.51876E-06,80.4999 C-3.88088E-06,88.7842 6.70346,95.4999 14.9727,95.4999 L261.027,95.5 C269.296,95.5 276,88.7842 276,80.5 L276,27.0631" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+	<DrawingImage
+		liil1il:Key="Union5">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,94 L221,94 L221,0 L0,0">
+				<DrawingGroup.Transform>
+					<TranslateTransform
+						X="3.7766993045806885E-05"
+						Y="0" />
+				</DrawingGroup.Transform>
+				<GeometryDrawing
+					Brush="#FF3562D6"
+					Geometry="F1 M221,94 M0,0 M27.063,0 C18.7787,0 12.063,6.25028 12.063,13.9604 L12.0632,62.0728 C12.0632,63.1766 11.457,64.1912 10.485,64.7144 L1.24364,69.6887 C-0.414597,70.8032 -0.414597,73.1014 1.24364,74.2159 L10.4851,79.1902 C11.457,79.7133 12.0348,80.7336 12.185,81.8272 C13.1279,88.6931 19.4295,94 27.063,94 L206,94 C214.284,94 221,87.7497 221,80.0396 L221,13.9604 C221,6.25028 214.284,0 206,0 L27.063,0" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+	<DrawingImage
+		liil1il:Key="Union6">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,149 L195,149 L195,0 L0,0">
+				<DrawingGroup.Transform>
+					<TranslateTransform
+						X="2.4586915969848633E-07"
+						Y="0" />
+				</DrawingGroup.Transform>
+				<GeometryDrawing
+					Brush="#FF3562D6"
+					Geometry="F1 M195,149 M0,0 M23.8793,0.5 C16.5696,0.5 10.644,8.95157 10.644,19.3771 L10.644,64.2878 C10.644,65.1834 10.2439,66.0322 9.55298,66.6021 L1.09736,73.5769 C-0.365787,75.0839 -0.365787,78.1915 1.09736,79.6985 L9.55298,86.6734 C10.2439,87.2433 10.644,88.092 10.644,88.9876 L10.644,130.123 C10.644,140.548 16.5696,149 23.8793,149 L181.765,149 C189.074,149 195,140.548 195,130.123 L195,19.3771 C195,8.95157 189.074,0.5 181.765,0.5 L23.8793,0.5" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

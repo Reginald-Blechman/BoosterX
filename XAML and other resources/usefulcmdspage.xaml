@@ -1,0 +1,68 @@
+﻿<liiil1:dje_z5PRQENNBQNA2SXVKJGDE2SCZR2CYLNBS733CGJ72C9WMNDESNRAW8JAU8Z5M3RC25VWD68N4_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+	Page.Title="UsefulCmdsPAge">
+	<Grid
+		Margin="0,20,20,20">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Grid.Column="0"
+			Orientation="Horizontal">
+			<Button
+				Name="BackButton"
+				Width="30"
+				Height="30"
+				Margin="10,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="23"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource UsefulCmds}"
+				TextAlignment="Left" />
+		</StackPanel>
+		<ItemsControl
+			Grid.Row="1"
+			Margin="0,10,0,0"
+			ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+			VirtualizingPanel.ScrollUnit="Pixel"
+			VirtualizingPanel.VirtualizationMode="Standard"
+			MaxHeight="{Binding ElementName=ListGridForHeight, Path=ActualHeight}"
+			ItemsSource="{Binding}">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<VirtualizingStackPanel />
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+			<Control.Template>
+				<ControlTemplate>
+					<ScrollViewer>
+						<ItemsPresenter />
+					</ScrollViewer>
+				</ControlTemplate>
+			</Control.Template>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<liiil1:dje_zTXQ5AHTH6TXHYLF7X8NC3783YSNN9SRAEAENSCT6ECWJUN8PZ2MGBWFTLSGCHK5NRUGTHBGN_ejd
+						FrameworkElement.DataContext="{Binding}" />
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</Grid>
+</liiil1:dje_z5PRQENNBQNA2SXVKJGDE2SCZR2CYLNBS733CGJ72C9WMNDESNRAW8JAU8Z5M3RC25VWD68N4_ejd>

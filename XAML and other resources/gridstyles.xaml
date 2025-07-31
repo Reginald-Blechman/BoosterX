@@ -1,0 +1,88 @@
+﻿<ResourceDictionary xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Style
+		TargetType="{liil1il:Type Grid}"
+		liil1il:Key="MouseEnterBlur">
+		<Setter
+			Property="UIElement.Effect">
+			<Setter.Value>
+				<DropShadowEffect
+					BlurRadius="0"
+					Opacity="0"
+					ShadowDepth="0"
+					Color="White" />
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<EventTrigger
+				RoutedEvent="Button.MouseEnter">
+				<BeginStoryboard>
+					<Storyboard>
+						<DoubleAnimation
+							Storyboard.TargetProperty="Effect.Opacity"
+							From="0"
+							To="1"
+							Duration="0:0:0.1" />
+						<DoubleAnimation
+							Storyboard.TargetProperty="Effect.BlurRadius"
+							From="0"
+							To="20"
+							Duration="0:0:0.1" />
+						<DoubleAnimation
+							BeginTime="0:0:0.1"
+							Storyboard.TargetProperty="Effect.BlurRadius"
+							From="20"
+							To="10"
+							Duration="0:0:0.25" />
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+			<EventTrigger
+				RoutedEvent="Button.MouseLeave">
+				<BeginStoryboard>
+					<Storyboard>
+						<DoubleAnimation
+							Storyboard.TargetProperty="Effect.Opacity"
+							From="1"
+							To="0"
+							Duration="0:0:0.3" />
+						<DoubleAnimation
+							Storyboard.TargetProperty="Effect.BlurRadius"
+							From="10"
+							To="0"
+							Duration="0:0:0.3" />
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<TriggerBase.EnterActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								AutoReverse="True"
+								RepeatBehavior="Forever"
+								Storyboard.TargetProperty="Effect.BlurRadius"
+								From="45.0"
+								To="17.0"
+								Duration="0:0:1" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.EnterActions>
+				<TriggerBase.ExitActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								AutoReverse="True"
+								RepeatBehavior="Forever"
+								Storyboard.TargetProperty="Effect.BlurRadius"
+								From="15.0"
+								To="15.0"
+								Duration="0:0:1" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.ExitActions>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+</ResourceDictionary>

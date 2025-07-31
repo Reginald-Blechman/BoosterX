@@ -1,0 +1,2579 @@
+﻿<liiil1:dje_z2JEDD4ZHM49WVF4K249YHVGWWAMG45W5UFFU4QNSHQ3JDVHD5GL7A54H3P9Q_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:lllii11l="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid
+			Row="0"
+			Column="0"
+			Margin="0,0,0,10">
+			<Border
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<Grid
+				Margin="6.5"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Center">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="auto" />
+					<ColumnDefinition
+						Width="auto" />
+					<ColumnDefinition
+						Width="auto" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="auto" />
+				</Grid.RowDefinitions>
+				<Grid
+					Column="0"
+					Margin="0,0,5,0">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+					</Grid.ColumnDefinitions>
+					<Border
+						Grid.Column="0"
+						Grid.ColumnSpan="3"
+						Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+						CornerRadius="14"
+						Opacity="1" />
+					<li1ii:MaterialIcon
+						Grid.Column="0"
+						FrameworkElement.Width="20"
+						FrameworkElement.Margin="10,0,5,0"
+						Control.Foreground="#FFFFFFFF"
+						MaterialIcon.Kind="Rename" />
+					<TextBox
+						Name="NameTB"
+						Grid.Column="1"
+						Margin="5,0,5,0"
+						VerticalAlignment="Center"
+						Background="#00FFFFFF"
+						CaretBrush="#FFFFFFFF"
+						Cursor="IBeam"
+						FontSize="16"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						Template="{StaticResource TextBoxTranparentControlTemplate}"
+						TextAlignment="Left"
+						Text="{Binding Name, Mode=TwoWay}" />
+					<Button
+						Name="OKButton"
+						Grid.Column="2"
+						Height="20"
+						Margin="5,0,10,0"
+						Content="OK"
+						Opacity="0"
+						Visibility="Collapsed"
+						Command="{Binding Rename}">
+						<FrameworkElement.Style>
+							<Style
+								BasedOn="{StaticResource MediumRoundedButtonBlue}"
+								TargetType="{liil1il:Type Button}">
+								<Style.Triggers>
+									<DataTrigger
+										Value="True"
+										Binding="{Binding ElementName=NameTB, Path=IsFocused}">
+										<TriggerBase.EnterActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Opacity"
+														From="0"
+														To="1"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Visible}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														Storyboard.TargetProperty="Opacity"
+														From="1"
+														To="0"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Collapsed}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.ExitActions>
+									</DataTrigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</Button>
+				</Grid>
+				<ComboBox
+					Grid.Column="1"
+					FontSize="16"
+					ItemContainerStyle="{DynamicResource theComboBoxItem}"
+					ItemsSource="{Binding Servers}"
+					SelectedItem="{Binding ChoosenServer}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<StackPanel
+								Orientation="Horizontal">
+								<Image
+									Width="20"
+									Height="20"
+									Margin="0,0,5,0"
+									RenderOptions.BitmapScalingMode="Fant"
+									Source="{Binding Icon}" />
+								<TextBlock
+									Margin="0,0,5,0"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{Binding City}" />
+								<TextBlock
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FF808080"
+									Text="{Binding Ping}" />
+							</StackPanel>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+					<FrameworkElement.Style>
+						<Style
+							BasedOn="{StaticResource theComboBoxForGames}"
+							TargetType="{liil1il:Type ComboBox}" />
+					</FrameworkElement.Style>
+				</ComboBox>
+				<ComboBox
+					Grid.Column="2"
+					MaxWidth="180"
+					Margin="5,0,0,0"
+					FontSize="16"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					ItemContainerStyle="{DynamicResource theComboBoxItem}"
+					ItemsSource="{Binding TestingTickrates}"
+					SelectedItem="{Binding ChoosenTickrate}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<StackPanel
+								Orientation="Horizontal">
+								<Image
+									Width="20"
+									Height="20"
+									Margin="0,0,5,0"
+									RenderOptions.BitmapScalingMode="Fant"
+									Source="{Binding Icon}" />
+								<TextBlock
+									Margin="0,0,5,0"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{Binding Name}" />
+								<TextBlock
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FF808080"
+									Text="{Binding TickName}" />
+							</StackPanel>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+					<FrameworkElement.Style>
+						<Style
+							BasedOn="{StaticResource theComboBoxForGames}"
+							TargetType="{liil1il:Type ComboBox}" />
+					</FrameworkElement.Style>
+				</ComboBox>
+				<Button
+					Grid.Column="3"
+					Height="36"
+					Margin="5,0,0,0"
+					HorizontalAlignment="Right"
+					Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+					Style="{DynamicResource TweakingTopButton}"
+					Command="{Binding Restart}">
+					<ContentControl.Content>
+						<StackPanel
+							Margin="10,0,10,0"
+							Orientation="Horizontal">
+							<Image
+								Width="15"
+								Margin="0,0,8,0"
+								Source="{StaticResource RefreshIcon}" />
+							<TextBlock
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="16"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource Restart}" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+				<Grid
+					Row="1"
+					Column="0"
+					ColumnSpan="6"
+					Margin="10,5,10,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					Visibility="Collapsed">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+					<StackPanel
+						Grid.Row="0"
+						Grid.Column="0"
+						Orientation="Horizontal">
+						<TextBlock
+							Margin="0,0,10,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource IT_ATime}" />
+						<TextBox
+							Margin="0,0,15,0"
+							Padding="5,2,5,2"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							VerticalContentAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							IsReadOnly="True"
+							Template="{DynamicResource ComboColoredTextBoxTemplate}"
+							TextAlignment="Left"
+							TextWrapping="Wrap"
+							FontFamily="{Binding MyFontFamily, Mode=OneWay}"
+							Text="{Binding ATestTime, Mode=TwoWay}" />
+						<Image
+							Height="18"
+							HorizontalAlignment="Left"
+							Cursor="Help"
+							Source="{DynamicResource InfoSvgInverted}"
+							ToolTip="{DynamicResource ATestTimeDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+					</StackPanel>
+					<StackPanel
+						Grid.Row="1"
+						Grid.Column="0"
+						Margin="0,5,0,0"
+						Orientation="Horizontal">
+						<TextBlock
+							Margin="0,0,10,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource IT_ATickrate}" />
+						<TextBox
+							Margin="0,0,15,0"
+							Padding="5,2,5,2"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							VerticalContentAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							IsReadOnly="True"
+							Template="{DynamicResource ComboColoredTextBoxTemplate}"
+							TextAlignment="Left"
+							TextWrapping="Wrap"
+							FontFamily="{Binding MyFontFamily, Mode=OneWay}"
+							Text="{Binding ATickRate, Mode=TwoWay}" />
+						<Image
+							Height="18"
+							HorizontalAlignment="Left"
+							Cursor="Help"
+							Source="{DynamicResource InfoSvgInverted}"
+							ToolTip="{DynamicResource ATickRateDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+					</StackPanel>
+				</Grid>
+			</Grid>
+		</Grid>
+		<Grid
+			Name="StartGrid"
+			Row="1"
+			Opacity="0"
+			Visibility="Visible">
+			<Border
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<StackPanel
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+				<Button
+					Grid.Row="0"
+					Style="{DynamicResource RayanCircle}"
+					Command="{Binding Start}">
+					<TextBlock
+						Margin="20,0,20,0"
+						VerticalAlignment="Center"
+						FontSize="30"
+						FontWeight="SemiBold"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource DoBeginUpper}"
+						TextAlignment="Left" />
+				</Button>
+			</StackPanel>
+		</Grid>
+		<Grid
+			Name="TestingGrid"
+			Row="1"
+			Opacity="1"
+			Visibility="Collapsed">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="auto" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<liiil1:dje_zCZLXJ8BUMUPBA7GD2P6GQUVCQBRKD79BLREV3XRP3MB6V9MPXHVLGS44QKTA_ejd
+				dje_zCZLXJ8BUMUPBA7GD2P6GQUVCQBRKD79BLREV3XRP3MB6V9MPXHVLGS44QKTA_ejd.Name="SpeedTestUCOrig"
+				Grid.Row="0"
+				Grid.Column="0"
+				FrameworkElement.DataContext="{Binding}" />
+			<Grid
+				Row="0"
+				Column="1"
+				MinWidth="215"
+				Margin="20,0,0,0"
+				HorizontalAlignment="Left">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="*" />
+					<RowDefinition
+						Height="auto" />
+				</Grid.RowDefinitions>
+				<Border
+					Grid.RowSpan="3"
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<TextBlock
+					Grid.Row="0"
+					Margin="20,20,20,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Top"
+					FontSize="16"
+					FontWeight="Medium"
+					TextTrimming="CharacterEllipsis"
+					TextWrapping="Wrap"
+					Foreground="{Binding StatusColor}"
+					Opacity="{Binding StatusOpacity}"
+					Text="{Binding StatusText}" />
+				<Button
+					Name="CancelButton"
+					Grid.Row="2"
+					Margin="20,0,20,20"
+					HorizontalAlignment="Left"
+					Style="{DynamicResource ApplyButtonGray2Style}"
+					Command="{Binding ForceStop}">
+					<StackPanel
+						Margin="10,7,10,7"
+						Orientation="Horizontal">
+						<li1ii:MaterialIcon
+							FrameworkElement.Width="16"
+							FrameworkElement.Margin="0,0,0,2"
+							FrameworkElement.VerticalAlignment="Center"
+							Control.Foreground="#FFFFFFFF"
+							MaterialIcon.Kind="Cancel" />
+						<TextBlock
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource cancel}"
+							TextAlignment="Center" />
+					</StackPanel>
+				</Button>
+				<Button
+					Name="ResultsButton"
+					Grid.Row="2"
+					Margin="20,0,20,20"
+					HorizontalAlignment="Left"
+					Opacity="0"
+					Style="{DynamicResource ApplyButtonStyle}"
+					Visibility="Collapsed"
+					Command="{Binding ResultsCommand}">
+					<StackPanel
+						Margin="10,7,10,7"
+						Orientation="Horizontal">
+						<li1ii:MaterialIcon
+							FrameworkElement.Width="16"
+							FrameworkElement.Margin="0,0,0,2"
+							FrameworkElement.VerticalAlignment="Center"
+							Control.Foreground="#FFFFFFFF"
+							MaterialIcon.Kind="Resume" />
+						<TextBlock
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource InetTestResults}"
+							TextAlignment="Center" />
+					</StackPanel>
+				</Button>
+			</Grid>
+			<Grid
+				Row="1"
+				Column="0"
+				ColumnSpan="2"
+				Margin="0,20,0,0">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="*" />
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="*" />
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="*" />
+				</Grid.RowDefinitions>
+				<Border
+					Grid.Row="0"
+					Grid.RowSpan="5"
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<Grid
+					Row="0"
+					Margin="20,20,20,10">
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="auto" />
+						<RowDefinition
+							Height="*" />
+						<RowDefinition
+							Height="auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+					</Grid.ColumnDefinitions>
+					<StackPanel
+						Grid.Column="0"
+						Grid.ColumnSpan="11"
+						Orientation="Horizontal">
+						<TextBlock
+							Margin="0,0,10,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="SemiBold"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingWithoutStress}"
+							TextAlignment="Center" />
+						<Image
+							Grid.Column="2"
+							Height="20"
+							HorizontalAlignment="Left"
+							Cursor="Help"
+							Source="{DynamicResource InfoSvgInverted}"
+							ToolTip="{DynamicResource PingWithoutStressDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+					</StackPanel>
+					<lllii11l:CartesianChart
+						Grid.Row="1"
+						Grid.Column="0"
+						Grid.ColumnSpan="20"
+						FrameworkElement.Margin="0,5,0,5"
+						Control.Background="#00FFFFFF"
+						Chart.LegendPosition="Hidden"
+						CartesianChart.Series="{Binding UnloadedSeries}"
+						CartesianChart.XAxes="{Binding XAxes}"
+						CartesianChart.YAxes="{Binding YAxes}">
+						<UIElement.OpacityMask>
+							<LinearGradientBrush
+								StartPoint="0.5,0"
+								EndPoint="0.5,1">
+								<GradientStop
+									Offset="0.792"
+									Color="Black" />
+								<GradientStop
+									Offset="1"
+									Color="Transparent" />
+							</LinearGradientBrush>
+						</UIElement.OpacityMask>
+					</lllii11l:CartesianChart>
+					<Grid
+						Row="2"
+						Column="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMeanIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMeanIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UnloadedMeanPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="2">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMedianIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMedianIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UnloadedMedianPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="6">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMaxIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMaxIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UnloadedMaxPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="4">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMinIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMinIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UnloadedMinPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="8">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingJitterIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingJitterIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UnloadedJitterPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="10">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+							Text="{DynamicResource PingOversyncIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingOversyncIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UnloadedOverSyncCountPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="12">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+							Text="{DynamicResource PingLostIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingLostIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UnloadedLostPing}" />
+					</Grid>
+				</Grid>
+				<Grid
+					Row="2"
+					Margin="20,10,20,10">
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="auto" />
+						<RowDefinition
+							Height="*" />
+						<RowDefinition
+							Height="auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+					</Grid.ColumnDefinitions>
+					<StackPanel
+						Grid.Column="0"
+						Grid.ColumnSpan="11"
+						Orientation="Horizontal">
+						<TextBlock
+							Margin="0,0,10,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="SemiBold"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingWhileDownloading}"
+							TextAlignment="Center" />
+						<Image
+							Grid.Column="2"
+							Height="20"
+							HorizontalAlignment="Left"
+							Cursor="Help"
+							Source="{DynamicResource InfoSvgInverted}"
+							ToolTip="{DynamicResource PingWhileDownloadingDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+					</StackPanel>
+					<lllii11l:CartesianChart
+						Grid.Row="1"
+						Grid.Column="0"
+						Grid.ColumnSpan="20"
+						FrameworkElement.Margin="0,5,0,5"
+						Control.Background="#00FFFFFF"
+						Chart.LegendPosition="Hidden"
+						CartesianChart.Series="{Binding DownloadSeries}"
+						CartesianChart.XAxes="{Binding XAxes}"
+						CartesianChart.YAxes="{Binding YAxes}">
+						<UIElement.OpacityMask>
+							<LinearGradientBrush
+								StartPoint="0.5,0"
+								EndPoint="0.5,1">
+								<GradientStop
+									Offset="0.792"
+									Color="Black" />
+								<GradientStop
+									Offset="1"
+									Color="Transparent" />
+							</LinearGradientBrush>
+						</UIElement.OpacityMask>
+					</lllii11l:CartesianChart>
+					<Grid
+						Row="2"
+						Column="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMeanIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMeanIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding DownloadMeanPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="2">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMedianIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMedianIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding DownloadMedianPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="6">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMaxIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMaxIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding DownloadMaxPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="4">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMinIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMinIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding DownloadMinPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="8">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingJitterIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingJitterIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding DownloadJitterPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="10">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+							Text="{DynamicResource PingOversyncIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingOversyncIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding DownloadOverSyncCountPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="12">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+							Text="{DynamicResource PingLostIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingLostIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding DownloadLostPing}" />
+					</Grid>
+				</Grid>
+				<Grid
+					Row="4"
+					Margin="20,10,20,20">
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="auto" />
+						<RowDefinition
+							Height="*" />
+						<RowDefinition
+							Height="auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+					</Grid.ColumnDefinitions>
+					<StackPanel
+						Grid.Column="0"
+						Grid.ColumnSpan="11"
+						Orientation="Horizontal">
+						<TextBlock
+							Margin="0,0,10,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="SemiBold"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingWhileUploading}"
+							TextAlignment="Center" />
+						<Image
+							Grid.Column="2"
+							Height="20"
+							HorizontalAlignment="Left"
+							Cursor="Help"
+							Source="{DynamicResource InfoSvgInverted}"
+							ToolTip="{DynamicResource PingWhileUploadingDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+					</StackPanel>
+					<lllii11l:CartesianChart
+						Grid.Row="1"
+						Grid.Column="0"
+						Grid.ColumnSpan="20"
+						FrameworkElement.Margin="0,5,0,5"
+						Control.Background="#00FFFFFF"
+						Chart.LegendPosition="Hidden"
+						CartesianChart.Series="{Binding UploadSeries}"
+						CartesianChart.XAxes="{Binding XAxes}"
+						CartesianChart.YAxes="{Binding YAxes}">
+						<UIElement.OpacityMask>
+							<LinearGradientBrush
+								StartPoint="0.5,0"
+								EndPoint="0.5,1">
+								<GradientStop
+									Offset="0.792"
+									Color="Black" />
+								<GradientStop
+									Offset="1"
+									Color="Transparent" />
+							</LinearGradientBrush>
+						</UIElement.OpacityMask>
+					</lllii11l:CartesianChart>
+					<Grid
+						Row="2"
+						Column="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMeanIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMeanIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UploadMeanPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="2">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMedianIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMedianIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UploadMedianPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="6">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMaxIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMaxIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UploadMaxPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="4">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingMinIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingMinIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UploadMinPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="8">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource PingJitterIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingJitterIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UploadJitterPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="10">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+							Text="{DynamicResource PingOversyncIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingOversyncIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UploadOverSyncCountPing}" />
+					</Grid>
+					<Grid
+						Row="2"
+						Column="12">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+							Text="{DynamicResource PingLostIs}"
+							TextAlignment="Center"
+							ToolTip="{DynamicResource PingLostIsDesc}"
+							ToolTipService.BetweenShowDelay="5"
+							ToolTipService.InitialShowDelay="5" />
+						<TextBlock
+							Grid.Column="1"
+							Margin="0,0,5,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Center"
+							Text="{Binding UploadLostPing}" />
+					</Grid>
+				</Grid>
+			</Grid>
+		</Grid>
+		<Grid
+			Name="ResultsGrid"
+			Row="1"
+			Opacity="0"
+			Visibility="Collapsed">
+			<Border
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<Grid
+				Margin="20">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="*" />
+				</Grid.RowDefinitions>
+				<Grid
+					Row="0"
+					Column="0">
+					<Button
+						Name="BackButton"
+						Width="25"
+						Height="25"
+						HorizontalAlignment="Left"
+						Style="{DynamicResource BorderOutlineButtonStyle}"
+						ToolTip="{DynamicResource Back}"
+						ToolTipService.BetweenShowDelay="500"
+						ToolTipService.InitialShowDelay="500"
+						Command="{Binding BackToPageCommand}">
+						<li1ii:MaterialIcon
+							FrameworkElement.Width="20"
+							FrameworkElement.Height="20"
+							Control.Foreground="#FFFFFFFF"
+							MaterialIcon.Kind="ArrowLeft"
+							RenderOptions.BitmapScalingMode="Fant" />
+					</Button>
+					<TextBlock
+						Margin="10,0,0,0"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						FontSize="22"
+						FontWeight="SemiBold"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource InetTestResults}"
+						TextAlignment="Center" />
+					<CheckBox
+						Name="AlwaysShowTB"
+						Margin="10,0,0,0"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Center"
+						Content="{DynamicResource ShowOnlyResults}"
+						Style="{StaticResource RealCheckBoxStyleSmall}" />
+				</Grid>
+				<ScrollViewer
+					Grid.Row="1"
+					Grid.Column="0"
+					Margin="0,10,0,0"
+					VerticalScrollBarVisibility="Auto">
+					<StackPanel>
+						<StackPanel
+							Margin="10,0,0,0"
+							HorizontalAlignment="Left"
+							Orientation="Horizontal">
+							<TextBlock
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								FontSize="18"
+								FontWeight="SemiBold"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource InetQualityUnloaded}"
+								TextAlignment="Left" />
+							<TextBlock
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								FontSize="18"
+								FontWeight="SemiBold"
+								TextAlignment="Left"
+								Foreground="{Binding MainResColor}"
+								Text="{Binding MainRes}" />
+						</StackPanel>
+						<TextBlock
+							Margin="0,5,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Left"
+							TextWrapping="Wrap"
+							Text="{Binding MainResDesc}" />
+						<Grid
+							Row="0"
+							Margin="0,5,0,5">
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="auto" />
+								<RowDefinition
+									Height="*" />
+								<RowDefinition
+									Height="auto" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+							</Grid.ColumnDefinitions>
+							<lllii11l:CartesianChart
+								CartesianChart.Name="ResultsChart"
+								Grid.Row="1"
+								Grid.Column="0"
+								Grid.ColumnSpan="20"
+								FrameworkElement.Height="100"
+								FrameworkElement.Margin="0,5,0,5"
+								Chart.LegendPosition="Hidden"
+								CartesianChart.Series="{Binding UnloadedSeries}"
+								CartesianChart.XAxes="{Binding XAxes}"
+								CartesianChart.YAxes="{Binding YAxes}">
+								<UIElement.OpacityMask>
+									<LinearGradientBrush
+										StartPoint="0.5,0"
+										EndPoint="0.5,1">
+										<GradientStop
+											Offset="0.792"
+											Color="Black" />
+										<GradientStop
+											Offset="1"
+											Color="Transparent" />
+									</LinearGradientBrush>
+								</UIElement.OpacityMask>
+							</lllii11l:CartesianChart>
+							<Grid
+								Row="2"
+								Column="0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMeanIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMeanIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UnloadedMeanPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="2">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMedianIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMedianIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UnloadedMedianPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="6">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMaxIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMaxIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UnloadedMaxPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="4">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMinIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMinIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UnloadedMinPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="8">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingJitterIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingJitterIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UnloadedJitterPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="10">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+									Text="{DynamicResource PingOversyncIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingOversyncIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UnloadedOverSyncCountPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="12">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+									Text="{DynamicResource PingLostIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingLostIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UnloadedLostPing}" />
+							</Grid>
+						</Grid>
+						<TextBlock
+							Margin="0,5,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Left"
+							TextWrapping="Wrap"
+							Text="{Binding MainPingDesc}" />
+						<StackPanel
+							Margin="10,50,0,0"
+							HorizontalAlignment="Left"
+							Orientation="Horizontal">
+							<TextBlock
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								FontSize="18"
+								FontWeight="SemiBold"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource Bufferbloat2}"
+								TextAlignment="Left" />
+							<TextBlock
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								FontSize="18"
+								FontWeight="SemiBold"
+								TextAlignment="Left"
+								Foreground="{Binding BufferBloatMainColor}"
+								Text="{Binding BufferBloatMain}" />
+						</StackPanel>
+						<TextBlock
+							Margin="0,5,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Left"
+							TextWrapping="Wrap"
+							Text="{Binding DownloadResDesc}" />
+						<Grid
+							Row="2"
+							Margin="0,5,0,0">
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="auto" />
+								<RowDefinition
+									Height="*" />
+								<RowDefinition
+									Height="auto" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+							</Grid.ColumnDefinitions>
+							<lllii11l:CartesianChart
+								Grid.Row="1"
+								Grid.Column="0"
+								Grid.ColumnSpan="20"
+								FrameworkElement.Height="100"
+								FrameworkElement.Margin="0,5,0,5"
+								Control.Background="#00FFFFFF"
+								Chart.LegendPosition="Hidden"
+								CartesianChart.Series="{Binding DownloadSeries}"
+								CartesianChart.XAxes="{Binding XAxes}"
+								CartesianChart.YAxes="{Binding YAxes}">
+								<UIElement.OpacityMask>
+									<LinearGradientBrush
+										StartPoint="0.5,0"
+										EndPoint="0.5,1">
+										<GradientStop
+											Offset="0.792"
+											Color="Black" />
+										<GradientStop
+											Offset="1"
+											Color="Transparent" />
+									</LinearGradientBrush>
+								</UIElement.OpacityMask>
+							</lllii11l:CartesianChart>
+							<Grid
+								Row="2"
+								Column="0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMeanIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMeanIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding DownloadMeanPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="2">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMedianIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMedianIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding DownloadMedianPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="6">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMaxIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMaxIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding DownloadMaxPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="4">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMinIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMinIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding DownloadMinPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="8">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingJitterIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingJitterIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding DownloadJitterPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="10">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+									Text="{DynamicResource PingOversyncIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingOversyncIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding DownloadOverSyncCountPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="12">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+									Text="{DynamicResource PingLostIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingLostIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding DownloadLostPing}" />
+							</Grid>
+						</Grid>
+						<StackPanel
+							Margin="10,50,0,0"
+							HorizontalAlignment="Left"
+							Orientation="Horizontal">
+							<TextBlock
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								FontSize="18"
+								FontWeight="SemiBold"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource Bufferbloat1}"
+								TextAlignment="Left" />
+							<TextBlock
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								FontSize="18"
+								FontWeight="SemiBold"
+								TextAlignment="Left"
+								Foreground="{Binding BufferBloatMain2Color}"
+								Text="{Binding BufferBloatMain2}" />
+						</StackPanel>
+						<TextBlock
+							Margin="0,5,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextAlignment="Left"
+							TextWrapping="Wrap"
+							Text="{Binding UploadResDesc}" />
+						<Grid
+							Row="4"
+							Margin="0,5,0,0">
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="auto" />
+								<RowDefinition
+									Height="*" />
+								<RowDefinition
+									Height="auto" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+							</Grid.ColumnDefinitions>
+							<lllii11l:CartesianChart
+								Grid.Row="1"
+								Grid.Column="0"
+								Grid.ColumnSpan="20"
+								FrameworkElement.Height="100"
+								FrameworkElement.Margin="0,5,0,5"
+								Chart.LegendPosition="Hidden"
+								CartesianChart.Series="{Binding UploadSeries}"
+								CartesianChart.XAxes="{Binding XAxes}"
+								CartesianChart.YAxes="{Binding YAxes}">
+								<UIElement.OpacityMask>
+									<LinearGradientBrush
+										StartPoint="0.5,0"
+										EndPoint="0.5,1">
+										<GradientStop
+											Offset="0.792"
+											Color="Black" />
+										<GradientStop
+											Offset="1"
+											Color="Transparent" />
+									</LinearGradientBrush>
+								</UIElement.OpacityMask>
+							</lllii11l:CartesianChart>
+							<Grid
+								Row="2"
+								Column="0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMeanIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMeanIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UploadMeanPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="2">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMedianIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMedianIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UploadMedianPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="6">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMaxIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMaxIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UploadMaxPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="4">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingMinIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingMinIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UploadMinPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="8">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource PingJitterIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingJitterIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UploadJitterPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="10">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+									Text="{DynamicResource PingOversyncIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingOversyncIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UploadOverSyncCountPing}" />
+							</Grid>
+							<Grid
+								Row="2"
+								Column="12">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+									Text="{DynamicResource PingLostIs}"
+									TextAlignment="Center"
+									ToolTip="{DynamicResource PingLostIsDesc}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<TextBlock
+									Grid.Column="1"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="12"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Center"
+									Text="{Binding UploadLostPing}" />
+							</Grid>
+						</Grid>
+					</StackPanel>
+				</ScrollViewer>
+			</Grid>
+		</Grid>
+	</Grid>
+</liiil1:dje_z2JEDD4ZHM49WVF4K249YHVGWWAMG45W5UFFU4QNSHQ3JDVHD5GL7A54H3P9Q_ejd>

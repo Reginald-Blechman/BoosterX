@@ -1,0 +1,208 @@
+﻿<liiil1:dje_zMDLRSKQM2NDUM9E9JHYU8XC4NSJJRR74Q2AHDD699N4XLM9DCUNMEPKQG93YUD7JLZ_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="PlaceboPage">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid
+			Row="0"
+			Column="0"
+			Width="625"
+			HorizontalAlignment="Left">
+			<Border
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<StackPanel
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Center"
+				Orientation="Horizontal">
+				<Button
+					Name="DefaultButton"
+					Width="150"
+					Height="36"
+					Margin="6.5,0,0,0"
+					Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+					Style="{DynamicResource TweakingTopButton}">
+					<ContentControl.Content>
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Width="15"
+								Margin="0,0,8,0"
+								Source="{StaticResource SpeedometerLow}" />
+							<TextBlock
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="16"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource default}" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+			</StackPanel>
+			<Button
+				Name="UpdateButton"
+				Width="150"
+				Height="36"
+				Margin="0,0,5,0"
+				HorizontalAlignment="Right"
+				Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+				Style="{DynamicResource TweakingTopButton}">
+				<ContentControl.Content>
+					<StackPanel
+						Orientation="Horizontal">
+						<Image
+							Width="15"
+							Margin="0,0,8,0"
+							Source="{StaticResource RefreshIcon}" />
+						<TextBlock
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource update}" />
+					</StackPanel>
+				</ContentControl.Content>
+			</Button>
+		</Grid>
+		<Grid
+			Row="1"
+			Column="0"
+			Margin="0,10,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<StackPanel
+				Grid.Row="0">
+				<StackPanel
+					HorizontalAlignment="Left"
+					Orientation="Horizontal">
+					<CheckBox
+						Name="TipCheckBox"
+						Content="{DynamicResource Tip}"
+						Style="{DynamicResource TipCheckBoxStyle}" />
+				</StackPanel>
+				<StackPanel
+					Margin="10,5,10,0"
+					Opacity="0"
+					Visibility="Collapsed">
+					<StackPanel
+						Orientation="Horizontal">
+						<TextBlock
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="SemiBold"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource RecommendedToClick}" />
+						<TextBlock
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="SemiBold"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							Text="{DynamicResource default}" />
+					</StackPanel>
+					<TextBlock
+						Margin="0,10,0,0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FontSize="14"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						Opacity="0.9"
+						Text="{DynamicResource DepreciatedDesc}"
+						TextWrapping="Wrap" />
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{liil1il:Type StackPanel}">
+							<Style.Triggers>
+								<DataTrigger
+									Value="True"
+									Binding="{Binding ElementName=TipCheckBox, Path=IsChecked}">
+									<TriggerBase.EnterActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Opacity"
+													From="0"
+													To="1"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Visible}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.EnterActions>
+									<TriggerBase.ExitActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetProperty="Opacity"
+													From="1"
+													To="0"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Collapsed}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.ExitActions>
+								</DataTrigger>
+							</Style.Triggers>
+						</Style>
+					</FrameworkElement.Style>
+				</StackPanel>
+			</StackPanel>
+			<ItemsControl
+				Grid.Row="1"
+				Margin="0,10,0,0"
+				ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+				VirtualizingPanel.ScrollUnit="Pixel"
+				VirtualizingPanel.VirtualizationMode="Standard"
+				MaxHeight="{Binding ElementName=ListGridForHeight, Path=ActualHeight}"
+				ItemsSource="{Binding}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<VirtualizingStackPanel />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<Control.Template>
+					<ControlTemplate>
+						<ScrollViewer>
+							<ItemsPresenter />
+						</ScrollViewer>
+					</ControlTemplate>
+				</Control.Template>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<liiil1:dje_zXTELLZMP9B4ZY3ZF3A9RXH78BQ92UXHM8VLAB45Y9DVAYM6YTSL6B9648M5XYUKNRX_ejd
+							FrameworkElement.DataContext="{Binding}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</Grid>
+	</Grid>
+</liiil1:dje_zMDLRSKQM2NDUM9E9JHYU8XC4NSJJRR74Q2AHDD699N4XLM9DCUNMEPKQG93YUD7JLZ_ejd>

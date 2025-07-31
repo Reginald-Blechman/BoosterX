@@ -1,0 +1,148 @@
+﻿<liiil1:dje_z79XZ9PJSA33Q6P6UM56MPW6ZC28DZ8FQ9UXMN9SRPJYJBPP3NDF8CQXGQGAQ_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	Page.Title="FAAcceptPage">
+	<Grid
+		Row="1"
+		Width="880"
+		Height="660"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Center">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Border
+			Grid.Column="0"
+			Grid.ColumnSpan="2"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Grid
+			Column="0"
+			Width="420"
+			Height="640"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center">
+			<UIElement.Clip>
+				<RectangleGeometry
+					RadiusX="16"
+					RadiusY="16"
+					Rect="0 0 420 640" />
+			</UIElement.Clip>
+			<Border
+				CornerRadius="16"
+				Opacity="1">
+				<Border.Background>
+					<ImageBrush
+						ImageSource="pack://application:,,,/BoosterX;component/Resources/Images/FirstAnalyze/FATemp.jpg"
+						Stretch="Fill" />
+				</Border.Background>
+			</Border>
+		</Grid>
+		<Grid
+			Column="1"
+			Margin="40,60,40,60">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<StackPanel
+				Grid.Row="0"
+				Grid.Column="0">
+				<TextBlock
+					VerticalAlignment="Center"
+					FontSize="16"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource FAAccept1}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,20,0,0"
+					VerticalAlignment="Center"
+					FontSize="16"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource FAAccept2}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,20,0,0"
+					VerticalAlignment="Center"
+					FontSize="12"
+					FontStyle="Italic"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource FAAccept3}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,20,0,0"
+					VerticalAlignment="Center"
+					FontSize="12"
+					Foreground="#FFFFFFFF"
+					TextAlignment="Left"
+					TextWrapping="Wrap">
+					<Run
+						Text="{StaticResource FAAccept4}" /> <Hyperlink
+						NavigateUri="https://boosterx.org/privacypolicy"><Run
+							Text="{StaticResource FAAccept5}" /></Hyperlink> <Run
+						Text=" " /> <Run
+						Text="{StaticResource and}" /> <Run
+						Text=" " /> <Hyperlink
+						NavigateUri="https://boosterx.org/useragreement"><Run
+							Text="{StaticResource FAAccept6}" /></Hyperlink></TextBlock>
+			</StackPanel>
+			<Grid
+				Row="0"
+				Column="0"
+				Height="40"
+				VerticalAlignment="Bottom">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="20" />
+					<ColumnDefinition
+						Width="*" />
+				</Grid.ColumnDefinitions>
+				<Button
+					Name="SkipButton"
+					Grid.Column="0"
+					Height="40"
+					Style="{DynamicResource MediumRoundedButtonBlueOutlineNoContent}">
+					<TextBlock
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						FontSize="18"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						RenderOptions.BitmapScalingMode="Fant"
+						Text="{DynamicResource skip}"
+						TextAlignment="Left" />
+				</Button>
+				<Button
+					Name="ContinueButton"
+					Grid.Column="2"
+					Height="40"
+					Style="{DynamicResource MediumRoundedButtonBlueNoConent}">
+					<TextBlock
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						FontSize="18"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						RenderOptions.BitmapScalingMode="Fant"
+						Text="{DynamicResource continue}"
+						TextAlignment="Left" />
+				</Button>
+			</Grid>
+		</Grid>
+	</Grid>
+</liiil1:dje_z79XZ9PJSA33Q6P6UM56MPW6ZC28DZ8FQ9UXMN9SRPJYJBPP3NDF8CQXGQGAQ_ejd>

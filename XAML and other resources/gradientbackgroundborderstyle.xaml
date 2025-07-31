@@ -1,0 +1,50 @@
+﻿<liiil1:dje_z3ZWHU8U3B8TZ4YKPMS7Z6HMSGKKMYLS5FKB5AGBA4GLJXHE5ZL59XFXU3Y7A_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	Border.Name="EffectBorder"
+	FrameworkElement.HorizontalAlignment="Center"
+	FrameworkElement.VerticalAlignment="Center"
+	Border.CornerRadius="20"
+	UIElement.Opacity="0.6">
+	<Border.Background>
+		<RadialGradientBrush
+			liil1il:Name="BorderGradient"
+			Center="200,200"
+			GradientOrigin="200,200"
+			MappingMode="Absolute"
+			RadiusX="100"
+			RadiusY="100">
+			<GradientStop
+				liil1il:Name="BorderMouseTrackColor"
+				Color="Black" />
+			<GradientStop
+				liil1il:Name="BorderBackColor"
+				Offset="0.7"
+				Color="Black" />
+		</RadialGradientBrush>
+	</Border.Background>
+	<FrameworkElement.Triggers>
+		<EventTrigger
+			RoutedEvent="MouseLeave">
+			<BeginStoryboard>
+				<Storyboard>
+					<ColorAnimation
+						Storyboard.TargetName="BorderMouseTrackColor"
+						Storyboard.TargetProperty="Color"
+						To="Black"
+						Duration="0:0:0.2" />
+				</Storyboard>
+			</BeginStoryboard>
+		</EventTrigger>
+		<EventTrigger
+			RoutedEvent="MouseEnter">
+			<BeginStoryboard>
+				<Storyboard>
+					<ColorAnimation
+						Storyboard.TargetName="BorderMouseTrackColor"
+						Storyboard.TargetProperty="Color"
+						To="#FF0B0E29"
+						Duration="0:0:0.3" />
+				</Storyboard>
+			</BeginStoryboard>
+		</EventTrigger>
+	</FrameworkElement.Triggers>
+</liiil1:dje_z3ZWHU8U3B8TZ4YKPMS7Z6HMSGKKMYLS5FKB5AGBA4GLJXHE5ZL59XFXU3Y7A_ejd>

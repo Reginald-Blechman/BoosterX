@@ -1,0 +1,386 @@
+﻿<liiil1:dje_zDCMKDKMUE8V9JWES6AQ8EKADRYPNV25T5XKSA8KRPZ52C8LJ9B8FD_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Grid>
+		<Border
+			Grid.ColumnSpan="2"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Grid>
+			<StackPanel
+				Name="EnableGrid2"
+				Margin="20,10,20,20">
+				<StackPanel
+					Height="30"
+					VerticalAlignment="Center"
+					Orientation="Horizontal">
+					<Image
+						Width="18"
+						Height="18"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						RenderOptions.BitmapScalingMode="Fant"
+						Source="{DynamicResource iSvg}"
+						ToolTip="{DynamicResource MemoryCleanToolTip}" />
+					<TextBlock
+						Margin="10,0,0,0"
+						VerticalAlignment="Center"
+						FontSize="18"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource Memory}"
+						TextAlignment="Left"
+						TextWrapping="Wrap" />
+					<TextBlock />
+				</StackPanel>
+				<StackPanel
+					Margin="0,10,0,0">
+					<Border
+						Name="VisualBorder"
+						Width="436"
+						Height="10"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}">
+						<UIElement.Clip>
+							<RectangleGeometry
+								liil1il:Name="VisualRectangle"
+								RadiusX="5"
+								RadiusY="5"
+								Rect="0,0,436,10" />
+						</UIElement.Clip>
+						<Grid
+							HorizontalAlignment="Left">
+							<Border
+								Name="CachedValueBorder"
+								Width="200"
+								Height="10"
+								HorizontalAlignment="Left"
+								Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}" />
+							<Border
+								Name="InUseBorder"
+								Width="100"
+								Height="10"
+								HorizontalAlignment="Left"
+								Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+						</Grid>
+					</Border>
+					<Grid>
+						<Grid
+							Name="InfoFieldsGrid"
+							Margin="0,20,0,0"
+							HorizontalAlignment="Left">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition />
+								<RowDefinition />
+							</Grid.RowDefinitions>
+							<StackPanel
+								Grid.Row="0"
+								Grid.Column="0"
+								Margin="0,0,10,0"
+								Orientation="Vertical">
+								<StackPanel
+									Orientation="Horizontal">
+									<Border
+										Width="6"
+										Height="6"
+										Background="#FFFFFFFF"
+										CornerRadius="3" />
+									<TextBlock
+										MaxWidth="80"
+										Margin="5,0,0,0"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										RenderOptions.BitmapScalingMode="Fant"
+										Text="{DynamicResource Total}"
+										TextTrimming="CharacterEllipsis" />
+								</StackPanel>
+								<TextBlock
+									Name="TotalSizeTextBlock"
+									Margin="11,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FlowDirection="LeftToRight"
+									FontSize="15"
+									FontWeight="Medium"
+									Foreground="#FFFFFFFF"
+									RenderOptions.BitmapScalingMode="Fant"
+									Text="954 GB" />
+							</StackPanel>
+							<StackPanel
+								Grid.Row="0"
+								Grid.Column="1"
+								Margin="0,0,10,0"
+								Orientation="Vertical">
+								<StackPanel
+									Orientation="Horizontal">
+									<Border
+										Width="6"
+										Height="6"
+										Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+										CornerRadius="3" />
+									<TextBlock
+										MaxWidth="80"
+										Margin="5,0,0,0"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										RenderOptions.BitmapScalingMode="Fant"
+										Text="{DynamicResource InUse}"
+										TextTrimming="CharacterEllipsis" />
+								</StackPanel>
+								<TextBlock
+									Name="InUseSizeTextBlock"
+									Margin="11,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FlowDirection="LeftToRight"
+									FontSize="15"
+									FontWeight="Medium"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+									RenderOptions.BitmapScalingMode="Fant"
+									Text="1222 GB" />
+							</StackPanel>
+							<StackPanel
+								Grid.Row="0"
+								Grid.Column="3"
+								Margin="0,0,10,0"
+								Orientation="Vertical">
+								<StackPanel
+									Orientation="Horizontal">
+									<Border
+										Width="6"
+										Height="6"
+										Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+										CornerRadius="3" />
+									<TextBlock
+										MaxWidth="80"
+										Margin="5,0,0,0"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										RenderOptions.BitmapScalingMode="Fant"
+										Text="{DynamicResource Cached}"
+										TextTrimming="CharacterEllipsis" />
+								</StackPanel>
+								<TextBlock
+									Name="CachedSizeTextBlock"
+									Margin="11,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FlowDirection="LeftToRight"
+									FontSize="15"
+									FontWeight="Medium"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+									RenderOptions.BitmapScalingMode="Fant"
+									Text="954 GB" />
+							</StackPanel>
+							<StackPanel
+								Grid.Row="1"
+								Grid.Column="0"
+								Margin="0,0,10,0"
+								Orientation="Vertical">
+								<StackPanel
+									Orientation="Horizontal">
+									<Border
+										Width="6"
+										Height="6"
+										Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+										CornerRadius="3" />
+									<TextBlock
+										MaxWidth="80"
+										Margin="5,0,0,0"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										RenderOptions.BitmapScalingMode="Fant"
+										Text="{DynamicResource Available}"
+										TextTrimming="CharacterEllipsis" />
+								</StackPanel>
+								<TextBlock
+									Name="AvailableSizeTextBlock"
+									Margin="11,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FlowDirection="LeftToRight"
+									FontSize="15"
+									FontWeight="Medium"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+									RenderOptions.BitmapScalingMode="Fant"
+									Text="954 GB" />
+							</StackPanel>
+							<StackPanel
+								Grid.Row="1"
+								Grid.Column="1"
+								Margin="0,0,10,0"
+								Orientation="Vertical">
+								<StackPanel
+									Orientation="Horizontal">
+									<Border
+										Width="6"
+										Height="6"
+										Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+										CornerRadius="3" />
+									<TextBlock
+										MaxWidth="80"
+										Margin="5,0,0,0"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										RenderOptions.BitmapScalingMode="Fant"
+										Text="{DynamicResource RealFree}"
+										TextTrimming="CharacterEllipsis" />
+								</StackPanel>
+								<TextBlock
+									Name="FreeSizeTextBlock"
+									Margin="11,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FlowDirection="LeftToRight"
+									FontSize="15"
+									FontWeight="Medium"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+									RenderOptions.BitmapScalingMode="Fant"
+									Text="954 GB" />
+							</StackPanel>
+						</Grid>
+						<StackPanel
+							Name="ButtonsSP"
+							Width="140"
+							Margin="0,20,0,0"
+							HorizontalAlignment="Right"
+							Orientation="Vertical">
+							<Button
+								Name="MemCacheCleanButton"
+								Height="32"
+								VerticalAlignment="Bottom"
+								Style="{DynamicResource VioletPurpleOnlyBorderButtonStyle}">
+								<ContentControl.Content>
+									<StackPanel
+										Orientation="Horizontal">
+										<Image
+											Width="14">
+											<Image.Source>
+												<DrawingImage>
+													<DrawingImage.Drawing>
+														<DrawingGroup
+															ClipGeometry="M0,0 L0,19 L19,19 L19,0 L0,0">
+															<DrawingGroup.Transform>
+																<TranslateTransform
+																	X="4.0227001591119915E-05"
+																	Y="0" />
+															</DrawingGroup.Transform>
+															<GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="F1 M19,19 M0,0 M9.90764,18.4074 C11.7323,19.4608 14.0635,18.8362 15.1169,17.0115 L18.4537,11.2321 C18.9781,10.3239 18.664,9.15176 17.7558,8.62741 L15.2789,7.19736 L17.1856,3.8948 C17.71,2.98659 17.3959,1.8145 16.4877,1.29015 L14.8364,0.336783 C13.9282,-0.187569 12.7561,0.126491 12.2318,1.0347 L10.3251,4.33726 L7.84813,2.90721 C6.93992,2.38285 5.76783,2.69691 5.24348,3.60512 L-4.0227E-05,12.6872 L9.90764,18.4074 M10.861,16.7561 L7.55845,14.8494 L8.51182,13.1981 L6.86054,12.2447 L5.90717,13.896 L5.08153,13.4193 L6.98826,10.1167 L5.33698,9.16337 L3.43025,12.4659 L2.60461,11.9892 L4.98803,7.86105 L14.8957,13.5813 L13.4657,16.0582 C12.9413,16.9664 11.7692,17.2804 10.861,16.7561 M16.8024,10.2787 L15.8491,11.93 L5.94139,6.20977 L6.89476,4.55849 L16.8024,10.2787" />
+														</DrawingGroup>
+													</DrawingImage.Drawing>
+												</DrawingImage>
+											</Image.Source>
+										</Image>
+										<TextBlock
+											MaxWidth="100"
+											Margin="4,0,0,0"
+											HorizontalAlignment="Center"
+											VerticalAlignment="Center"
+											FontSize="14"
+											FontWeight="Regular"
+											Foreground="#FFFFFFFF"
+											RenderOptions.BitmapScalingMode="Fant"
+											Text="{DynamicResource CleanCache}"
+											TextTrimming="CharacterEllipsis" />
+									</StackPanel>
+								</ContentControl.Content>
+							</Button>
+							<Button
+								Name="MemFullCleanButton"
+								Height="32"
+								Margin="0,10,0,0"
+								VerticalAlignment="Bottom"
+								Style="{DynamicResource VioletPurpleOnlyBorderButtonStyle}">
+								<ContentControl.Content>
+									<StackPanel
+										Orientation="Horizontal">
+										<Image
+											Width="14">
+											<Image.Source>
+												<DrawingImage>
+													<DrawingImage.Drawing>
+														<DrawingGroup
+															ClipGeometry="M0,0 L0,19 L19,19 L19,0 L0,0">
+															<DrawingGroup.Transform>
+																<TranslateTransform
+																	X="4.0227001591119915E-05"
+																	Y="0" />
+															</DrawingGroup.Transform>
+															<GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="F1 M19,19 M0,0 M9.90764,18.4074 C11.7323,19.4608 14.0635,18.8362 15.1169,17.0115 L18.4537,11.2321 C18.9781,10.3239 18.664,9.15176 17.7558,8.62741 L15.2789,7.19736 L17.1856,3.8948 C17.71,2.98659 17.3959,1.8145 16.4877,1.29015 L14.8364,0.336783 C13.9282,-0.187569 12.7561,0.126491 12.2318,1.0347 L10.3251,4.33726 L7.84813,2.90721 C6.93992,2.38285 5.76783,2.69691 5.24348,3.60512 L-4.0227E-05,12.6872 L9.90764,18.4074 M10.861,16.7561 L7.55845,14.8494 L8.51182,13.1981 L6.86054,12.2447 L5.90717,13.896 L5.08153,13.4193 L6.98826,10.1167 L5.33698,9.16337 L3.43025,12.4659 L2.60461,11.9892 L4.98803,7.86105 L14.8957,13.5813 L13.4657,16.0582 C12.9413,16.9664 11.7692,17.2804 10.861,16.7561 M16.8024,10.2787 L15.8491,11.93 L5.94139,6.20977 L6.89476,4.55849 L16.8024,10.2787" />
+														</DrawingGroup>
+													</DrawingImage.Drawing>
+												</DrawingImage>
+											</Image.Source>
+										</Image>
+										<TextBlock
+											MaxWidth="100"
+											Margin="4,0,0,0"
+											HorizontalAlignment="Center"
+											VerticalAlignment="Center"
+											FontSize="14"
+											FontWeight="Regular"
+											Foreground="#FFFFFFFF"
+											RenderOptions.BitmapScalingMode="Fant"
+											Text="{DynamicResource FullClean}"
+											TextTrimming="CharacterEllipsis" />
+									</StackPanel>
+								</ContentControl.Content>
+							</Button>
+							<TextBlock
+								Name="CleaningTextBox"
+								Margin="0,10,0,0"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="16"
+								FontWeight="Regular"
+								Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+								RenderOptions.BitmapScalingMode="Fant" />
+						</StackPanel>
+					</Grid>
+				</StackPanel>
+			</StackPanel>
+			<UIElement.Effect>
+				<BlurEffect
+					liil1il:Name="EnableGrid"
+					Radius="0" />
+			</UIElement.Effect>
+		</Grid>
+		<TextBlock
+			Name="EnableGrid3"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			FontSize="16"
+			FontWeight="Medium"
+			Foreground="#FFFFFFFF"
+			Opacity="0"
+			RenderOptions.BitmapScalingMode="Fant"
+			Text="{DynamicResource ShowRAMMetricsEnable}"
+			TextAlignment="Center"
+			TextWrapping="Wrap"
+			Visibility="Collapsed" />
+	</Grid>
+</liiil1:dje_zDCMKDKMUE8V9JWES6AQ8EKADRYPNV25T5XKSA8KRPZ52C8LJ9B8FD_ejd>

@@ -1,0 +1,24 @@
+﻿<liiil1:dje_zASTEA68QV9JLMYGZ2N6CNG8R7CWBMT8QWNJYKUX8PA47XJSL3WE5TMPA7MQEHCC3FW_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Border
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<TextBlock
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			FontSize="24"
+			FontWeight="SemiBold"
+			Foreground="#FFFFFFFF"
+			Text="{DynamicResource ThisPageUnderDevelopment}"
+			TextAlignment="Center" />
+	</Grid>
+</liiil1:dje_zASTEA68QV9JLMYGZ2N6CNG8R7CWBMT8QWNJYKUX8PA47XJSL3WE5TMPA7MQEHCC3FW_ejd>

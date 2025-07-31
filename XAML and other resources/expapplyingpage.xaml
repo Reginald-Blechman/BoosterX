@@ -1,0 +1,1029 @@
+﻿<liiil1:dje_z2JLZCGZ3QXEER9XV34JWZVWRQG36ZLYPFWG4AK5XUE7JPWQ_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:llli1="clr-namespace:XamlAnimatedGif;assembly=XamlAnimatedGif" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="ExpApplyingPage">
+	<Grid
+		Width="880"
+		Margin="0,20,20,20">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Orientation="Horizontal">
+			<Button
+				Width="30"
+				Height="30"
+				Margin="10,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Grid.Row="0"
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="16"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource ApplyingOptimization}"
+				TextAlignment="Left" />
+		</StackPanel>
+		<Grid
+			Name="AnalizeGrid"
+			Row="1"
+			Column="0"
+			Width="880"
+			Height="650"
+			Opacity="0"
+			Visibility="Collapsed">
+			<Border
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<StackPanel
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+				<Border
+					Width="513"
+					Height="513">
+					<Image
+						Name="NoFillGif"
+						Width="700"
+						Height="700"
+						Margin="-287"
+						llli1:AnimationBehavior.SourceUri="pack://application:,,,/BoosterX;component\Resources\Gif\LoadingNoFill.gif"
+						RenderOptions.BitmapScalingMode="Fant"
+						SnapsToDevicePixels="True"
+						Stretch="UniformToFill" />
+				</Border>
+				<TextBlock
+					Margin="0,20,0,0"
+					VerticalAlignment="Center"
+					FontSize="30"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource AnalysingChoosenTweaks}"
+					TextAlignment="Center"
+					TextWrapping="Wrap" />
+			</StackPanel>
+		</Grid>
+		<Grid
+			Name="AnalizeResultsGrid"
+			Row="1"
+			Column="0"
+			Opacity="0"
+			Visibility="Collapsed">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<ScrollViewer
+				Margin="0,0,20,20"
+				CanContentScroll="False"
+				VerticalScrollBarVisibility="Auto">
+				<StackPanel>
+					<Grid
+						Name="DefenderGrid"
+						Margin="0,0,0,5">
+						<Border
+							Background="#FF000000"
+							CornerRadius="20"
+							Opacity="0.6" />
+						<Grid
+							Margin="20">
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="auto" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+							</Grid.ColumnDefinitions>
+							<StackPanel
+								Grid.Row="0"
+								Grid.Column="1"
+								Margin="40,40,20,40"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center">
+								<TextBlock
+									Margin="0,0,0,0"
+									FontSize="16"
+									FontWeight="Medium"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource DisableTamperProtection}"
+									TextAlignment="Left"
+									TextWrapping="Wrap" />
+								<Button
+									Name="DefenderButton"
+									Height="40"
+									Margin="0,30,0,0"
+									BorderThickness="3"
+									SnapsToDevicePixels="True"
+									Style="{DynamicResource ApplyButtonStyle}">
+									<StackPanel
+										HorizontalAlignment="Center"
+										Orientation="Horizontal">
+										<li1ii:MaterialIcon
+											FrameworkElement.Height="15"
+											Control.Foreground="#FFFFFFFF"
+											MaterialIcon.Kind="ShieldLockOpenOutline" />
+										<TextBlock
+											Margin="5,0,0,0"
+											FontSize="16"
+											FontWeight="Regular"
+											Foreground="#FFFFFFFF"
+											Text="{DynamicResource OpenDefender}"
+											TextAlignment="Left"
+											TextWrapping="Wrap" />
+									</StackPanel>
+								</Button>
+								<StackPanel
+									Margin="0,20,0,0"
+									Orientation="Horizontal">
+									<Image
+										Height="17"
+										Margin="0,1,0,0"
+										VerticalAlignment="Top"
+										Opacity="0.5"
+										Source="{DynamicResource iSvgColor2}" />
+									<TextBlock
+										MaxWidth="300"
+										Margin="5,0,0,0"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Bottom"
+										FontSize="14"
+										FontWeight="Regular"
+										Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+										LineHeight="20"
+										LineStackingStrategy="BlockLineHeight"
+										Opacity="0.5"
+										Text="{DynamicResource AVPatcher}"
+										TextAlignment="Left"
+										TextWrapping="Wrap" />
+								</StackPanel>
+							</StackPanel>
+							<Image
+								Name="DefenderGif"
+								Grid.Row="0"
+								Grid.Column="0"
+								Width="400"
+								Height="400"
+								RenderOptions.BitmapScalingMode="Fant"
+								SnapsToDevicePixels="True"
+								Stretch="Fill">
+								<UIElement.Clip>
+									<RectangleGeometry
+										RadiusX="10"
+										RadiusY="10"
+										Rect="0 0 400 400" />
+								</UIElement.Clip>
+							</Image>
+						</Grid>
+					</Grid>
+					<StackPanel
+						Name="ServicesAnalizeText"
+						Margin="5"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Orientation="Horizontal">
+						<li1ii:MaterialIcon
+							FrameworkElement.Width="30"
+							FrameworkElement.Margin="0,0,10,0"
+							Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+							MaterialIcon.Kind="Warning" />
+						<TextBlock
+							FontSize="20"
+							FontWeight="Bold"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+							Opacity="1"
+							Text="{DynamicResource CheckWinServices}"
+							TextAlignment="Left"
+							TextWrapping="Wrap" />
+					</StackPanel>
+					<ItemsControl
+						Name="WillBrakeItemControl">
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<liiil1:dje_z77EFLA4PV3MZUEQU3R4HLE3ZWKBUQTADE78DZVH77AWXC5URGK7R3W9RK8TA_ejd
+									FrameworkElement.DataContext="{Binding}" />
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+						<ItemsControl.ItemsPanel>
+							<ItemsPanelTemplate>
+								<VirtualizingStackPanel
+									Orientation="Vertical"
+									VirtualizationMode="Recycling" />
+							</ItemsPanelTemplate>
+						</ItemsControl.ItemsPanel>
+					</ItemsControl>
+					<StackPanel
+						Grid.Row="2"
+						Grid.Column="0"
+						HorizontalAlignment="Center"
+						Orientation="Horizontal">
+						<Button
+							Name="BackButton"
+							Grid.Row="2"
+							Grid.Column="0"
+							Width="200"
+							Height="45"
+							Margin="0,10,5,0"
+							VerticalAlignment="Bottom"
+							Style="{DynamicResource ApplyButtonGrayStyle}">
+							<ContentControl.Content>
+								<StackPanel
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									Orientation="Horizontal">
+									<li1ii:MaterialIcon
+										FrameworkElement.Width="18"
+										FrameworkElement.Height="18"
+										FrameworkElement.Margin="0,0,2,0"
+										Control.Foreground="#FFFFFFFF"
+										MaterialIcon.Kind="ArrowLeft"
+										RenderOptions.BitmapScalingMode="Fant" />
+									<TextBlock
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="16"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource Back}" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+						<Button
+							Name="ContinueButtonAnal"
+							Width="200"
+							Height="45"
+							Margin="5,10,0,0"
+							VerticalAlignment="Bottom"
+							Style="{DynamicResource ApplyButtonStyle}">
+							<ContentControl.Content>
+								<StackPanel
+									Orientation="Horizontal">
+									<Image
+										Width="15"
+										Margin="0,0,8,0"
+										Source="{StaticResource ApplyFilled}" />
+									<TextBlock
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="16"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource continue}" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+					</StackPanel>
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+		<Grid
+			Name="OptimizationGrid"
+			Row="1"
+			Column="0"
+			Width="880"
+			Height="650"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Opacity="0"
+			Visibility="Collapsed">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Border
+				Grid.ColumnSpan="2"
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<Grid
+				Column="0"
+				Width="420"
+				Height="630"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+				<UIElement.Clip>
+					<RectangleGeometry
+						RadiusX="16"
+						RadiusY="16"
+						Rect="0 0 420 630" />
+				</UIElement.Clip>
+				<Border
+					CornerRadius="16"
+					Opacity="1">
+					<Border.Background>
+						<ImageBrush
+							ImageSource="pack://application:,,,/BoosterX;component/Resources/Images/Questions/Back.jpg"
+							Stretch="Fill" />
+					</Border.Background>
+				</Border>
+				<Grid
+					Width="420"
+					Height="630">
+					<UIElement.Clip>
+						<RectangleGeometry
+							RadiusX="16"
+							RadiusY="16"
+							Rect="0 0 420 630" />
+					</UIElement.Clip>
+					<StackPanel
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center">
+						<Border
+							Width="420"
+							Height="630">
+							<Image
+								Name="FilledGif"
+								Width="500"
+								Height="500"
+								Margin="-287"
+								llli1:AnimationBehavior.SourceUri="pack://application:,,,/BoosterX;component/Resources\Gif\LoadingFilled.gif"
+								RenderOptions.BitmapScalingMode="Fant"
+								SnapsToDevicePixels="True"
+								Stretch="UniformToFill" />
+						</Border>
+					</StackPanel>
+				</Grid>
+			</Grid>
+			<TextBlock
+				Name="OptimizationTextBlock"
+				Width="740"
+				Margin="0,20,0,0"
+				VerticalAlignment="Top"
+				FontSize="30"
+				Style="{DynamicResource TitleStyle}"
+				TextAlignment="Center"
+				TextWrapping="Wrap" />
+			<Grid
+				Column="1"
+				Margin="40,60,40,60">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="*" />
+				</Grid.RowDefinitions>
+				<TextBlock
+					Grid.Row="0"
+					FontSize="22"
+					FontWeight="Bold"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource optongoing}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<Grid
+					Row="1"
+					Margin="0,30,0,0">
+					<ScrollViewer
+						Name="OptScroll"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Bottom"
+						VerticalContentAlignment="Bottom">
+						<ItemsControl
+							Name="OptItems">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<WrapPanel
+										Orientation="Horizontal">
+										<TextBlock
+											Margin="0,0,7,0"
+											VerticalAlignment="Center"
+											FontSize="16"
+											FontWeight="Regular"
+											Foreground="#FFFFFFFF"
+											TextAlignment="Left"
+											Text="{Binding OptCurrent}" />
+										<StackPanel
+											Orientation="Horizontal">
+											<TextBlock
+												Margin="0,0,0,0"
+												VerticalAlignment="Center"
+												FontSize="16"
+												FontWeight="Regular"
+												Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z52HQ7LJ6MG7CVYQ_ejd}"
+												Text="{DynamicResource RunningDots}"
+												TextAlignment="Left" />
+											<FrameworkElement.Style>
+												<Style
+													TargetType="{liil1il:Type StackPanel}">
+													<Style.Triggers>
+														<DataTrigger
+															Value="True"
+															Binding="{Binding IsFinished}">
+															<Setter
+																Property="Visibility"
+																Value="Collapsed" />
+														</DataTrigger>
+														<DataTrigger
+															Value="False"
+															Binding="{Binding IsFinished}">
+															<Setter
+																Property="Visibility"
+																Value="Visible" />
+														</DataTrigger>
+													</Style.Triggers>
+												</Style>
+											</FrameworkElement.Style>
+										</StackPanel>
+										<StackPanel
+											Orientation="Horizontal">
+											<TextBlock
+												Margin="0,0,0,0"
+												VerticalAlignment="Center"
+												FontSize="16"
+												FontWeight="Regular"
+												Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+												Text="{DynamicResource FinishedOpt}"
+												TextAlignment="Left" />
+											<li1ii:MaterialIcon
+												FrameworkElement.Width="20"
+												FrameworkElement.Height="20"
+												Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+												MaterialIcon.Kind="Check" />
+											<FrameworkElement.Style>
+												<Style
+													TargetType="{liil1il:Type StackPanel}">
+													<Style.Triggers>
+														<DataTrigger
+															Value="False"
+															Binding="{Binding IsFinished}">
+															<Setter
+																Property="Visibility"
+																Value="Collapsed" />
+														</DataTrigger>
+														<DataTrigger
+															Value="True"
+															Binding="{Binding IsFinished}">
+															<Setter
+																Property="Visibility"
+																Value="Visible" />
+														</DataTrigger>
+													</Style.Triggers>
+												</Style>
+											</FrameworkElement.Style>
+										</StackPanel>
+									</WrapPanel>
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+							<ItemsControl.ItemsPanel>
+								<ItemsPanelTemplate>
+									<StackPanel
+										HorizontalAlignment="Left" />
+								</ItemsPanelTemplate>
+							</ItemsControl.ItemsPanel>
+						</ItemsControl>
+					</ScrollViewer>
+				</Grid>
+			</Grid>
+		</Grid>
+		<Grid
+			Name="OptimizationResultsGrid"
+			Row="1"
+			Column="0"
+			Width="880"
+			Height="650"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Opacity="0"
+			Visibility="Collapsed">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Border
+				Grid.Column="0"
+				Grid.ColumnSpan="2"
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<Grid
+				Column="0"
+				Width="420"
+				Height="630"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+				<UIElement.Clip>
+					<RectangleGeometry
+						RadiusX="16"
+						RadiusY="16"
+						Rect="0 0 420 630" />
+				</UIElement.Clip>
+				<Border
+					CornerRadius="16"
+					Opacity="1">
+					<Border.Background>
+						<ImageBrush
+							ImageSource="pack://application:,,,/BoosterX;component/Resources/Images/Questions/Back.jpg"
+							Stretch="Fill" />
+					</Border.Background>
+				</Border>
+				<Grid
+					Width="420"
+					Height="630">
+					<UIElement.Clip>
+						<RectangleGeometry
+							RadiusX="16"
+							RadiusY="16"
+							Rect="0 0 420 630" />
+					</UIElement.Clip>
+					<StackPanel
+						Margin="20,80,0,0"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top"
+						Orientation="Horizontal">
+						<Image
+							Width="200"
+							RenderOptions.BitmapScalingMode="Fant"
+							Source="pack://application:,,,/BoosterX;component/Resources/Images/BoostLogo.png" />
+						<TextBlock
+							Name="BoostPercentBlock"
+							Margin="20,0,20,0"
+							VerticalAlignment="Center"
+							FontSize="40"
+							FontWeight="Bold"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							Text="+0%"
+							TextAlignment="Left" />
+					</StackPanel>
+					<liiil1:dje_zVT9RNJKT5EE8VQMMKTEQSX3SDPNZGEBBA7NQQRMNEQ83728SA6FHC3DLAS5Q_ejd
+						FrameworkElement.Margin="0,0,0,0"
+						FrameworkElement.HorizontalAlignment="Center"
+						FrameworkElement.VerticalAlignment="Center">
+						<UIElement.Effect>
+							<DropShadowEffect
+								BlurRadius="50"
+								Direction="0"
+								Opacity="0.2"
+								ShadowDepth="5" />
+						</UIElement.Effect>
+					</liiil1:dje_zVT9RNJKT5EE8VQMMKTEQSX3SDPNZGEBBA7NQQRMNEQ83728SA6FHC3DLAS5Q_ejd>
+					<TextBlock
+						Name="GLHFTB"
+						MaxWidth="340"
+						Margin="0,0,0,70"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Bottom"
+						FontSize="30"
+						FontWeight="SemiBold"
+						Foreground="#FFFFFFFF"
+						LineHeight="38"
+						LineStackingStrategy="BlockLineHeight"
+						TextAlignment="Center"
+						TextWrapping="Wrap" />
+				</Grid>
+			</Grid>
+			<Grid
+				Column="1"
+				Margin="40,40,40,40">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="*" />
+					<RowDefinition
+						Height="auto" />
+				</Grid.RowDefinitions>
+				<TextBlock
+					Grid.Row="0"
+					FontSize="22"
+					FontWeight="Bold"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource SuccessOptimization}"
+					TextAlignment="Left"
+					TextWrapping="Wrap" />
+				<StackPanel
+					Grid.Row="1"
+					Margin="0,30,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center">
+					<StackPanel
+						Orientation="Horizontal">
+						<Image
+							Width="20"
+							RenderOptions.BitmapScalingMode="Fant"
+							Source="{StaticResource CleaningSvg}" />
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="10,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource Cleaned}"
+							TextAlignment="Left" />
+						<TextBlock
+							Name="TrashSizeBlock"
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							Text="0 MB"
+							TextAlignment="Left" />
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource trash}"
+							TextAlignment="Left" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,12,0,0"
+						Orientation="Horizontal">
+						<Image
+							Width="20"
+							RenderOptions.BitmapScalingMode="Fant"
+							Source="{StaticResource ServicesSvg}" />
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="10,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource disabled}"
+							TextAlignment="Left" />
+						<TextBlock
+							Name="ServicesDisabledBlock"
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							Text="0"
+							TextAlignment="Left" />
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource services}"
+							TextAlignment="Left" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,12,0,0"
+						Orientation="Horizontal">
+						<Image
+							Width="20"
+							RenderOptions.BitmapScalingMode="Fant"
+							Source="{StaticResource ApplyFilled}" />
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="10,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource Applied}"
+							TextAlignment="Left" />
+						<TextBlock
+							Name="TweakAppliedBlock"
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							Text="0"
+							TextAlignment="Left" />
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="0"
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource tweaks}"
+							TextAlignment="Left" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,12,0,0"
+						Orientation="Horizontal">
+						<Image
+							Width="20"
+							RenderOptions.BitmapScalingMode="Fant"
+							Source="{StaticResource AppsSvg}" />
+						<TextBlock
+							Margin="10,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource Deleted}"
+							TextAlignment="Left" />
+						<TextBlock
+							Name="AppsDeletedBlock"
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							Text="0"
+							TextAlignment="Left" />
+						<TextBlock
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource apps}"
+							TextAlignment="Left" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,12,0,0"
+						Orientation="Horizontal">
+						<Image
+							Width="25"
+							Margin="-5,0,-0,0"
+							Source="{StaticResource AutorunsSvg}" />
+						<TextBlock
+							Margin="10,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource Removed}"
+							TextAlignment="Left" />
+						<TextBlock
+							Name="AutorunsRemovedBlock"
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Medium"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							Text="0"
+							TextAlignment="Left" />
+						<TextBlock
+							Margin="7,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource autoruns}"
+							TextAlignment="Left" />
+					</StackPanel>
+				</StackPanel>
+				<StackPanel
+					Grid.Row="2"
+					Margin="0,30,0,0"
+					Orientation="Horizontal">
+					<li1ii:MaterialIcon
+						FrameworkElement.Width="25"
+						FrameworkElement.Margin="-4,-5,-1,-5"
+						Control.Foreground="#FFFFFFFF"
+						MaterialIcon.Kind="TextBoxCheckOutline" />
+					<TextBlock
+						Margin="10,0,0,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource OverallCompleted}"
+						TextAlignment="Left" />
+					<TextBlock
+						Name="OverallTB"
+						Margin="7,0,0,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+						Text="0"
+						TextAlignment="Left" />
+					<TextBlock
+						Margin="7,0,0,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource functions}"
+						TextAlignment="Left" />
+				</StackPanel>
+				<StackPanel
+					Grid.Row="3"
+					Margin="0,0,0,20"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Bottom"
+					Orientation="Vertical">
+					<Border
+						Name="RestartForFeatures"
+						Margin="0,0,0,10"
+						BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+						BorderThickness="2"
+						CornerRadius="10"
+						Visibility="Collapsed">
+						<StackPanel
+							Margin="10"
+							Orientation="Horizontal">
+							<li1ii:MaterialIcon
+								FrameworkElement.Width="25"
+								FrameworkElement.Margin="-4,-5,-1,-5"
+								Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+								MaterialIcon.Kind="Warning" />
+							<TextBlock
+								MaxWidth="300"
+								Margin="5,0,0,0"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Bottom"
+								FontSize="14"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								LineHeight="20"
+								LineStackingStrategy="BlockLineHeight"
+								Opacity="1"
+								Text="{DynamicResource FeaturesNeedRestart}"
+								TextAlignment="Left"
+								TextWrapping="Wrap" />
+						</StackPanel>
+					</Border>
+					<Border
+						Name="RestartForAV"
+						BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+						BorderThickness="2"
+						CornerRadius="10"
+						Visibility="Collapsed">
+						<StackPanel
+							Margin="10"
+							Orientation="Horizontal">
+							<li1ii:MaterialIcon
+								FrameworkElement.Width="25"
+								FrameworkElement.Margin="-4,-5,-1,-5"
+								Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+								MaterialIcon.Kind="Warning" />
+							<TextBlock
+								MaxWidth="300"
+								Margin="5,0,0,0"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Bottom"
+								FontSize="14"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								LineHeight="20"
+								LineStackingStrategy="BlockLineHeight"
+								Opacity="1"
+								Text="{DynamicResource AVDisableWarn}"
+								TextAlignment="Left"
+								TextWrapping="Wrap" />
+						</StackPanel>
+					</Border>
+					<Border
+						Name="AVDisabled"
+						BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+						BorderThickness="2"
+						CornerRadius="10"
+						Visibility="Collapsed">
+						<StackPanel
+							Margin="10"
+							Orientation="Horizontal">
+							<li1ii:MaterialIcon
+								FrameworkElement.Width="25"
+								FrameworkElement.Margin="-4,-5,-1,-5"
+								Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+								MaterialIcon.Kind="ThumbsUp" />
+							<TextBlock
+								MaxWidth="300"
+								Margin="5,0,0,0"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Bottom"
+								FontSize="14"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								LineHeight="20"
+								LineStackingStrategy="BlockLineHeight"
+								Opacity="1"
+								Text="{DynamicResource AVDisableSuccess}"
+								TextAlignment="Left"
+								TextWrapping="Wrap" />
+						</StackPanel>
+					</Border>
+					<StackPanel
+						Margin="0,10,0,0"
+						Orientation="Horizontal">
+						<Image
+							Height="17"
+							Margin="0,1,0,0"
+							VerticalAlignment="Top"
+							Opacity="0.5"
+							Source="{DynamicResource iSvgColor2}" />
+						<TextBlock
+							MaxWidth="340"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Bottom"
+							FontSize="14"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+							LineHeight="20"
+							LineStackingStrategy="BlockLineHeight"
+							Opacity="0.5"
+							Text="{DynamicResource RestartPCAfterOptimization}"
+							TextAlignment="Left"
+							TextWrapping="Wrap" />
+					</StackPanel>
+				</StackPanel>
+				<Button
+					Name="ContinueButton"
+					Grid.Row="4"
+					MinWidth="120"
+					MinHeight="36"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Bottom"
+					Style="{DynamicResource ApplyButtonStyle}">
+					<StackPanel
+						Margin="15,2,15,3"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Cursor="Hand">
+						<TextBlock
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="SemiBold"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource continue}"
+							TextAlignment="Left" />
+					</StackPanel>
+				</Button>
+				<Button
+					Name="RestartButton"
+					Grid.Row="4"
+					MinWidth="120"
+					MinHeight="36"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Bottom"
+					Style="{DynamicResource ApplyButtonGray2Style}">
+					<StackPanel
+						Margin="15,2,15,3"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Cursor="Hand"
+						Orientation="Horizontal">
+						<li1ii:MaterialIcon
+							FrameworkElement.Width="20"
+							FrameworkElement.Margin="0,0,6,0"
+							Control.Foreground="#FFFFFFFF"
+							MaterialIcon.Kind="Reload" />
+						<TextBlock
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource restartpc}"
+							TextAlignment="Left" />
+					</StackPanel>
+				</Button>
+			</Grid>
+		</Grid>
+	</Grid>
+</liiil1:dje_z2JLZCGZ3QXEER9XV34JWZVWRQG36ZLYPFWG4AK5XUE7JPWQ_ejd>

@@ -1,0 +1,1544 @@
+﻿<liiil1:dje_zV7JVTGZ7W7XZV5CGJLRZY5344P2YPZZ43QZRMSXBYXHM3SBGMHKS4_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	dje_z2VV9SX855TTC38PL5F2XNUVTSA5WTHAHNLFTD5ZNGMDE87Z_ejd.Name="GMXPage"
+	Page.Title="GameModeX">
+	<Grid
+		Name="MainGrid"
+		Margin="0,20,20,20">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Grid.Column="0"
+			Orientation="Horizontal">
+			<Button
+				Name="BackButton"
+				Width="30"
+				Height="30"
+				Margin="10,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="23"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="GameModeX"
+				TextAlignment="Left" />
+		</StackPanel>
+		<Grid
+			Name="InstallGrid"
+			Row="1"
+			Width="880"
+			Height="650"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Visibility="Collapsed">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Border
+				Grid.Column="0"
+				Grid.ColumnSpan="2"
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<Border
+				Grid.Column="0"
+				Width="420"
+				Height="630"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				CornerRadius="16">
+				<Border.Background>
+					<ImageBrush
+						ImageSource="pack://application:,,,/BoosterX;component/Resources/Images/Apps/GMXArt.jpeg"
+						Stretch="UniformToFill" />
+				</Border.Background>
+			</Border>
+			<Grid
+				Column="1">
+				<StackPanel>
+					<Image
+						Height="24"
+						Margin="30,50,0,0"
+						HorizontalAlignment="Left"
+						RenderOptions.BitmapScalingMode="HighQuality"
+						Source="pack://application:,,,/BoosterX;component/Resources/Images/Apps/GMXText.png" />
+					<TextBlock
+						Margin="30,10,0,0"
+						VerticalAlignment="Center"
+						FontSize="22"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						RenderOptions.BitmapScalingMode="Fant"
+						Text="{DynamicResource GMXSlogan}"
+						TextAlignment="Left" />
+					<Grid
+						Margin="20,50,30,0">
+						<Border
+							Grid.Column="0"
+							Grid.ColumnSpan="2"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							CornerRadius="16"
+							Opacity="0.1" />
+						<TextBlock
+							Margin="20"
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource GMXDesc}"
+							TextAlignment="Left"
+							TextWrapping="Wrap" />
+					</Grid>
+				</StackPanel>
+				<Grid
+					VerticalAlignment="Bottom">
+					<StackPanel
+						Name="InstallAnimationStack2"
+						Margin="20,0,30,60"
+						Opacity="0">
+						<TextBlock
+							Name="InstallingText"
+							Margin="10,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="20"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource Installing}"
+							TextAlignment="Left"
+							TextWrapping="Wrap" />
+						<ProgressBar
+							Name="ProgressBar"
+							Width="378"
+							Height="24"
+							Margin="0,2,0,0"
+							Style="{DynamicResource ProgressBarStyleBx}" />
+					</StackPanel>
+					<StackPanel
+						Name="InstallAnimationStack"
+						Margin="20,0,30,60">
+						<TextBlock
+							Margin="10,0,0,0"
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource InstallLocation}"
+							TextAlignment="Left"
+							TextWrapping="Wrap" />
+						<StackPanel
+							Orientation="Horizontal">
+							<TextBox
+								Name="InstallLocationTextBlock"
+								Width="345"
+								Height="24"
+								Padding="5,0,5,0"
+								VerticalContentAlignment="Center"
+								CaretBrush="#FFFFFFFF"
+								FontSize="13"
+								FontWeight="Medium"
+								Foreground="#FFFFFFFF"
+								Template="{DynamicResource ComboColoredTextBoxTemplate3}"
+								Text="C:\Users\Lalala\AppData\Roaming\GameModeX"
+								TextAlignment="Left" />
+							<Button
+								Width="28"
+								Margin="5,0,0,0"
+								Style="{DynamicResource VioletSimpleTextBtn}">
+								<Image
+									Source="{DynamicResource FolderSvg}" />
+							</Button>
+						</StackPanel>
+					</StackPanel>
+					<Button
+						Name="InstallButton"
+						Width="140"
+						Height="30"
+						Margin="20"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Bottom"
+						Content="{DynamicResource install}"
+						Style="{DynamicResource MediumRoundedGradientButton}" />
+				</Grid>
+			</Grid>
+		</Grid>
+		<Grid
+			Name="MainMenuGrid"
+			Row="1"
+			Visibility="Visible">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="2*"
+					MinWidth="400" />
+				<ColumnDefinition
+					Width="auto" />
+				<ColumnDefinition
+					Width="*"
+					MinWidth="345" />
+			</Grid.ColumnDefinitions>
+			<ScrollViewer
+				Grid.Column="2"
+				VerticalAlignment="Top"
+				VerticalContentAlignment="Top"
+				VerticalScrollBarVisibility="Auto">
+				<Grid
+					Name="HeightGrid">
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="auto" />
+						<RowDefinition
+							Height="*" />
+					</Grid.RowDefinitions>
+					<Grid
+						Name="GlobalProfileGrid">
+						<Border
+							Grid.Column="0"
+							Grid.ColumnSpan="2"
+							Background="#FF000000"
+							CornerRadius="20"
+							Opacity="0.6" />
+						<StackPanel
+							Margin="20">
+							<TextBlock
+								Grid.Row="0"
+								Grid.Column="0"
+								Margin="0,0,0,0"
+								VerticalAlignment="Center"
+								FontSize="20"
+								FontWeight="ExtraBold"
+								Foreground="#FFFFFFFF"
+								SnapsToDevicePixels="True"
+								Text="{DynamicResource CommonProfile}"
+								TextAlignment="Left" />
+							<Grid
+								Margin="0,5,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource GameModeXOnOff}"
+									TextTrimming="CharacterEllipsis" />
+								<TextBox
+									Name="changeHKtxt"
+									Grid.Column="1"
+									Height="24"
+									Padding="4,0,4,0"
+									VerticalAlignment="Center"
+									VerticalContentAlignment="Center"
+									FontSize="14"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Template="{DynamicResource ComboColoredTextBoxTemplate4}"
+									TextAlignment="Right"
+									Text="{Binding OnOffShortcut, Mode=TwoWay}" />
+								<Button
+									Name="OnOffShortcutButton"
+									Grid.Column="1"
+									Style="{DynamicResource InvisibleButton}" />
+							</Grid>
+							<Grid
+								Margin="0,7,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<StackPanel
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									Orientation="Horizontal">
+									<TextBlock
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										FontSize="18"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource DisableDWM}"
+										TextTrimming="CharacterEllipsis" />
+									<Image
+										Height="20"
+										Margin="5,0,0,0"
+										Cursor="Help"
+										Source="{DynamicResource InfoSvg}"
+										ToolTip="{DynamicResource DisableDWMDesc}"
+										ToolTipService.BetweenShowDelay="5"
+										ToolTipService.InitialShowDelay="5" />
+								</StackPanel>
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding DisableDWM}" />
+							</Grid>
+							<Grid
+								Margin="0,7,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Grid.ColumnSpan="2"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource DisableExplorer}"
+									TextTrimming="CharacterEllipsis" />
+								<CheckBox
+									Grid.Column="2"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding DisableExplorer, Mode=TwoWay}" />
+							</Grid>
+							<Grid
+								Margin="0,7,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="7*" />
+									<ColumnDefinition
+										Width="9*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<StackPanel
+									Grid.Column="0"
+									Grid.ColumnSpan="2"
+									Margin="0,0,5,0"
+									Orientation="Horizontal">
+									<TextBlock
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										FontSize="18"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource CleanCache}"
+										TextTrimming="CharacterEllipsis" />
+									<Image
+										Height="20"
+										Margin="5,0,0,0"
+										Cursor="Help"
+										Source="{DynamicResource InfoSvg}"
+										ToolTip="{DynamicResource GMXCacheToolTip}"
+										ToolTipService.BetweenShowDelay="5"
+										ToolTipService.InitialShowDelay="5" />
+								</StackPanel>
+								<TextBox
+									Name="changeHK2"
+									Grid.Column="2"
+									Height="24"
+									Padding="4,0,4,0"
+									VerticalAlignment="Center"
+									VerticalContentAlignment="Center"
+									FontSize="14"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Template="{DynamicResource ComboColoredTextBoxTemplate4}"
+									TextAlignment="Right"
+									Text="{Binding CleanCacheShortcut, Mode=TwoWay}" />
+								<Button
+									Name="CacheCleanShortcutButton"
+									Grid.Column="2"
+									Style="{DynamicResource InvisibleButton}" />
+							</Grid>
+							<Grid
+								Margin="15,5,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource GMXCleanCache}"
+									TextTrimming="CharacterEllipsis" />
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding CleanCacheAtStart, Mode=TwoWay}" />
+							</Grid>
+							<Grid
+								Margin="0,7,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<StackPanel
+									Margin="0,0,0,0"
+									Orientation="Horizontal">
+									<TextBlock
+										Grid.Column="0"
+										Margin="0,0,5,0"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										FontSize="18"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="Snap Tap"
+										TextTrimming="CharacterEllipsis" />
+									<Image
+										Height="20"
+										Margin="5,0,0,0"
+										Cursor="Help"
+										Source="{DynamicResource InfoSvg}"
+										ToolTip="{DynamicResource SnapTapDesc}"
+										ToolTipService.BetweenShowDelay="5"
+										ToolTipService.InitialShowDelay="5" />
+								</StackPanel>
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding SnapTap, Mode=TwoWay}" />
+							</Grid>
+							<ItemsControl
+								Margin="15,5,0,0"
+								ItemsSource="{Binding STPairs}">
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<Grid>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition
+													Width="*" />
+												<ColumnDefinition
+													Width="auto" />
+												<ColumnDefinition
+													Width="auto" />
+											</Grid.ColumnDefinitions>
+											<TextBlock
+												Grid.Column="0"
+												Margin="0,0,5,0"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Center"
+												FontSize="18"
+												FontWeight="Regular"
+												Foreground="#FFFFFFFF"
+												TextTrimming="CharacterEllipsis"
+												Text="{Binding Name}" />
+											<TextBox
+												Grid.Column="1"
+												Height="24"
+												Padding="4,0,4,0"
+												VerticalAlignment="Center"
+												VerticalContentAlignment="Center"
+												FontSize="14"
+												FontWeight="Regular"
+												Foreground="#FFFFFFFF"
+												Template="{DynamicResource ComboColoredTextBoxTemplate4}"
+												TextAlignment="Right"
+												Text="{Binding Keys, Mode=TwoWay}" />
+											<Button
+												Grid.Column="1"
+												Style="{DynamicResource InvisibleButton}"
+												Command="{Binding EditCmd}" />
+											<Button
+												Grid.Column="1"
+												Style="{DynamicResource InvisibleButton}"
+												Command="{Binding EditCmd}" />
+											<Button
+												Grid.Column="2"
+												Margin="8,0,0,0"
+												Style="{DynamicResource InvisibleButton}"
+												Command="{Binding DeleteCmd}">
+												<Grid>
+													<Border
+														Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+														CornerRadius="20" />
+													<li1ii:MaterialIcon
+														FrameworkElement.Height="20"
+														Control.Foreground="#FFFFFFFF"
+														MaterialIcon.Kind="Close" />
+												</Grid>
+											</Button>
+										</Grid>
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+							<Button
+								Name="AddSnapPair"
+								Height="22"
+								Margin="15,5,0,0"
+								HorizontalAlignment="Left"
+								Content="{DynamicResource AddPair}"
+								Style="{DynamicResource MediumRoundedButtonBlue}" />
+							<Grid
+								Margin="0,7,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<StackPanel
+									Margin="0,0,0,0"
+									Orientation="Horizontal">
+									<TextBlock
+										Grid.Column="0"
+										Margin="0,0,5,0"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										FontSize="18"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource DisableMouseHooks}"
+										TextTrimming="CharacterEllipsis" />
+									<Image
+										Height="20"
+										Margin="5,0,0,0"
+										Cursor="Help"
+										Source="{DynamicResource InfoSvg}"
+										ToolTip="{DynamicResource DisableMouseHooksDesc}"
+										ToolTipService.BetweenShowDelay="5"
+										ToolTipService.InitialShowDelay="5" />
+									<Image
+										Height="20"
+										Margin="5,0,0,0"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										RenderOptions.BitmapScalingMode="Fant"
+										Source="pack://application:,,,/BoosterX;component/Resources\Images\ProLabel.png" />
+								</StackPanel>
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding DisableMouseHooks, Mode=TwoWay}" />
+							</Grid>
+							<StackPanel
+								Margin="0,20,0,0"
+								Orientation="Horizontal">
+								<TextBlock
+									VerticalAlignment="Center"
+									FontSize="20"
+									FontWeight="ExtraBold"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource GMXSchemeChanger}"
+									TextAlignment="Left" />
+								<Image
+									Height="20"
+									Margin="5,0,0,0"
+									Cursor="Help"
+									Source="{DynamicResource InfoSvg}"
+									ToolTip="{DynamicResource GMXPowerToolTip}"
+									ToolTipService.BetweenShowDelay="5"
+									ToolTipService.InitialShowDelay="5" />
+								<Image
+									Height="20"
+									Margin="5,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									RenderOptions.BitmapScalingMode="Fant"
+									Source="pack://application:,,,/BoosterX;component/Resources\Images\ProLabel.png" />
+							</StackPanel>
+							<Grid
+								Margin="0,5,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource WhenStartingGame}"
+									TextTrimming="CharacterEllipsis" />
+								<ComboBox
+									Grid.Column="1"
+									Height="24"
+									MaxWidth="120"
+									ItemContainerStyle="{DynamicResource theComboBoxItem}"
+									Style="{DynamicResource theComboBox}"
+									ItemsSource="{Binding PowerSchemes}"
+									SelectedValue="{Binding PSGaming}"
+									SelectedValuePath="{Binding Guid}">
+									<ItemsControl.ItemTemplate>
+										<DataTemplate>
+											<TextBlock
+												Margin="0,0,0,0"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Center"
+												FontSize="14"
+												FontWeight="Regular"
+												Foreground="#FFFFFFFF"
+												TextTrimming="CharacterEllipsis"
+												Text="{Binding Name}" />
+										</DataTemplate>
+									</ItemsControl.ItemTemplate>
+								</ComboBox>
+							</Grid>
+							<Grid
+								Margin="0,5,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource WhenExitingGame}"
+									TextTrimming="CharacterEllipsis" />
+								<ComboBox
+									Grid.Column="1"
+									Height="24"
+									MaxWidth="120"
+									ItemContainerStyle="{DynamicResource theComboBoxItem}"
+									Style="{DynamicResource theComboBox}"
+									ItemsSource="{Binding PowerSchemes}"
+									SelectedValue="{Binding PSGameOff}"
+									SelectedValuePath="{Binding Guid}">
+									<ItemsControl.ItemTemplate>
+										<DataTemplate>
+											<TextBlock
+												Margin="0,0,0,0"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Center"
+												FontSize="14"
+												FontWeight="Regular"
+												Foreground="#FFFFFFFF"
+												TextTrimming="CharacterEllipsis"
+												Text="{Binding Name}" />
+										</DataTemplate>
+									</ItemsControl.ItemTemplate>
+								</ComboBox>
+							</Grid>
+							<TextBlock
+								Grid.Row="0"
+								Grid.Column="0"
+								Margin="0,20,0,5"
+								VerticalAlignment="Center"
+								FontSize="20"
+								FontWeight="ExtraBold"
+								Foreground="#FFFFFFFF"
+								SnapsToDevicePixels="True"
+								Text="{DynamicResource GameModeX}"
+								TextAlignment="Left" />
+							<Grid>
+								<Button
+									Name="StartRestartGMXButton"
+									Height="26"
+									HorizontalAlignment="Left"
+									Content="{DynamicResource Start}"
+									Style="{DynamicResource MediumRoundedButtonBlue}" />
+								<Button
+									Name="DeleteGMXButton"
+									Height="26"
+									HorizontalAlignment="Right"
+									Content="{DynamicResource Delete}"
+									Style="{DynamicResource MediumRoundedButtonRed}" />
+							</Grid>
+						</StackPanel>
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{liil1il:Type Grid}">
+								<Style.Triggers>
+									<DataTrigger
+										Value="False"
+										Binding="{Binding ElementName=GameProfile, Path=IsEnabled}">
+										<TriggerBase.EnterActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Opacity"
+														From="0"
+														To="1"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Visible}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														Storyboard.TargetProperty="Opacity"
+														From="1"
+														To="0"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Collapsed}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.ExitActions>
+									</DataTrigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</Grid>
+					<Grid
+						Name="GameProfile"
+						IsEnabled="False">
+						<Border
+							Grid.Column="0"
+							Grid.ColumnSpan="2"
+							Background="#FF000000"
+							CornerRadius="20"
+							Opacity="0.6" />
+						<StackPanel
+							Margin="20">
+							<Grid>
+								<Image
+									Height="20"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Source="pack://application:,,,/BoosterX;component/Resources\Images\ProLabel.png" />
+								<Button
+									Name="DeleteProfileButton"
+									HorizontalAlignment="Right"
+									Content="{DynamicResource Remove}"
+									Style="{DynamicResource MediumRoundedButtonRed}" />
+							</Grid>
+							<StackPanel
+								Margin="0,10,0,0"
+								Orientation="Horizontal">
+								<TextBlock
+									Grid.Row="0"
+									Grid.Column="0"
+									Margin="0,0,0,10"
+									VerticalAlignment="Center"
+									FontSize="20"
+									FontWeight="SemiBold"
+									Foreground="#FFFFFFFF"
+									SnapsToDevicePixels="True"
+									Text="{DynamicResource Profile}"
+									TextAlignment="Left" />
+								<TextBlock
+									Grid.Row="0"
+									Grid.Column="0"
+									Margin="5,0,0,10"
+									VerticalAlignment="Center"
+									FontSize="20"
+									FontWeight="SemiBold"
+									Foreground="#FFFFFFFF"
+									SnapsToDevicePixels="True"
+									TextAlignment="Left"
+									TextTrimming="CharacterEllipsis"
+									Text="{Binding Name}" />
+							</StackPanel>
+							<Grid
+								Margin="0,0,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<StackPanel
+									Grid.Column="0"
+									Orientation="Horizontal">
+									<TextBlock
+										Margin="0,0,5,0"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										FontSize="18"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource GMXLaunchDelay}"
+										TextTrimming="CharacterEllipsis" />
+									<Image
+										Height="20"
+										Margin="0,0,5,0"
+										Cursor="Help"
+										Source="{DynamicResource InfoSvg}"
+										ToolTip="{DynamicResource GMXLaunchDelayDesc}"
+										ToolTipService.BetweenShowDelay="5"
+										ToolTipService.InitialShowDelay="5" />
+								</StackPanel>
+								<TextBox
+									Name="GameDelayHK"
+									Grid.Column="1"
+									Height="24"
+									Padding="4,0,4,0"
+									VerticalAlignment="Center"
+									VerticalContentAlignment="Center"
+									CaretBrush="#FFFFFFFF"
+									FontSize="14"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Template="{DynamicResource ComboColoredTextBoxTemplate4}"
+									TextAlignment="Right"
+									Text="{Binding LaunchDelay, Mode=TwoWay}" />
+							</Grid>
+							<Grid
+								Margin="0,0,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource UseCommonProfile}"
+									TextTrimming="CharacterEllipsis" />
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding UseGlobalProfile, Mode=TwoWay}" />
+							</Grid>
+							<Grid
+								Margin="0,0,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource DisableDWM}"
+									TextTrimming="CharacterEllipsis" />
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding DisableDWM, Mode=TwoWay}" />
+							</Grid>
+							<Grid
+								Margin="0,0,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource DisableExplorer}"
+									TextTrimming="CharacterEllipsis" />
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding DisableExplorer, Mode=TwoWay}" />
+							</Grid>
+							<StackPanel
+								Name="ThreadManager">
+								<StackPanel
+									Margin="0,25,0,10"
+									Orientation="Horizontal">
+									<TextBlock
+										VerticalAlignment="Center"
+										FontSize="20"
+										FontWeight="SemiBold"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource ThreadManager}"
+										TextAlignment="Left" />
+									<Image
+										Height="20"
+										Margin="5,0,0,0"
+										Cursor="Help"
+										Source="{DynamicResource InfoSvg}"
+										ToolTip="{DynamicResource GMXThreadManagerToolTip}"
+										ToolTipService.BetweenShowDelay="5"
+										ToolTipService.InitialShowDelay="5" />
+									<Grid
+										Margin="5,0,0,0">
+										<Border
+											Height="20"
+											Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+											CornerRadius="5" />
+										<TextBlock
+											Margin="4,0,4,0"
+											VerticalAlignment="Center"
+											FontSize="12"
+											FontWeight="SemiBold"
+											Foreground="#FFFFFFFF"
+											Text="BETA"
+											TextAlignment="Left" />
+									</Grid>
+								</StackPanel>
+								<Grid
+									Margin="0,5,0,0">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition
+											Width="*" />
+										<ColumnDefinition
+											Width="auto" />
+									</Grid.ColumnDefinitions>
+									<TextBlock
+										Name="ProcessorTextBlock"
+										Grid.Column="0"
+										Margin="0,0,5,0"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										FontSize="18"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										TextTrimming="CharacterEllipsis" />
+									<CheckBox
+										Grid.Column="1"
+										Style="{DynamicResource CheckBoxWithIcons}"
+										IsChecked="{Binding ThreadCompatibility, Mode=TwoWay}" />
+								</Grid>
+							</StackPanel>
+							<TextBlock
+								Grid.Row="0"
+								Grid.Column="0"
+								Margin="0,25,0,10"
+								VerticalAlignment="Center"
+								FontSize="20"
+								FontWeight="SemiBold"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource GameAffinity}"
+								TextAlignment="Left" />
+							<Grid
+								Margin="0,0,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource unboundCPU0}"
+									TextTrimming="CharacterEllipsis" />
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding DisableCore0, Mode=TwoWay}" />
+							</Grid>
+							<Grid
+								Name="HTVisibility"
+								Margin="0,0,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Margin="0,0,5,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource OffHyperthreading}"
+									TextTrimming="CharacterEllipsis" />
+								<CheckBox
+									Grid.Column="1"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding DisableHyperThreading, Mode=TwoWay}" />
+							</Grid>
+							<Grid
+								Name="OnlyPCoresGrid"
+								Margin="0,0,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Grid.Column="0"
+									Grid.ColumnSpan="2"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource RunOnPCores}"
+									TextTrimming="CharacterEllipsis" />
+								<CheckBox
+									Grid.Column="2"
+									Style="{DynamicResource CheckBoxWithIcons}"
+									IsChecked="{Binding OnlyPCores, Mode=TwoWay}" />
+							</Grid>
+							<ItemsControl
+								Name="AffinityItemsControl"
+								Margin="0,15,0,0">
+								<ItemsControl.ItemsPanel>
+									<ItemsPanelTemplate>
+										<WrapPanel
+											Orientation="Horizontal" />
+									</ItemsPanelTemplate>
+								</ItemsControl.ItemsPanel>
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<liiil1:dje_zJRCW7MNDSVC4P756WU8A3BER7GKNBCCJGUDZNDJNUNRL58UTLPSSA_ejd
+											FrameworkElement.Margin="5"
+											FrameworkElement.DataContext="{Binding}" />
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+						</StackPanel>
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{liil1il:Type Grid}">
+								<Style.Triggers>
+									<DataTrigger
+										Value="False"
+										Binding="{Binding ElementName=GameProfile, Path=IsEnabled}">
+										<TriggerBase.EnterActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														Storyboard.TargetProperty="Opacity"
+														From="1"
+														To="0"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Collapsed}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Opacity"
+														From="0"
+														To="1"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Visible}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.ExitActions>
+									</DataTrigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</Grid>
+				</Grid>
+			</ScrollViewer>
+			<GridSplitter
+				Grid.Column="1"
+				Width="5"
+				HorizontalAlignment="Stretch"
+				Background="#00FFFFFF" />
+			<ScrollViewer
+				Name="ScrollViewerMain"
+				Grid.Column="0"
+				VerticalAlignment="Top"
+				VerticalContentAlignment="Top"
+				VerticalScrollBarVisibility="Auto">
+				<StackPanel>
+					<StackPanel>
+						<StackPanel
+							HorizontalAlignment="Left"
+							Orientation="Horizontal">
+							<TextBlock
+								Margin="10"
+								VerticalAlignment="Center"
+								FontSize="18"
+								FontWeight="SemiBold"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource GMXGamesForAutoStart}"
+								TextAlignment="Left" />
+							<Image
+								Height="20"
+								Cursor="Help"
+								Source="{DynamicResource InfoSvg}"
+								ToolTip="{DynamicResource GMXGamesToolTip}"
+								ToolTipService.BetweenShowDelay="5"
+								ToolTipService.InitialShowDelay="5" />
+							<Button
+								Name="AddGamesButton2"
+								Margin="10,0,0,0"
+								Cursor="Hand"
+								Style="{DynamicResource VioletSimpleTextBtn}">
+								<Grid>
+									<Border
+										Height="30"
+										Background="#FF000000"
+										CornerRadius="15"
+										Opacity="0.6" />
+									<StackPanel
+										Orientation="Horizontal">
+										<Image
+											Width="22"
+											Margin="4"
+											RenderOptions.BitmapScalingMode="Fant"
+											Source="pack://application:,,,/BoosterX;component/Resources/Images/Plus.png" />
+										<TextBlock
+											Margin="0,0,10,0"
+											VerticalAlignment="Center"
+											FontSize="12"
+											FontWeight="SemiBold"
+											Foreground="#FFFFFFFF"
+											Text="{DynamicResource add}"
+											TextAlignment="Left" />
+									</StackPanel>
+								</Grid>
+							</Button>
+						</StackPanel>
+						<WrapPanel>
+							<ItemsControl
+								Name="GMXGamesItemsControl">
+								<ItemsControl.ItemsPanel>
+									<ItemsPanelTemplate>
+										<WrapPanel
+											HorizontalAlignment="Left" />
+									</ItemsPanelTemplate>
+								</ItemsControl.ItemsPanel>
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<liiil1:dje_zQYVQXVX6YYVUT5X4D2BLRQY8E6ANZC4J4AVU2NBQS9BRR22E7GM2HQX72SYC57TC2W_ejd
+											dje_zQYVQXVX6YYVUT5X4D2BLRQY8E6ANZC4J4AVU2NBQS9BRR22E7GM2HQX72SYC57TC2W_ejd.Checked="dje_z9PYSWYMRKGMGGYRA4YYGGSSZE3LA_ejd"
+											dje_zQYVQXVX6YYVUT5X4D2BLRQY8E6ANZC4J4AVU2NBQS9BRR22E7GM2HQX72SYC57TC2W_ejd.Unchecked="dje_zPQHDGQQAGZ5GB2WL43QG8Z7UDYXA_ejd"
+											RadioButton.GroupName="GamesGroup"
+											FrameworkElement.DataContext="{Binding}" />
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+							<Button
+								Name="AddGamesButton"
+								Width="164"
+								Height="200"
+								Margin="5"
+								HorizontalAlignment="Left"
+								Cursor="Hand"
+								Style="{DynamicResource VioletSimpleTextBtn}">
+								<Grid>
+									<Border
+										Background="#FF000000"
+										CornerRadius="20"
+										Opacity="0.6" />
+									<StackPanel
+										Width="164"
+										Height="200">
+										<TextBlock
+											Width="140"
+											Margin="0,60,0,0"
+											HorizontalAlignment="Center"
+											VerticalAlignment="Center"
+											FontSize="16"
+											FontWeight="SemiBold"
+											Foreground="#FFFFFFFF"
+											Text="{DynamicResource add}"
+											TextAlignment="Center"
+											TextWrapping="Wrap" />
+										<Image
+											Width="26"
+											Margin="0,5,0,0"
+											RenderOptions.BitmapScalingMode="Fant"
+											Source="pack://application:,,,/BoosterX;component/Resources/Images/Plus.png" />
+									</StackPanel>
+								</Grid>
+							</Button>
+						</WrapPanel>
+					</StackPanel>
+					<StackPanel>
+						<StackPanel
+							HorizontalAlignment="Left"
+							Orientation="Horizontal">
+							<TextBlock
+								Margin="10"
+								VerticalAlignment="Center"
+								FontSize="18"
+								FontWeight="SemiBold"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource GMXAppsForAutoDisable}"
+								TextAlignment="Left" />
+							<Image
+								Height="20"
+								Cursor="Help"
+								Source="{DynamicResource InfoSvg}"
+								ToolTip="{DynamicResource GMXAppsToolTip}"
+								ToolTipService.BetweenShowDelay="5"
+								ToolTipService.InitialShowDelay="5" />
+							<Button
+								Name="AddAppsButton2"
+								Margin="10,0,0,0"
+								Cursor="Hand"
+								Style="{DynamicResource VioletSimpleTextBtn}">
+								<Grid>
+									<Border
+										Height="30"
+										Background="#FF000000"
+										CornerRadius="15"
+										Opacity="0.6" />
+									<StackPanel
+										Orientation="Horizontal">
+										<Image
+											Width="22"
+											Margin="4"
+											RenderOptions.BitmapScalingMode="Fant"
+											Source="pack://application:,,,/BoosterX;component/Resources/Images/Plus.png" />
+										<TextBlock
+											Margin="0,0,10,0"
+											VerticalAlignment="Center"
+											FontSize="12"
+											FontWeight="SemiBold"
+											Foreground="#FFFFFFFF"
+											Text="{DynamicResource add}"
+											TextAlignment="Left" />
+									</StackPanel>
+								</Grid>
+							</Button>
+						</StackPanel>
+						<ItemsControl
+							Name="GMXAppsItemsControl">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<liiil1:dje_zXNNJLKZGU3XN9MK85ZPHRMHN6TLT9JSR6D4D7NR9PZJCSNHLEEUA4V5W85KFULPDMQ_ejd
+										FrameworkElement.DataContext="{Binding}" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+						<Button
+							Name="AddAppsButton"
+							Width="164"
+							Height="200"
+							Margin="5"
+							HorizontalAlignment="Left"
+							Cursor="Hand"
+							Style="{DynamicResource VioletSimpleTextBtn}">
+							<Grid>
+								<Border
+									Background="#FF000000"
+									CornerRadius="20"
+									Opacity="0.6" />
+								<StackPanel
+									Width="164"
+									Height="200">
+									<TextBlock
+										Width="140"
+										Margin="0,60,0,0"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="16"
+										FontWeight="SemiBold"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource add}"
+										TextAlignment="Center"
+										TextWrapping="Wrap" />
+									<Image
+										Width="26"
+										Margin="0,5,0,0"
+										RenderOptions.BitmapScalingMode="Fant"
+										Source="pack://application:,,,/BoosterX;component/Resources/Images/Plus.png" />
+								</StackPanel>
+							</Grid>
+						</Button>
+					</StackPanel>
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+		<Grid
+			Name="GameAddGrid"
+			Row="1"
+			Opacity="0"
+			Visibility="Collapsed">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="*" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<Grid
+				Row="0">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="*" />
+				</Grid.RowDefinitions>
+				<TextBlock
+					Grid.Row="0"
+					Margin="10"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="SemiBold"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource GMXChooseGames}"
+					TextAlignment="Left" />
+				<ScrollViewer
+					Grid.Row="1"
+					Margin="0,0,0,0"
+					HorizontalScrollBarVisibility="Disabled"
+					VerticalScrollBarVisibility="Auto">
+					<WrapPanel
+						Orientation="Horizontal">
+						<ItemsControl
+							ItemsSource="{Binding GMXAddGameVMs}">
+							<ItemsControl.ItemsPanel>
+								<ItemsPanelTemplate>
+									<WrapPanel
+										HorizontalAlignment="Left" />
+								</ItemsPanelTemplate>
+							</ItemsControl.ItemsPanel>
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<liiil1:dje_zD9H5YRWWZ4CW8CBTSV5XFZWZGYMAUUF2CG8QX76AKAKJ5TWK6FC4D9NNZ7QBGYPWR3_ejd
+										FrameworkElement.DataContext="{Binding}" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+						<ItemsControl
+							Name="ManuallyAddedGamesItemsControl">
+							<ItemsControl.ItemsPanel>
+								<ItemsPanelTemplate>
+									<WrapPanel
+										HorizontalAlignment="Left" />
+								</ItemsPanelTemplate>
+							</ItemsControl.ItemsPanel>
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<liiil1:dje_zD9H5YRWWZ4CW8CBTSV5XFZWZGYMAUUF2CG8QX76AKAKJ5TWK6FC4D9NNZ7QBGYPWR3_ejd
+										FrameworkElement.DataContext="{Binding}" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+						<Button
+							Name="ChooseGameButton"
+							Width="170"
+							Height="200"
+							Margin="5"
+							Cursor="Hand"
+							Style="{DynamicResource VioletSimpleTextBtn}">
+							<Grid>
+								<Border
+									Background="#FF000000"
+									CornerRadius="20"
+									Opacity="0.6" />
+								<StackPanel
+									Name="AddButton"
+									Width="170"
+									Height="200"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center">
+									<TextBlock
+										Width="140"
+										Margin="0,60,0,0"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="16"
+										FontWeight="SemiBold"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource GMXChooseGameManually}"
+										TextAlignment="Center"
+										TextWrapping="Wrap" />
+									<Image
+										Width="26"
+										Margin="0,5,0,0"
+										RenderOptions.BitmapScalingMode="Fant"
+										Source="pack://application:,,,/BoosterX;component/Resources/Images/Plus.png" />
+								</StackPanel>
+							</Grid>
+						</Button>
+					</WrapPanel>
+				</ScrollViewer>
+			</Grid>
+			<Button
+				Name="GameChooseContinueButton"
+				Grid.Row="1"
+				Width="160"
+				Height="50"
+				Margin="20"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Bottom"
+				Content="{DynamicResource continue}"
+				Style="{DynamicResource MediumRoundedGradientButton}" />
+		</Grid>
+		<Grid
+			Name="AppsAddGrid"
+			Row="1"
+			Column="0"
+			Opacity="0"
+			Visibility="Collapsed">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="*" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<Grid
+				Row="0">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="*" />
+				</Grid.RowDefinitions>
+				<TextBlock
+					Grid.Row="0"
+					Grid.Column="0"
+					Margin="10"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="SemiBold"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource GMXChooseApps}"
+					TextAlignment="Left" />
+				<ScrollViewer
+					Grid.Row="1"
+					Grid.Column="0"
+					HorizontalScrollBarVisibility="Disabled"
+					VerticalScrollBarVisibility="Auto">
+					<StackPanel
+						Grid.Row="1"
+						Grid.Column="0">
+						<ItemsControl
+							ItemsSource="{Binding GMXAddAppsVMs}">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<liiil1:dje_zXDDY734JTRJMYEQY33V7MNQ4JCNC9JLBFQ3AKRJKCNM28LE4RST8H8ZG6FL5VRB7AQ_ejd
+										FrameworkElement.DataContext="{Binding}" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+						<ItemsControl
+							Name="ManuallyAddedAppsItemsControl">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<liiil1:dje_zXDDY734JTRJMYEQY33V7MNQ4JCNC9JLBFQ3AKRJKCNM28LE4RST8H8ZG6FL5VRB7AQ_ejd
+										FrameworkElement.DataContext="{Binding}" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+					</StackPanel>
+				</ScrollViewer>
+			</Grid>
+			<Button
+				Name="ChooseAppButton"
+				Grid.Row="1"
+				Height="50"
+				Margin="0,20,20,20"
+				HorizontalAlignment="Left"
+				Cursor="Hand"
+				Style="{DynamicResource VioletSimpleTextBtn}">
+				<Grid>
+					<Border
+						Height="50"
+						Background="#FF000000"
+						CornerRadius="10"
+						Opacity="0.6" />
+					<StackPanel
+						Name="AddAppButton"
+						Height="50"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Orientation="Horizontal">
+						<TextBlock
+							Margin="10,0,0,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="SemiBold"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource GMXChooseAppManually}"
+							TextAlignment="Center"
+							TextWrapping="Wrap" />
+						<Image
+							Width="26"
+							Height="26"
+							Margin="5,0,10,0"
+							RenderOptions.BitmapScalingMode="Fant"
+							Source="pack://application:,,,/BoosterX;component/Resources/Images/Plus.png" />
+					</StackPanel>
+				</Grid>
+			</Button>
+			<Button
+				Name="AppChooseContinueButton"
+				Grid.Row="1"
+				Width="160"
+				Height="50"
+				Margin="20"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Bottom"
+				Content="{DynamicResource continue}"
+				Style="{DynamicResource MediumRoundedGradientButton}" />
+		</Grid>
+	</Grid>
+</liiil1:dje_zV7JVTGZ7W7XZV5CGJLRZY5344P2YPZZ43QZRMSXBYXHM3SBGMHKS4_ejd>

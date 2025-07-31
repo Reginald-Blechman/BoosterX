@@ -1,0 +1,3847 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-">
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="{liil1il:Type Button}">
+		<Setter
+			Property="FontFamily"
+			Value="{DynamicResource GlobalFontFamily}" />
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="InvisibleButton">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						Background="{TemplateBinding Background}">
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="AIButtonStyle">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Height"
+			Value="24" />
+		<Setter
+			Property="Width"
+			Value="44" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Name="Bord"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+							BorderThickness="2"
+							CornerRadius="12"
+							Opacity="0.3" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="sb1">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Bord"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.15" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="sb1" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="sb2">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Bord"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zD9GRSSAL8RCY2D2_ejd}"
+											Duration="0:0:0.15" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="sb2" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="GraySimpleTextBtn">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Button
+						BorderBrush="#FFFFFFFF"
+						BorderThickness="3"
+						Content="{TemplateBinding Content}"
+						FontSize="20"
+						FontWeight="SemiBold"
+						Foreground="#FFA9A9A9"
+						RenderOptions.BitmapScalingMode="Fant"
+						SnapsToDevicePixels="True">
+						<UIElement.Effect>
+							<DropShadowEffect
+								liil1il:Name="xboxsam1"
+								BlurRadius="0"
+								Opacity="0"
+								ShadowDepth="0"
+								Color="#bababa" />
+						</UIElement.Effect>
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{liil1il:Type Border}"
+									liil1il:Key="{liil1il:Type Border}">
+									<Setter
+										Property="Border.CornerRadius"
+										Value="10" />
+								</Style>
+								<Style
+									TargetType="{liil1il:Type Button}"
+									liil1il:Key="{liil1il:Type Button}">
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{liil1il:Type Button}">
+												<Border
+													Background="{TemplateBinding Background}">
+													<ContentPresenter
+														HorizontalAlignment="Center"
+														VerticalAlignment="Center" />
+												</Border>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<FrameworkElement.Triggers>
+							<EventTrigger
+								RoutedEvent="Button.MouseEnter">
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="0"
+											To="20"
+											Duration="0:0:0.1" />
+										<DoubleAnimation
+											BeginTime="0:0:0.1"
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="20"
+											To="15"
+											Duration="0:0:0.25" />
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="Opacity"
+											From="0"
+											To="1"
+											Duration="0:0:0.0005" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+							<EventTrigger
+								RoutedEvent="Button.MouseLeave">
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="15"
+											To="0"
+											Duration="0:0:0.3" />
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="Opacity"
+											From="1"
+											To="0"
+											Duration="0:0:0.3" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+						</FrameworkElement.Triggers>
+					</Button>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="VioletSimpleTextBtn">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Button
+						BorderBrush="#FFFFFFFF"
+						BorderThickness="3"
+						Content="{TemplateBinding Content}"
+						FontSize="{TemplateBinding FontSize}"
+						FontWeight="SemiBold"
+						Foreground="#FFFFFFFF"
+						RenderOptions.BitmapScalingMode="Fant"
+						SnapsToDevicePixels="True">
+						<UIElement.Effect>
+							<DropShadowEffect
+								liil1il:Name="xboxsam1"
+								BlurRadius="0"
+								Opacity="0"
+								ShadowDepth="0"
+								Color="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSM85V9F8UX4VG5BQNPS2F_ejd}" />
+						</UIElement.Effect>
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{liil1il:Type Border}"
+									liil1il:Key="{liil1il:Type Border}">
+									<Setter
+										Property="Border.CornerRadius"
+										Value="10" />
+								</Style>
+								<Style
+									TargetType="{liil1il:Type Button}"
+									liil1il:Key="{liil1il:Type Button}">
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{liil1il:Type Button}">
+												<Border
+													Background="{TemplateBinding Background}">
+													<ContentPresenter
+														HorizontalAlignment="Center"
+														VerticalAlignment="Center" />
+												</Border>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<FrameworkElement.Triggers>
+							<EventTrigger
+								RoutedEvent="Button.MouseEnter">
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="0"
+											To="20"
+											Duration="0:0:0.1" />
+										<DoubleAnimation
+											BeginTime="0:0:0.1"
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="20"
+											To="15"
+											Duration="0:0:0.25" />
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="Opacity"
+											From="0"
+											To="1"
+											Duration="0:0:0.0005" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+							<EventTrigger
+								RoutedEvent="Button.MouseLeave">
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="15"
+											To="0"
+											Duration="0:0:0.3" />
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="Opacity"
+											From="1"
+											To="0"
+											Duration="0:0:0.3" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+						</FrameworkElement.Triggers>
+					</Button>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="VioletSimpleTextBtnThin">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Button
+						BorderBrush="#FFFFFFFF"
+						Content="{TemplateBinding Content}"
+						FontSize="{TemplateBinding FontSize}"
+						FontWeight="Medium"
+						Foreground="{TemplateBinding Foreground}"
+						RenderOptions.BitmapScalingMode="Fant"
+						SnapsToDevicePixels="True">
+						<UIElement.Effect>
+							<DropShadowEffect
+								liil1il:Name="xboxsam1"
+								BlurRadius="0"
+								Opacity="0"
+								ShadowDepth="0"
+								Color="#2E5CFF" />
+						</UIElement.Effect>
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{liil1il:Type Border}"
+									liil1il:Key="{liil1il:Type Border}">
+									<Setter
+										Property="Border.CornerRadius"
+										Value="10" />
+								</Style>
+								<Style
+									TargetType="{liil1il:Type Button}"
+									liil1il:Key="{liil1il:Type Button}">
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{liil1il:Type Button}">
+												<Border
+													Background="{TemplateBinding Background}">
+													<ContentPresenter
+														HorizontalAlignment="Center"
+														VerticalAlignment="Center" />
+												</Border>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<FrameworkElement.Triggers>
+							<EventTrigger
+								RoutedEvent="Button.MouseEnter">
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="0"
+											To="20"
+											Duration="0:0:0.1" />
+										<DoubleAnimation
+											BeginTime="0:0:0.1"
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="20"
+											To="15"
+											Duration="0:0:0.25" />
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="Opacity"
+											From="0"
+											To="1"
+											Duration="0:0:0.0005" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+							<EventTrigger
+								RoutedEvent="Button.MouseLeave">
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											From="15"
+											To="0"
+											Duration="0:0:0.3" />
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="Opacity"
+											From="1"
+											To="0"
+											Duration="0:0:0.3" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+						</FrameworkElement.Triggers>
+					</Button>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type RadioButton}"
+		liil1il:Key="MainColorBorderedRadioButton">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type RadioButton}">
+					<Grid>
+						<Border
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="2"
+							CornerRadius="10"
+							Opacity="1"
+							RenderOptions.BitmapScalingMode="Fant" />
+						<Border
+							Name="MainColorBorderedRadioButton"
+							Background="#00FFFFFF"
+							CornerRadius="10">
+							<StackPanel
+								Orientation="Horizontal">
+								<TextBlock
+									Margin="10,5,10,5"
+									VerticalAlignment="Center"
+									FontSize="15"
+									FontWeight="Medium"
+									Foreground="#FFFFFFFF"
+									Text="{TemplateBinding Content}" />
+							</StackPanel>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="MainColorBorderedRadioButton"
+								Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+								Property="Background" />
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainColorBorderedRadioButton"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="MainColorBorderedRadioButton"
+								Property="Background"
+								Value="#00FFFFFF" />
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainColorBorderedRadioButton"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zD9GRSSAL8RCY2D2_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="MainColorBorderedRadioButton"
+								Property="Background"
+								Value="#FF090E26" />
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainColorBorderedRadioButton"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainColorBorderedRadioButton"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type RadioButton}"
+		liil1il:Key="TransparentButtonStyleNoBackColor">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type RadioButton}">
+					<Grid>
+						<Border
+							Name="TransparentButtonStyleBorderStroke"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="0"
+							CornerRadius="10"
+							Opacity="0.3"
+							RenderOptions.BitmapScalingMode="Fant">
+							<UIElement.Effect>
+								<BlurEffect
+									Radius="2" />
+							</UIElement.Effect>
+						</Border>
+						<Border
+							Background="#00FFFFFF"
+							CornerRadius="10">
+							<StackPanel
+								Orientation="Horizontal">
+								<ContentControl
+									Content="{TemplateBinding Content}" />
+							</StackPanel>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="TransparentButtonStyleBorderStroke"
+											Storyboard.TargetProperty="Opacity"
+											To="1"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="TransparentButtonStyleBorderStroke"
+											Storyboard.TargetProperty="Opacity"
+											To="0"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TransparentButtonStyleBorderStroke"
+								Property="BorderThickness"
+								Value="0" />
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TransparentButtonStyleBorderStroke"
+								Property="BorderThickness"
+								Value="2" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type RadioButton}"
+		liil1il:Key="TransparentButtonStyleViolet">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type RadioButton}">
+					<Grid>
+						<Border
+							Name="TransparentButtonStyleVioletBorderStroke"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="0"
+							CornerRadius="10"
+							Opacity="0.3"
+							RenderOptions.BitmapScalingMode="Fant">
+							<UIElement.Effect>
+								<BlurEffect
+									Radius="2" />
+							</UIElement.Effect>
+						</Border>
+						<Border
+							Name="TransparentButtonStyleVioletBorder"
+							Background="#00FFFFFF"
+							CornerRadius="10">
+							<StackPanel
+								Orientation="Horizontal">
+								<ContentControl
+									Content="{TemplateBinding Content}" />
+							</StackPanel>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TransparentButtonStyleVioletBorder"
+								Property="Background"
+								Value="#FF090E26" />
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="TransparentButtonStyleVioletBorder"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="TransparentButtonStyleVioletBorder"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TransparentButtonStyleVioletBorderStroke"
+								Property="BorderThickness"
+								Value="0" />
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TransparentButtonStyleVioletBorderStroke"
+								Property="BorderThickness"
+								Value="1" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="VioletPurpleOnlyBorderButtonStyle">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Grid>
+							<Border
+								Background="#00FFFFFF"
+								BorderThickness="2"
+								CornerRadius="15">
+								<Border.BorderBrush>
+									<LinearGradientBrush
+										StartPoint="0.5,0"
+										EndPoint="0.5,1">
+										<GradientStop
+											Color="#FF2E5CFF" />
+										<GradientStop
+											Offset="1"
+											Color="#FF7D2EFF" />
+										<GradientStop
+											Offset="0.501"
+											Color="#FF5328FF" />
+									</LinearGradientBrush>
+								</Border.BorderBrush>
+							</Border>
+							<Border
+								Name="BorderWithBlur"
+								Width="{TemplateBinding Width}"
+								Margin="0,0,0,0"
+								CornerRadius="15"
+								Opacity="0">
+								<Border.Background>
+									<LinearGradientBrush
+										StartPoint="0.5,0"
+										EndPoint="0.5,1">
+										<GradientStop
+											Offset="1"
+											Color="#FF2E5CFF" />
+										<GradientStop
+											Color="#FF7D2EFF" />
+										<GradientStop
+											Offset="0.501"
+											Color="#FF5328FF" />
+									</LinearGradientBrush>
+								</Border.Background>
+							</Border>
+							<StackPanel
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center">
+								<ContentControl
+									Content="{TemplateBinding Content}" />
+							</StackPanel>
+						</Grid>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<EventTrigger
+							RoutedEvent="Button.MouseDown" />
+						<EventTrigger
+							RoutedEvent="Button.MouseEnter">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="BorderWithBlur"
+										Storyboard.TargetProperty="Opacity"
+										To="0.8"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+						<EventTrigger
+							RoutedEvent="Button.MouseLeave">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="BorderWithBlur"
+										Storyboard.TargetProperty="Opacity"
+										To="0"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="CircleYellowButton">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+							BorderThickness="2"
+							CornerRadius="25">
+							<UIElement.Effect>
+								<DropShadowEffect
+									liil1il:Name="BorderBack"
+									BlurRadius="5"
+									Direction="270"
+									Opacity="0.2"
+									ShadowDepth="1"
+									Color="#FFC93F" />
+							</UIElement.Effect>
+						</Border>
+						<Grid>
+							<Image
+								Width="20">
+								<Image.Source>
+									<DrawingImage>
+										<DrawingImage.Drawing>
+											<DrawingGroup
+												ClipGeometry="M0,0 L0,19 L19,19 L19,0 L0,0">
+												<DrawingGroup.Transform>
+													<TranslateTransform
+														X="4.0227001591119915E-05"
+														Y="0" />
+												</DrawingGroup.Transform>
+												<GeometryDrawing
+													Brush="#FFFFFFFF"
+													Geometry="F1 M19,19 M0,0 M9.90764,18.4074 C11.7323,19.4608 14.0635,18.8362 15.1169,17.0115 L18.4537,11.2321 C18.9781,10.3239 18.664,9.15176 17.7558,8.62741 L15.2789,7.19736 L17.1856,3.8948 C17.71,2.98659 17.3959,1.8145 16.4877,1.29015 L14.8364,0.336783 C13.9282,-0.187569 12.7561,0.126491 12.2318,1.0347 L10.3251,4.33726 L7.84813,2.90721 C6.93992,2.38285 5.76783,2.69691 5.24348,3.60512 L-4.0227E-05,12.6872 L9.90764,18.4074 M10.861,16.7561 L7.55845,14.8494 L8.51182,13.1981 L6.86054,12.2447 L5.90717,13.896 L5.08153,13.4193 L6.98826,10.1167 L5.33698,9.16337 L3.43025,12.4659 L2.60461,11.9892 L4.98803,7.86105 L14.8957,13.5813 L13.4657,16.0582 C12.9413,16.9664 11.7692,17.2804 10.861,16.7561 M16.8024,10.2787 L15.8491,11.93 L5.94139,6.20977 L6.89476,4.55849 L16.8024,10.2787" />
+											</DrawingGroup>
+										</DrawingImage.Drawing>
+									</DrawingImage>
+								</Image.Source>
+							</Image>
+						</Grid>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<EventTrigger
+							RoutedEvent="Button.MouseEnter">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="BorderBack"
+										Storyboard.TargetProperty="Opacity"
+										To="0.8"
+										Duration="0:0:0.1" />
+									<DoubleAnimation
+										Storyboard.TargetName="BorderBack"
+										Storyboard.TargetProperty="BlurRadius"
+										To="15"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+						<EventTrigger
+							RoutedEvent="Button.MouseLeave">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="BorderBack"
+										Storyboard.TargetProperty="Opacity"
+										To="0.2"
+										Duration="0:0:0.1" />
+									<DoubleAnimation
+										Storyboard.TargetName="BorderBack"
+										Storyboard.TargetProperty="BlurRadius"
+										To="5"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type CheckBox}"
+		liil1il:Key="TweakingButtonStyleVioletNoContent">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type CheckBox}">
+					<Grid>
+						<Border
+							Name="TweakingButtonStyleVioletBorderStroke"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+							BorderThickness="0"
+							CornerRadius="10"
+							Opacity="1"
+							RenderOptions.BitmapScalingMode="Fant"
+							SnapsToDevicePixels="True" />
+						<Border
+							Name="TweakingButtonStyleVioletBorder"
+							Background="#00FFFFFF"
+							CornerRadius="10"
+							SnapsToDevicePixels="True" />
+						<Border
+							Name="TweakingButtonStyleVioletBorder2"
+							Margin="10,0,10,0"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z82W2KBY2W2H2UZX34LHGR_ejd}"
+							BorderThickness="0,0,0,2"
+							Opacity="0.5"
+							SnapsToDevicePixels="True" />
+						<StackPanel
+							Orientation="Horizontal">
+							<ContentControl
+								Content="{TemplateBinding Content}" />
+						</StackPanel>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="TweakingButtonStyleVioletBorder"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+										<ColorAnimation
+											Storyboard.TargetName="TweakingButtonStyleVioletBorder2"
+											Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="TweakingButtonStyleVioletBorder"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.1" />
+										<ColorAnimation
+											Storyboard.TargetName="TweakingButtonStyleVioletBorder2"
+											Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zZ58MUFQZBETC5R2_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TweakingButtonStyleVioletBorderStroke"
+								Property="BorderThickness"
+								Value="0" />
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TweakingButtonStyleVioletBorderStroke"
+								Property="BorderThickness"
+								Value="2" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type RadioButton}"
+		liil1il:Key="TweakingButtonStyleViolet">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type RadioButton}">
+					<Grid>
+						<Border
+							Name="TweakingButtonStyleVioletBorderStroke"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+							BorderThickness="0"
+							CornerRadius="10"
+							Opacity="1"
+							RenderOptions.BitmapScalingMode="Fant">
+							<UIElement.Effect>
+								<BlurEffect
+									Radius="2" />
+							</UIElement.Effect>
+						</Border>
+						<Border
+							Name="TweakingButtonStyleVioletBorder"
+							Background="#00FFFFFF"
+							CornerRadius="10" />
+						<StackPanel
+							Orientation="Horizontal">
+							<ContentControl
+								Content="{TemplateBinding Content}" />
+						</StackPanel>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="TweakingButtonStyleVioletBorder"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="TweakingButtonStyleVioletBorder"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TweakingButtonStyleVioletBorderStroke"
+								Property="BorderThickness"
+								Value="0" />
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="TweakingButtonStyleVioletBorderStroke"
+								Property="BorderThickness"
+								Value="1" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="FastMethodsButtonStyle">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Name="FastMethodsButtonStyleBorderStroke"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+							BorderThickness="0"
+							CornerRadius="10"
+							Opacity="1"
+							RenderOptions.BitmapScalingMode="Fant">
+							<UIElement.Effect>
+								<BlurEffect
+									Radius="2" />
+							</UIElement.Effect>
+						</Border>
+						<Border
+							Name="FastMethodsButtonStyleBorder"
+							Background="#00FFFFFF"
+							CornerRadius="10" />
+						<StackPanel
+							Orientation="Horizontal">
+							<ContentControl
+								Content="{TemplateBinding Content}" />
+						</StackPanel>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<EventTrigger
+							RoutedEvent="MouseLeftButtonDown">
+							<BeginStoryboard>
+								<Storyboard>
+									<ColorAnimation
+										Storyboard.TargetName="FastMethodsButtonStyleBorder"
+										Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+										To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+						<EventTrigger
+							RoutedEvent="MouseLeftButtonUp">
+							<BeginStoryboard>
+								<Storyboard>
+									<ColorAnimation
+										Storyboard.TargetName="FastMethodsButtonStyleBorder"
+										Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+										To="Transparent"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="FastMethodsButtonStyleBorderStroke"
+								Property="BorderThickness"
+								Value="0" />
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="FastMethodsButtonStyleBorderStroke"
+								Property="BorderThickness"
+								Value="2" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="TrashButton">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="#00FFFFFF" />
+						<Border
+							Name="Shadow"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+							CornerRadius="4"
+							Opacity="0" />
+						<StackPanel
+							HorizontalAlignment="Center"
+							Orientation="Horizontal">
+							<ContentControl
+								Content="{TemplateBinding Content}" />
+						</StackPanel>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<EventTrigger
+							RoutedEvent="MouseEnter">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="Shadow"
+										Storyboard.TargetProperty="Opacity"
+										To="1"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+						<EventTrigger
+							RoutedEvent="MouseLeave">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="Shadow"
+										Storyboard.TargetProperty="Opacity"
+										To="0"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="TweakingTopButton">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Name="Shadow"
+							Height="10"
+							Margin="20,-5,20,0"
+							VerticalAlignment="Top"
+							Background="{TemplateBinding Background}"
+							Opacity="0">
+							<UIElement.Effect>
+								<BlurEffect
+									Radius="18" />
+							</UIElement.Effect>
+						</Border>
+						<Border
+							Name="TTBBackgroundColor"
+							Background="{TemplateBinding Background}"
+							CornerRadius="14" />
+						<StackPanel
+							HorizontalAlignment="Center"
+							Orientation="Horizontal">
+							<ContentControl
+								Content="{TemplateBinding Content}" />
+						</StackPanel>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<EventTrigger
+							RoutedEvent="MouseEnter">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="Shadow"
+										Storyboard.TargetProperty="Opacity"
+										To="0.5"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+						<EventTrigger
+							RoutedEvent="MouseLeave">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="Shadow"
+										Storyboard.TargetProperty="Opacity"
+										To="0"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="TweakingTopButtonPRO">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Name="Shadow"
+							Height="10"
+							Margin="20,-5,20,0"
+							VerticalAlignment="Top"
+							Background="{TemplateBinding Background}"
+							Opacity="0">
+							<UIElement.Effect>
+								<BlurEffect
+									Radius="18" />
+							</UIElement.Effect>
+						</Border>
+						<Border
+							Name="TTBBackgroundColor"
+							Background="{TemplateBinding Background}"
+							BorderThickness="2"
+							CornerRadius="14">
+							<Border.BorderBrush>
+								<LinearGradientBrush>
+									<GradientStop
+										Offset="1"
+										Color="#FF7D2EFF" />
+									<GradientStop
+										Offset="0"
+										Color="#FF5328FF" />
+								</LinearGradientBrush>
+							</Border.BorderBrush>
+						</Border>
+						<StackPanel
+							HorizontalAlignment="Center"
+							Orientation="Horizontal">
+							<ContentControl
+								Content="{TemplateBinding Content}" />
+						</StackPanel>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<EventTrigger
+							RoutedEvent="MouseEnter">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="Shadow"
+										Storyboard.TargetProperty="Opacity"
+										To="0.5"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+						<EventTrigger
+							RoutedEvent="MouseLeave">
+							<BeginStoryboard>
+								<Storyboard>
+									<DoubleAnimation
+										Storyboard.TargetName="Shadow"
+										Storyboard.TargetProperty="Opacity"
+										To="0"
+										Duration="0:0:0.1" />
+								</Storyboard>
+							</BeginStoryboard>
+						</EventTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type CheckBox}"
+		liil1il:Key="TweaksButtonStyle">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type CheckBox}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="14" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="{TemplateBinding Foreground}"
+							Text="{TemplateBinding Content}"
+							TextTrimming="CharacterEllipsis" />
+						<Image
+							Grid.Column="1"
+							Width="10"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center">
+							<Image.Source>
+								<DrawingImage>
+									<DrawingImage.Drawing>
+										<DrawingGroup
+											ClipGeometry="M0,0 L0,5 L7,5 L7,0 L0,0">
+											<GeometryDrawing
+												Brush="#FFFFFFFF"
+												Geometry="F1 M7,5 M0,0 M0.8225,0.5 L3.5,2.97439 L6.1775,0.5 L7,1.2655 L3.5,4.5 L0,1.2655 L0.8225,0.5" />
+										</DrawingGroup>
+									</DrawingImage.Drawing>
+								</DrawingImage>
+							</Image.Source>
+							<FrameworkElement.LayoutTransform>
+								<RotateTransform
+									liil1il:Name="ExpandArrow"
+									Angle="0" />
+							</FrameworkElement.LayoutTransform>
+						</Image>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ExpandArrow"
+											Storyboard.TargetProperty="Angle"
+											To="180"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ExpandArrow"
+											Storyboard.TargetProperty="Angle"
+											To="0"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="SuperRoundedButtonBlue">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="20" />
+						<ContentPresenter
+							Content="{TemplateBinding Content}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="SuperRoundedButtonGray">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="20" />
+						<ContentPresenter
+							Content="{TemplateBinding Content}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="MediumRoundedButtonBlue">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						Background="{TemplateBinding Background}"
+						CornerRadius="8">
+						<TextBlock
+							Margin="10,0,10,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="13"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{TemplateBinding Content}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+			<MultiTrigger>
+				<MultiTrigger.Conditions>
+					<Condition
+						Property="IsEnabled"
+						Value="True" />
+				</MultiTrigger.Conditions>
+				<TriggerBase.EnterActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<ColorAnimation
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zZ58MUFQZBETC5R2_ejd}"
+								Duration="0:0:0.1" />
+							<ColorAnimation
+								BeginTime="0:0:0.1"
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+								Duration="0:0:0.2" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.EnterActions>
+				<TriggerBase.ExitActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<ColorAnimation
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z9MZATB4TWME8U7MP7WHN2_ejd}"
+								Duration="0:0:0.2" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.ExitActions>
+			</MultiTrigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="MediumRoundedButtonDarkBlue">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUMNCHPVU5DUVRTWHMPV4Z_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						Background="{TemplateBinding Background}"
+						CornerRadius="8">
+						<TextBlock
+							Margin="10,0,10,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="13"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							Text="{TemplateBinding Content}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="ApplyButtonStyle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="15" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+			<MultiTrigger>
+				<MultiTrigger.Conditions>
+					<Condition
+						Property="IsEnabled"
+						Value="True" />
+				</MultiTrigger.Conditions>
+				<TriggerBase.EnterActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<ColorAnimation
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zZ58MUFQZBETC5R2_ejd}"
+								Duration="0:0:0.1" />
+							<ColorAnimation
+								BeginTime="0:0:0.1"
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+								Duration="0:0:0.2" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.EnterActions>
+				<TriggerBase.ExitActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<ColorAnimation
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z9MZATB4TWME8U7MP7WHN2_ejd}"
+								Duration="0:0:0.2" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.ExitActions>
+			</MultiTrigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="ApplyButtonStyleRound">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="17" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+			<MultiTrigger>
+				<MultiTrigger.Conditions>
+					<Condition
+						Property="IsEnabled"
+						Value="True" />
+				</MultiTrigger.Conditions>
+				<TriggerBase.EnterActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<ColorAnimation
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zZ58MUFQZBETC5R2_ejd}"
+								Duration="0:0:0.1" />
+							<ColorAnimation
+								BeginTime="0:0:0.1"
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+								Duration="0:0:0.2" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.EnterActions>
+				<TriggerBase.ExitActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<ColorAnimation
+								Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+								To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z9MZATB4TWME8U7MP7WHN2_ejd}"
+								Duration="0:0:0.2" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.ExitActions>
+			</MultiTrigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="ApplyButtonLightBlueStyle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="17"
+							Opacity="0.3" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="ApplyButtonGrayStyle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUMNCHPVU5DUVRTWHMPV4Z_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="15" />
+						<ContentPresenter
+							Content="{TemplateBinding Content}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUMNCHPVU5DUVRTWHMPV4Z_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUMNCHPVU5DUVRTWHMPV4Z_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="GrayButtonHoverStyle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUMNCHPVU5DUVRTWHMPV4Z_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Name="BackBorder"
+							Background="{TemplateBinding Background}"
+							CornerRadius="15" />
+						<ContentPresenter
+							Content="{TemplateBinding Content}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="BackBorder"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="BackBorder"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z6TEMKZM53PAWUV7UDDRVD_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="ApplyButtonGray2Style">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="15" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="MediumRoundedButtonRed">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						Background="{TemplateBinding Background}"
+						CornerRadius="8">
+						<TextBlock
+							Margin="10,0,10,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="SemiBold"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{TemplateBinding Content}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type RadioButton}"
+		liil1il:Key="InterruptsRadioButtonStyle">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type RadioButton}">
+					<Grid>
+						<Border
+							Background="#FF000000"
+							CornerRadius="20"
+							Opacity="0.6"
+							RenderOptions.BitmapScalingMode="Fant" />
+						<Border
+							Name="EffectBorderRadioButton"
+							Width="120"
+							Height="80"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="2"
+							CornerRadius="30"
+							Opacity="0">
+							<UIElement.Effect>
+								<BlurEffect
+									Radius="100" />
+							</UIElement.Effect>
+						</Border>
+						<Border
+							Name="EffectBorderRadioButton2"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="2"
+							CornerRadius="18"
+							Opacity="0" />
+						<StackPanel
+							Margin="20"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center">
+							<ContentControl
+								Content="{TemplateBinding Content}" />
+						</StackPanel>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="EffectBorderRadioButton"
+											Storyboard.TargetProperty="Opacity"
+											To="0.6"
+											Duration="0:0:0.2" />
+										<DoubleAnimation
+											Storyboard.TargetName="EffectBorderRadioButton2"
+											Storyboard.TargetProperty="Opacity"
+											To="1"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="EffectBorderRadioButton"
+											Storyboard.TargetProperty="Opacity"
+											To="0.3"
+											Duration="0:0:0.2" />
+										<DoubleAnimation
+											Storyboard.TargetName="EffectBorderRadioButton2"
+											Storyboard.TargetProperty="Opacity"
+											To="0.5"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="BeginOpacityZero">
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="EffectBorderRadioButton"
+											Storyboard.TargetProperty="Opacity"
+											To="0"
+											Duration="0:0:0.2" />
+										<DoubleAnimation
+											Storyboard.TargetName="EffectBorderRadioButton2"
+											Storyboard.TargetProperty="Opacity"
+											To="0"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="BeginOpacityZero" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="BeginOpacityThree">
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="EffectBorderRadioButton"
+											Storyboard.TargetProperty="Opacity"
+											To="0.3"
+											Duration="0:0:0.2" />
+										<DoubleAnimation
+											Storyboard.TargetName="EffectBorderRadioButton2"
+											Storyboard.TargetProperty="Opacity"
+											To="0.5"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="BeginOpacityThree" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type CheckBox}"
+		liil1il:Key="MainAndRedColoredRadioButtonStyle">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type CheckBox}">
+					<Grid>
+						<Border
+							Name="MainAndRedColoredRadioButtonStyleBorderBack"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="2"
+							CornerRadius="10"
+							RenderOptions.BitmapScalingMode="Fant">
+							<StackPanel
+								HorizontalAlignment="Center"
+								Orientation="Horizontal">
+								<TextBlock
+									Margin="10,0,10,0"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="13"
+									FontWeight="Medium"
+									Foreground="#FFFFFFFF"
+									Text="{TemplateBinding Content}" />
+							</StackPanel>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asd">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asd" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asd2">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asd2" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asdasd">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asdasd" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asdasd2">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asdasd2" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asdas21d">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asdas21d" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asdasd22">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="Transparent"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asdasd22" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type CheckBox}"
+		liil1il:Key="MainAndRedColoredRadioButtonStyle2">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type CheckBox}">
+					<Grid>
+						<Border
+							Name="MainAndRedColoredRadioButtonStyleBorderBack"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="2"
+							CornerRadius="10"
+							RenderOptions.BitmapScalingMode="Fant">
+							<StackPanel
+								HorizontalAlignment="Center"
+								Orientation="Horizontal">
+								<TextBlock
+									Margin="10,0,10,0"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Medium"
+									Foreground="#FFFFFFFF"
+									Text="{TemplateBinding Content}" />
+							</StackPanel>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asd">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asd" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asd2">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asd2" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asdasd">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zD9GRSSAL8RCY2D2_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asdasd" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asdasd2">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z829GEF55NB9EHH292LDLD_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asdasd2" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asdas21d">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asdas21d" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="False" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard
+									Name="asdasd22">
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="MainAndRedColoredRadioButtonStyleBorderBack"
+											Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+											To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}"
+											Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<RemoveStoryboard
+									BeginStoryboardName="asdasd22" />
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="MediumRoundedGradientButton">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						Name="MainBorder"
+						Width="{TemplateBinding Width}"
+						Height="{TemplateBinding Height}"
+						CornerRadius="8">
+						<Border.Background>
+							<LinearGradientBrush
+								StartPoint="0,1"
+								EndPoint="1,1">
+								<GradientStop
+									liil1il:Name="Gradient3"
+									Offset="0"
+									Color="#FFFF6550" />
+								<GradientStop
+									liil1il:Name="Gradient4"
+									Offset="0.500"
+									Color="#FFC13DFF" />
+								<GradientStop
+									liil1il:Name="Gradient5"
+									Offset="1"
+									Color="#FF8438FF" />
+							</LinearGradientBrush>
+						</Border.Background>
+						<TextBlock
+							Margin="10,0,10,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="15"
+							FontWeight="Medium"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{TemplateBinding Content}" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Gradient3"
+											Storyboard.TargetProperty="Color"
+											To="#FF8438FF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient4"
+											Storyboard.TargetProperty="Color"
+											To="#FFFF6550"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient5"
+											Storyboard.TargetProperty="Color"
+											To="#FFC13DFF"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Gradient3"
+											Storyboard.TargetProperty="Color"
+											To="#FFFF6550"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient4"
+											Storyboard.TargetProperty="Color"
+											To="#FFC13DFF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient5"
+											Storyboard.TargetProperty="Color"
+											To="#FF8438FF"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Gradient3"
+											Storyboard.TargetProperty="Color"
+											To="#FF8438FF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient4"
+											Storyboard.TargetProperty="Color"
+											To="#FFC13DFF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient5"
+											Storyboard.TargetProperty="Color"
+											To="#FFFF6550"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Gradient3"
+											Storyboard.TargetProperty="Color"
+											To="#FFFF6550"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient4"
+											Storyboard.TargetProperty="Color"
+											To="#FFC13DFF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient5"
+											Storyboard.TargetProperty="Color"
+											To="#FF8438FF"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="SuperRoundedGradientButton">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						Name="MainBorder"
+						Width="{TemplateBinding Width}"
+						Height="{TemplateBinding Height}"
+						CornerRadius="14">
+						<Border.Background>
+							<LinearGradientBrush
+								StartPoint="0,1"
+								EndPoint="1,1">
+								<GradientStop
+									liil1il:Name="Gradient3"
+									Offset="0"
+									Color="#FFFF6550" />
+								<GradientStop
+									liil1il:Name="Gradient4"
+									Offset="0.500"
+									Color="#FFC13DFF" />
+								<GradientStop
+									liil1il:Name="Gradient5"
+									Offset="1"
+									Color="#FF8438FF" />
+							</LinearGradientBrush>
+						</Border.Background>
+						<Grid>
+							<ContentPresenter
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center" />
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Gradient3"
+											Storyboard.TargetProperty="Color"
+											To="#FF8438FF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient4"
+											Storyboard.TargetProperty="Color"
+											To="#FFFF6550"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient5"
+											Storyboard.TargetProperty="Color"
+											To="#FFC13DFF"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Gradient3"
+											Storyboard.TargetProperty="Color"
+											To="#FFFF6550"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient4"
+											Storyboard.TargetProperty="Color"
+											To="#FFC13DFF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient5"
+											Storyboard.TargetProperty="Color"
+											To="#FF8438FF"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Gradient3"
+											Storyboard.TargetProperty="Color"
+											To="#FF8438FF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient4"
+											Storyboard.TargetProperty="Color"
+											To="#FFC13DFF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient5"
+											Storyboard.TargetProperty="Color"
+											To="#FFFF6550"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ColorAnimation
+											Storyboard.TargetName="Gradient3"
+											Storyboard.TargetProperty="Color"
+											To="#FFFF6550"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient4"
+											Storyboard.TargetProperty="Color"
+											To="#FFC13DFF"
+											Duration="0:0:0.2" />
+										<ColorAnimation
+											Storyboard.TargetName="Gradient5"
+											Storyboard.TargetProperty="Color"
+											To="#FF8438FF"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type CheckBox}"
+		liil1il:Key="TweaksButtonStyleCanCopy">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type CheckBox}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBox
+							Grid.Column="0"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Background="#00FFFFFF"
+							CaretBrush="#FFFFFFFF"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							IsReadOnly="True"
+							Template="{DynamicResource TextBoxTranparentControlTemplate}"
+							Text="{TemplateBinding Content}" />
+						<Image
+							Grid.Column="1"
+							Width="10"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left">
+							<Image.Source>
+								<DrawingImage>
+									<DrawingImage.Drawing>
+										<DrawingGroup
+											ClipGeometry="M0,0 L0,5 L7,5 L7,0 L0,0">
+											<GeometryDrawing
+												Brush="#FFFFFFFF"
+												Geometry="F1 M7,5 M0,0 M0.8225,0.5 L3.5,2.97439 L6.1775,0.5 L7,1.2655 L3.5,4.5 L0,1.2655 L0.8225,0.5" />
+										</DrawingGroup>
+									</DrawingImage.Drawing>
+								</DrawingImage>
+							</Image.Source>
+							<FrameworkElement.LayoutTransform>
+								<RotateTransform
+									liil1il:Name="ExpandArrow"
+									Angle="0" />
+							</FrameworkElement.LayoutTransform>
+						</Image>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ExpandArrow"
+											Storyboard.TargetProperty="Angle"
+											To="180"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ExpandArrow"
+											Storyboard.TargetProperty="Angle"
+											To="0"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="WhiteButtonStyle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Background"
+			Value="#FFFFFFFF" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="8" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="ActivateButtonStyle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="{TemplateBinding Background}"
+							CornerRadius="8" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="BorderOutlineButtonStyle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Name="BorderForAnim"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+							BorderThickness="0"
+							CornerRadius="8" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="BorderForAnim"
+								Property="BorderThickness"
+								Value="2" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="RedShadowButtonStyle">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Button
+						BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+						BorderThickness="2"
+						Content="{TemplateBinding Content}"
+						RenderOptions.BitmapScalingMode="Fant"
+						SnapsToDevicePixels="True">
+						<UIElement.Effect>
+							<DropShadowEffect
+								liil1il:Name="xboxsam1"
+								BlurRadius="0"
+								Opacity="0"
+								ShadowDepth="0"
+								Color="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}" />
+						</UIElement.Effect>
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{liil1il:Type Border}"
+									liil1il:Key="{liil1il:Type Border}">
+									<Setter
+										Property="Border.CornerRadius"
+										Value="10" />
+								</Style>
+								<Style
+									TargetType="{liil1il:Type Button}"
+									liil1il:Key="{liil1il:Type Button}">
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{liil1il:Type Button}">
+												<Border
+													Background="{TemplateBinding Background}">
+													<ContentPresenter
+														HorizontalAlignment="Center"
+														VerticalAlignment="Center" />
+												</Border>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<FrameworkElement.Triggers>
+							<EventTrigger
+								RoutedEvent="Button.MouseEnter">
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											To="30"
+											Duration="0:0:0.1" />
+										<DoubleAnimation
+											BeginTime="0:0:0.1"
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											To="20"
+											Duration="0:0:0.25" />
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="Opacity"
+											From="0"
+											To="1"
+											Duration="0:0:0.0005" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+							<EventTrigger
+								RoutedEvent="Button.MouseLeave">
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="BlurRadius"
+											To="0"
+											Duration="0:0:0.3" />
+										<DoubleAnimation
+											Storyboard.TargetName="xboxsam1"
+											Storyboard.TargetProperty="Opacity"
+											To="0"
+											Duration="0:0:0.3" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+						</FrameworkElement.Triggers>
+					</Button>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="MediumRoundedButtonBlueNoConent">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						Background="{TemplateBinding Background}"
+						CornerRadius="12">
+						<ContentPresenter
+							Content="{TemplateBinding Content}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="SuperRoundedBlackButton">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Background="#FF000000"
+							CornerRadius="20"
+							Opacity="0.6" />
+						<Border
+							Name="BluredBack"
+							Margin="25,15,25,15"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zY99EWG67ABS6GW2_ejd}"
+							Opacity="0">
+							<UIElement.Effect>
+								<BlurEffect
+									KernelType="Gaussian"
+									Radius="70" />
+							</UIElement.Effect>
+						</Border>
+						<ContentPresenter
+							Content="{TemplateBinding Content}" />
+						<Border />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="BluredBack"
+											Storyboard.TargetProperty="Opacity"
+											To="1"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="BluredBack"
+											Storyboard.TargetProperty="Opacity"
+											To="0"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="MediumRoundedButtonBlueOutlineNoContent">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						Background="#00FFFFFF"
+						BorderBrush="{TemplateBinding Background}"
+						BorderThickness="2"
+						CornerRadius="12">
+						<ContentPresenter
+							Content="{TemplateBinding Content}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="MediumRoundedButtonDarkBlueOutlineNoContent">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Background"
+			Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z82W2KBY2W2H2UZX34LHGR_ejd}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Border
+						BorderBrush="{TemplateBinding Background}"
+						BorderThickness="2"
+						CornerRadius="12">
+						<ContentPresenter
+							Content="{TemplateBinding Content}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{liil1il:Type Button}"
+		liil1il:Key="RayanCircle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type Button}">
+					<Grid>
+						<Border
+							Width="260"
+							Height="260"
+							Background="#00FFFFFF"
+							BorderBrush="#00FFFFFF"
+							BorderThickness="2"
+							CornerRadius="130" />
+						<Border
+							Name="TrCircle"
+							Width="260"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="2"
+							CornerRadius="130"
+							Opacity="0.1"
+							Height="{Binding ElementName=TrCircle, Path=Width}" />
+						<Border
+							Name="MainCirce"
+							Width="200"
+							Background="#00FFFFFF"
+							BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							BorderThickness="2"
+							CornerRadius="130"
+							Opacity="1"
+							Height="{Binding ElementName=MainCirce, Path=Width}" />
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="MainCirce"
+											Storyboard.TargetProperty="Width"
+											To="260"
+											Duration="0:0:0.4">
+											<DoubleAnimation.EasingFunction>
+												<CircleEase
+													EasingMode="EaseInOut" />
+											</DoubleAnimation.EasingFunction>
+										</DoubleAnimation>
+										<DoubleAnimation
+											Storyboard.TargetName="TrCircle"
+											Storyboard.TargetProperty="Width"
+											To="200"
+											Duration="0:0:0.4">
+											<DoubleAnimation.EasingFunction>
+												<CircleEase
+													EasingMode="EaseInOut" />
+											</DoubleAnimation.EasingFunction>
+										</DoubleAnimation>
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="MainCirce"
+											Storyboard.TargetProperty="Width"
+											To="200"
+											Duration="0:0:0.4">
+											<DoubleAnimation.EasingFunction>
+												<CircleEase
+													EasingMode="EaseInOut" />
+											</DoubleAnimation.EasingFunction>
+										</DoubleAnimation>
+										<DoubleAnimation
+											Storyboard.TargetName="TrCircle"
+											Storyboard.TargetProperty="Width"
+											To="260"
+											Duration="0:0:0.4">
+											<DoubleAnimation.EasingFunction>
+												<CircleEase
+													EasingMode="EaseInOut" />
+											</DoubleAnimation.EasingFunction>
+										</DoubleAnimation>
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type CheckBox}"
+		liil1il:Key="TweaksButtonStyleBold">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type CheckBox}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="16" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Bold"
+							Foreground="{TemplateBinding Foreground}"
+							Text="{TemplateBinding Content}"
+							TextTrimming="CharacterEllipsis" />
+						<Image
+							Grid.Column="1"
+							Width="10"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center">
+							<Image.Source>
+								<DrawingImage>
+									<DrawingImage.Drawing>
+										<DrawingGroup
+											ClipGeometry="M0,0 L0,5 L7,5 L7,0 L0,0">
+											<GeometryDrawing
+												Brush="#FFFFFFFF"
+												Geometry="F1 M7,5 M0,0 M0.8225,0.5 L3.5,2.97439 L6.1775,0.5 L7,1.2655 L3.5,4.5 L0,1.2655 L0.8225,0.5" />
+										</DrawingGroup>
+									</DrawingImage.Drawing>
+								</DrawingImage>
+							</Image.Source>
+							<FrameworkElement.LayoutTransform>
+								<RotateTransform
+									liil1il:Name="ExpandArrow"
+									Angle="0" />
+							</FrameworkElement.LayoutTransform>
+						</Image>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ExpandArrow"
+											Storyboard.TargetProperty="Angle"
+											To="180"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ExpandArrow"
+											Storyboard.TargetProperty="Angle"
+											To="0"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {liil1il:Type ToggleButton}}"
+		TargetType="{liil1il:Type CheckBox}"
+		liil1il:Key="DesriptionButtonStyle">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{liil1il:Type CheckBox}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="14" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="12"
+							FontWeight="Medium"
+							Foreground="{TemplateBinding Foreground}"
+							Text="{TemplateBinding Content}"
+							TextTrimming="CharacterEllipsis" />
+						<Image
+							Grid.Column="1"
+							Width="10"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center">
+							<Image.Source>
+								<DrawingImage>
+									<DrawingImage.Drawing>
+										<DrawingGroup
+											ClipGeometry="M0,0 L0,5 L7,5 L7,0 L0,0">
+											<GeometryDrawing
+												Brush="#FFFFFFFF"
+												Geometry="F1 M7,5 M0,0 M0.8225,0.5 L3.5,2.97439 L6.1775,0.5 L7,1.2655 L3.5,4.5 L0,1.2655 L0.8225,0.5" />
+										</DrawingGroup>
+									</DrawingImage.Drawing>
+								</DrawingImage>
+							</Image.Source>
+							<FrameworkElement.LayoutTransform>
+								<RotateTransform
+									liil1il:Name="ExpandArrow"
+									Angle="0" />
+							</FrameworkElement.LayoutTransform>
+						</Image>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ExpandArrow"
+											Storyboard.TargetProperty="Angle"
+											To="180"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ExpandArrow"
+											Storyboard.TargetProperty="Angle"
+											To="0"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

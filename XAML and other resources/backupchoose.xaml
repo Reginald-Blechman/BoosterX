@@ -1,0 +1,143 @@
+﻿<liiil1:dje_zHJ2BYBCDVPA3PKSXWQJ4SPET45JG6PDLVEGHS842LAUAMUQ2APCL2AYVUVMA_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+	Page.Title="BackUpChoose">
+	<Grid
+		MaxWidth="890"
+		Margin="0,20,20,20">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Orientation="Horizontal">
+			<Button
+				Name="BackButton"
+				Width="30"
+				Height="30"
+				Margin="0,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Grid.Row="0"
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="20"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				TextAlignment="Left"
+				Text="{Binding ProfileName}" />
+		</StackPanel>
+		<TextBlock
+			Grid.Row="1"
+			Margin="0,10,0,0"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			FontSize="20"
+			FontWeight="Medium"
+			TextTrimming="CharacterEllipsis"
+			Foreground="{Binding StatusColor}"
+			Opacity="{Binding StatusOpacity}"
+			Text="{Binding StatusText}" />
+		<liiil1:dje_zXNNJLKZGU3XN9MK85ZPHRMHN6E5ELSTJG7NE358T5V8U64Z_ejd
+			Grid.Row="2"
+			FrameworkElement.VerticalAlignment="Top"
+			UIElement.Opacity="{Binding AnimationOpacity}"
+			UIElement.Visibility="{Binding AnimationVisibility}" />
+		<ScrollViewer
+			Grid.Row="2"
+			Margin="0,10,0,0"
+			VerticalScrollBarVisibility="Auto"
+			Visibility="{Binding MainVisibility}">
+			<StackPanel>
+				<ItemsControl
+					Name="LocalItems"
+					Margin="0,10,0,0"
+					ItemsSource="{Binding Pages}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<liiil1:dje_zC2NJRMFW869HG6SMD7D73TQX3DP8F6C3MCKV6NK8MZK5RX2BJYXQ32YU734AFE7UPD7ZFLRU_ejd
+								FrameworkElement.Margin="0,0,0,10"
+								FrameworkElement.DataContext="{Binding}" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+				<StackPanel
+					Margin="0,10,0,0"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Orientation="Horizontal"
+					Visibility="{Binding ButtonsVisibility}">
+					<Button
+						Grid.Row="2"
+						Grid.Column="0"
+						Height="45"
+						Margin="10,0,10,0"
+						VerticalAlignment="Bottom"
+						Style="{DynamicResource ApplyButtonGrayStyle}"
+						Command="{Binding MoveToOptimizationPage}">
+						<ContentControl.Content>
+							<StackPanel
+								Margin="20,0,20,0"
+								Orientation="Horizontal">
+								<Image
+									Width="20"
+									Margin="0,0,8,0"
+									Source="{StaticResource CogsSvg}" />
+								<TextBlock
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="20"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource MoveToOptPage}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+					<Button
+						Grid.Row="2"
+						Grid.Column="0"
+						Height="45"
+						Margin="10,0,10,0"
+						VerticalAlignment="Bottom"
+						Style="{DynamicResource ApplyButtonStyle}"
+						Command="{Binding ApplyCommand}">
+						<ContentControl.Content>
+							<StackPanel
+								Margin="20,0,20,0"
+								Orientation="Horizontal">
+								<Image
+									Width="20"
+									Margin="0,0,8,0"
+									Source="{StaticResource ApplyFilled}" />
+								<TextBlock
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="20"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource InstaApply}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+				</StackPanel>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</liiil1:dje_zHJ2BYBCDVPA3PKSXWQJ4SPET45JG6PDLVEGHS842LAUAMUQ2APCL2AYVUVMA_ejd>

@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Style
+		TargetType="{liil1il:Type Frame}"
+		liil1il:Key="MainFrameStyle">
+		<Style.Resources>
+			<ResourceDictionary>
+				<Storyboard
+					liil1il:Key="MainFrameGoDark">
+					<DoubleAnimation
+						Storyboard.TargetProperty="Opacity"
+						To="0"
+						Duration="0:0:0.1" />
+				</Storyboard>
+				<Storyboard
+					liil1il:Key="MainFrameGoVisible">
+					<DoubleAnimation
+						BeginTime="0:0:0.1"
+						Storyboard.TargetProperty="Opacity"
+						To="1"
+						Duration="0:0:0.1" />
+				</Storyboard>
+			</ResourceDictionary>
+		</Style.Resources>
+		<Style.Triggers>
+			<EventTrigger
+				RoutedEvent="Loaded">
+				<BeginStoryboard
+					Storyboard="{StaticResource MainFrameGoVisible}" />
+			</EventTrigger>
+		</Style.Triggers>
+	</Style>
+</ResourceDictionary>

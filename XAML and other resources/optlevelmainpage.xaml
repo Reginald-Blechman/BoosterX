@@ -1,0 +1,117 @@
+﻿<liiil1:dje_zBU3CS7GN6NFVKVZP4BJBKHDGQWSLME77KSQR4MZ5U9E4HPLFJPTX2V2BZ3UA_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liiii1l="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing"
+	FrameworkElement.Width="156"
+	FrameworkElement.Height="156">
+	<Grid
+		Width="146"
+		Height="146"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Top">
+		<Border
+			BorderBrush="#FF000000"
+			BorderThickness="2"
+			CornerRadius="19"
+			Opacity="1" />
+		<liiii1l:Arc
+			Arc.Name="progressPath"
+			FrameworkElement.Width="200"
+			FrameworkElement.Height="200"
+			FrameworkElement.HorizontalAlignment="Center"
+			FrameworkElement.VerticalAlignment="Center"
+			Arc.ArcThickness="100"
+			Arc.ArcThicknessUnit="Pixel"
+			Arc.EndAngle="0"
+			Shape.Fill="#FFFFC93F"
+			FrameworkElement.FlowDirection="LeftToRight"
+			Shape.Stretch="None">
+			<UIElement.Clip>
+				<CombinedGeometry
+					GeometryCombineMode="Exclude">
+					<CombinedGeometry.Geometry1>
+						<RectangleGeometry
+							RadiusX="20"
+							RadiusY="20"
+							Rect="27 27 146 146" />
+					</CombinedGeometry.Geometry1>
+					<CombinedGeometry.Geometry2>
+						<RectangleGeometry
+							RadiusX="18"
+							RadiusY="18"
+							Rect="29 29 142 142" />
+					</CombinedGeometry.Geometry2>
+				</CombinedGeometry>
+			</UIElement.Clip>
+		</liiii1l:Arc>
+		<Border
+			Width="142"
+			Height="142"
+			Background="#FF000000"
+			CornerRadius="18"
+			Opacity="0.6" />
+		<Grid
+			Width="106"
+			Height="106"
+			Margin="10,-5,10,10">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<TextBlock
+				Grid.Row="0"
+				VerticalAlignment="Center"
+				FontSize="16"
+				FontWeight="Medium"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource OptimizationIs}"
+				TextAlignment="Left"
+				TextWrapping="Wrap" />
+			<StackPanel
+				Grid.Row="2"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FlowDirection="LeftToRight"
+				Orientation="Horizontal">
+				<Image
+					Margin="0,0,5,0"
+					Source="{DynamicResource RocketSvg}" />
+				<TextBlock
+					Name="OptLevelPercentageTextBlock"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Heavy"
+					Foreground="#FFFFFFFF"
+					Text="0" />
+				<TextBlock
+					Name="OptLevelPercentageTextBlock2"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Heavy"
+					Foreground="#FFFFFFFF"
+					Text="%" />
+			</StackPanel>
+			<TextBlock
+				Name="OptLevelTextBlock"
+				Grid.Row="4"
+				Width="110"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FontSize="14"
+				FontWeight="Normal"
+				Foreground="#FFFFFFFF"
+				LineHeight="18"
+				LineStackingStrategy="BlockLineHeight"
+				Text="{DynamicResource Checkingtext}"
+				TextAlignment="Left"
+				TextWrapping="Wrap" />
+		</Grid>
+	</Grid>
+</liiil1:dje_zBU3CS7GN6NFVKVZP4BJBKHDGQWSLME77KSQR4MZ5U9E4HPLFJPTX2V2BZ3UA_ejd>

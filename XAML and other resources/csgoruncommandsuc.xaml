@@ -1,0 +1,56 @@
+﻿<liiil1:dje_zJQURJS45PP7RPJ83A946UR6QD856XLNY6L67Q6VXSSTUHC5F8RHCEK5TTFXV2U3XA3_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Grid
+		Margin="0,0,0,5">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="auto" />
+		</Grid.RowDefinitions>
+		<Grid
+			Row="0">
+			<Border
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<StackPanel
+				Margin="10">
+				<Grid
+					VerticalAlignment="Center">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="*" />
+					</Grid.ColumnDefinitions>
+					<TextBox
+						Grid.Row="0"
+						Grid.Column="0"
+						Margin="0,0,0,0"
+						VerticalAlignment="Center"
+						Background="#00FFFFFF"
+						CaretBrush="#FFFFFFFF"
+						FontSize="15"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						IsReadOnly="True"
+						Template="{DynamicResource TextBoxTranparentControlTemplate}"
+						TextAlignment="Left"
+						Text="{Binding Command, Mode=OneWay}" />
+					<TextBox
+						Grid.Row="0"
+						Grid.Column="1"
+						VerticalAlignment="Center"
+						Background="#00FFFFFF"
+						CaretBrush="#FFDDDDDD"
+						FontSize="15"
+						FontWeight="Regular"
+						Foreground="#FFDDDDDD"
+						IsReadOnly="True"
+						Template="{DynamicResource TextBoxTranparentControlTemplate}"
+						TextAlignment="Left"
+						TextWrapping="Wrap"
+						Text="{Binding Description, Mode=OneWay}" />
+				</Grid>
+			</StackPanel>
+		</Grid>
+	</Grid>
+</liiil1:dje_zJQURJS45PP7RPJ83A946UR6QD856XLNY6L67Q6VXSSTUHC5F8RHCEK5TTFXV2U3XA3_ejd>

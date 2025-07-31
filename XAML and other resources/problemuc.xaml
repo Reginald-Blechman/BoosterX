@@ -1,0 +1,124 @@
+﻿<liiil1:dje_z8WS2RFCKC6824HLYEXJ6P394RFF58BXTCEEDRUKYSR6ESQ8XDHUTLCLNV7SA_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	FrameworkElement.Margin="0,0,0,10"
+	UIElement.Visibility="{Binding Visibility}">
+	<Grid>
+		<Border
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Grid
+			Margin="15">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="*" />
+				<ColumnDefinition
+					Width="auto" />
+			</Grid.ColumnDefinitions>
+			<StackPanel
+				Grid.Row="0"
+				Grid.Column="0"
+				Orientation="Horizontal">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="23"
+					FrameworkElement.Height="23"
+					FrameworkElement.Margin="0,0,5,0"
+					Control.Foreground="#FFFFFFFF"
+					RenderOptions.BitmapScalingMode="Fant"
+					MaterialIcon.Kind="{Binding Icon}" />
+				<CheckBox
+					Name="NameCheckBox"
+					Foreground="#FFFFFFFF"
+					RenderOptions.BitmapScalingMode="Fant"
+					Style="{DynamicResource TweaksButtonStyle}"
+					Content="{Binding Name}" />
+			</StackPanel>
+			<StackPanel
+				Grid.Row="0"
+				Grid.Column="1"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Center"
+				Orientation="Horizontal">
+				<TextBlock
+					Margin="10,0,10,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="16"
+					FontWeight="Regular"
+					TextTrimming="CharacterEllipsis"
+					Foreground="{Binding StatusColor}"
+					Opacity="{Binding StatusOpacity}"
+					Text="{Binding StatusText}" />
+				<Button
+					Margin="10,0,0,0"
+					Content="{DynamicResource fix}"
+					Style="{DynamicResource MediumRoundedButtonBlue}"
+					Command="{Binding RunFix}" />
+			</StackPanel>
+			<StackPanel
+				Grid.Row="1"
+				Grid.Column="0"
+				Grid.ColumnSpan="3"
+				Margin="10,5,10,0"
+				Opacity="0"
+				Visibility="Collapsed">
+				<TextBlock
+					FontSize="14"
+					FontWeight="Regular"
+					Foreground="#FFDDDDDD"
+					TextWrapping="Wrap"
+					Text="{Binding Description}" />
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{liil1il:Type StackPanel}">
+						<Style.Triggers>
+							<DataTrigger
+								Value="True"
+								Binding="{Binding ElementName=NameCheckBox, Path=IsChecked}">
+								<TriggerBase.EnterActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Opacity"
+												From="0"
+												To="1"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Visible}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.EnterActions>
+								<TriggerBase.ExitActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetProperty="Opacity"
+												From="1"
+												To="0"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Collapsed}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.ExitActions>
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</StackPanel>
+		</Grid>
+	</Grid>
+</liiil1:dje_z8WS2RFCKC6824HLYEXJ6P394RFF58BXTCEEDRUKYSR6ESQ8XDHUTLCLNV7SA_ejd>

@@ -1,0 +1,378 @@
+﻿<liiil1:dje_zKEQVN852JL84LRJYUDK45F9AHA9KTSL5RHH8HGEJREFHAGFAPVXWZ_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Style
+				TargetType="{liil1il:Type TextBox}"
+				liil1il:Key="StartModeStyle">
+				<Style.Triggers>
+					<MultiDataTrigger>
+						<MultiDataTrigger.Conditions>
+							<Condition
+								Value="True"
+								Binding="{Binding IsDisabled}" />
+							<Condition
+								Value="True"
+								Binding="{Binding HasChanges}" />
+						</MultiDataTrigger.Conditions>
+						<Setter
+							Property="Foreground"
+							Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+						<Setter
+							Property="Text"
+							Value="{DynamicResource willbedisableds}" />
+					</MultiDataTrigger>
+					<MultiDataTrigger>
+						<MultiDataTrigger.Conditions>
+							<Condition
+								Value="False"
+								Binding="{Binding IsDisabled}" />
+							<Condition
+								Value="True"
+								Binding="{Binding HasChanges}" />
+						</MultiDataTrigger.Conditions>
+						<Setter
+							Property="Foreground"
+							Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}" />
+						<Setter
+							Property="Text"
+							Value="{DynamicResource willbeenableds}" />
+					</MultiDataTrigger>
+					<MultiDataTrigger>
+						<MultiDataTrigger.Conditions>
+							<Condition
+								Binding="{Binding IsDisabled}"
+								Value="{liil1il:Null}" />
+							<Condition
+								Value="True"
+								Binding="{Binding HasChanges}" />
+						</MultiDataTrigger.Conditions>
+						<Setter
+							Property="Foreground"
+							Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7FRVJVZAVZQYE4Q_ejd}" />
+						<Setter
+							Property="Text"
+							Value="{DynamicResource willbechanged}" />
+					</MultiDataTrigger>
+					<MultiDataTrigger>
+						<MultiDataTrigger.Conditions>
+							<Condition
+								Value="True"
+								Binding="{Binding IsDisabled}" />
+							<Condition
+								Value="False"
+								Binding="{Binding HasChanges}" />
+						</MultiDataTrigger.Conditions>
+						<Setter
+							Property="Foreground"
+							Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+						<Setter
+							Property="Text"
+							Value="{DynamicResource disableds}" />
+					</MultiDataTrigger>
+					<MultiDataTrigger>
+						<MultiDataTrigger.Conditions>
+							<Condition
+								Value="False"
+								Binding="{Binding IsDisabled}" />
+							<Condition
+								Value="False"
+								Binding="{Binding HasChanges}" />
+						</MultiDataTrigger.Conditions>
+						<Setter
+							Property="Foreground"
+							Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}" />
+						<Setter
+							Property="Text"
+							Value="{DynamicResource enableds}" />
+					</MultiDataTrigger>
+					<MultiDataTrigger>
+						<MultiDataTrigger.Conditions>
+							<Condition
+								Binding="{Binding IsDisabled}"
+								Value="{liil1il:Null}" />
+							<Condition
+								Value="False"
+								Binding="{Binding HasChanges}" />
+						</MultiDataTrigger.Conditions>
+						<Setter
+							Property="Foreground"
+							Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7FRVJVZAVZQYE4Q_ejd}" />
+						<Setter
+							Property="Text"
+							Value="{DynamicResource PartiallyDisabled}" />
+					</MultiDataTrigger>
+					<MultiDataTrigger>
+						<MultiDataTrigger.Conditions>
+							<Condition
+								Value="False"
+								Binding="{Binding HasServices}" />
+						</MultiDataTrigger.Conditions>
+						<Setter
+							Property="Foreground"
+							Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+						<Setter
+							Property="Text"
+							Value="{DynamicResource ItsEmptyHere}" />
+					</MultiDataTrigger>
+					<EventTrigger
+						RoutedEvent="TextBox.TextChanged">
+						<BeginStoryboard>
+							<Storyboard>
+								<DoubleAnimation
+									Storyboard.TargetProperty="Opacity"
+									From="0"
+									To="1"
+									Duration="0:0:0.25" />
+							</Storyboard>
+						</BeginStoryboard>
+					</EventTrigger>
+				</Style.Triggers>
+			</Style>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid
+			Row="0"
+			Column="0"
+			Margin="0,0,0,5">
+			<Border
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<StackPanel
+				Margin="10">
+				<Grid
+					VerticalAlignment="Center">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="auto" />
+							<RowDefinition
+								Height="auto" />
+						</Grid.RowDefinitions>
+						<StackPanel
+							Grid.Row="0"
+							Grid.Column="0"
+							Orientation="Horizontal">
+							<li1ii:MaterialIcon
+								FrameworkElement.Width="23"
+								FrameworkElement.Height="23"
+								FrameworkElement.Margin="0,0,5,0"
+								Control.Foreground="#FFFFFFFF"
+								RenderOptions.BitmapScalingMode="Fant"
+								MaterialIcon.Kind="{Binding Icon}" />
+							<CheckBox
+								Name="SerGroupGroupNameCheckBox"
+								Grid.Row="0"
+								Grid.Column="0"
+								Style="{DynamicResource TweaksButtonStyle}"
+								Content="{Binding GroupNameLoc}"
+								Foreground="{Binding IsRed}" />
+						</StackPanel>
+						<TextBox
+							Grid.Row="0"
+							Grid.Column="1"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Background="#00FFFFFF"
+							FontFamily="{DynamicResource GlobalFontFamily}"
+							FontSize="15"
+							FontWeight="Medium"
+							IsHitTestVisible="False"
+							IsReadOnly="True"
+							IsReadOnlyCaretVisible="False"
+							Style="{DynamicResource StartModeStyle}"
+							Template="{StaticResource TextBoxTranparentControlTemplate}"
+							TextAlignment="Left" />
+						<liiil1:dje_zXNNJLKZGU3XN9MK85ZPHRMHN6QJQ3PZ4M67CWC9PZ9X3X95XSMR63_ejd
+							Grid.Row="0"
+							Grid.Column="2"
+							FrameworkElement.DataContext="{Binding}" />
+						<Grid
+							Name="DescriptionBorder"
+							Row="1"
+							Column="0"
+							ColumnSpan="3"
+							Opacity="0"
+							Visibility="Collapsed">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="*" />
+								<RowDefinition
+									Height="auto" />
+							</Grid.RowDefinitions>
+							<Image
+								Grid.Column="0"
+								Width="11.5"
+								Margin="15,0,0,0"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Top"
+								Source="{StaticResource UnderLine}" />
+							<StackPanel
+								Grid.Column="1"
+								Margin="5,10,0,0">
+								<TextBlock
+									Margin="5,0,0,0"
+									Style="{DynamicResource WhiteTextBlockStyle}"
+									TextAlignment="Left"
+									TextWrapping="Wrap"
+									Text="{Binding GroupDescriptionLoc}" />
+								<CheckBox
+									Name="ShowIncludedServicesCheckBox"
+									Margin="0,10,0,0"
+									Content="{DynamicResource ShowIncludedServices}"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+									Style="{DynamicResource TweaksButtonStyle}" />
+							</StackPanel>
+							<FrameworkElement.Style>
+								<Style
+									TargetType="{liil1il:Type Grid}">
+									<Style.Triggers>
+										<DataTrigger
+											Value="True"
+											Binding="{Binding ElementName=SerGroupGroupNameCheckBox, Path=IsChecked}">
+											<TriggerBase.EnterActions>
+												<BeginStoryboard>
+													<Storyboard>
+														<DoubleAnimation
+															BeginTime="0:0:0.2"
+															Storyboard.TargetProperty="Opacity"
+															From="0"
+															To="1"
+															Duration="0:0:0.2" />
+														<ObjectAnimationUsingKeyFrames
+															Storyboard.TargetProperty="Visibility">
+															<DiscreteObjectKeyFrame
+																KeyTime="0:0:0.02"
+																Value="{liil1il:Static Visibility.Visible}" />
+														</ObjectAnimationUsingKeyFrames>
+													</Storyboard>
+												</BeginStoryboard>
+											</TriggerBase.EnterActions>
+											<TriggerBase.ExitActions>
+												<BeginStoryboard>
+													<Storyboard>
+														<DoubleAnimation
+															Storyboard.TargetProperty="Opacity"
+															From="1"
+															To="0"
+															Duration="0:0:0.2" />
+														<ObjectAnimationUsingKeyFrames
+															BeginTime="0:0:0.2"
+															Storyboard.TargetProperty="Visibility">
+															<DiscreteObjectKeyFrame
+																KeyTime="0:0:0.02"
+																Value="{liil1il:Static Visibility.Collapsed}" />
+														</ObjectAnimationUsingKeyFrames>
+													</Storyboard>
+												</BeginStoryboard>
+											</TriggerBase.ExitActions>
+										</DataTrigger>
+									</Style.Triggers>
+								</Style>
+							</FrameworkElement.Style>
+						</Grid>
+					</Grid>
+				</Grid>
+			</StackPanel>
+		</Grid>
+		<StackPanel
+			Grid.Row="1"
+			Opacity="0"
+			Visibility="Collapsed">
+			<ItemsControl
+				Margin="20,0,0,0"
+				ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+				ScrollViewer.IsDeferredScrollingEnabled="False"
+				VirtualizingPanel.ScrollUnit="Pixel"
+				VirtualizingPanel.VirtualizationMode="Recycling"
+				ItemsSource="{Binding Services}">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<liiil1:dje_z2F52GSNWMMSE83WAZXX4EHXNTLRZ4F4L23229LUWEKWU6UZ_ejd
+							FrameworkElement.Margin="0"
+							FrameworkElement.DataContext="{Binding}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+			<FrameworkElement.Style>
+				<Style
+					TargetType="{liil1il:Type StackPanel}">
+					<Style.Triggers>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition
+									Value="True"
+									Binding="{Binding ElementName=ShowIncludedServicesCheckBox, Path=IsChecked}" />
+								<Condition
+									Value="True"
+									Binding="{Binding ElementName=SerGroupGroupNameCheckBox, Path=IsChecked}" />
+							</MultiDataTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											BeginTime="0:0:0.2"
+											Storyboard.TargetProperty="Opacity"
+											From="0"
+											To="1"
+											Duration="0:0:0.2" />
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame
+												KeyTime="0:0:0.02"
+												Value="{liil1il:Static Visibility.Visible}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetProperty="Opacity"
+											From="1"
+											To="0"
+											Duration="0:0:0.2" />
+										<ObjectAnimationUsingKeyFrames
+											BeginTime="0:0:0.2"
+											Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame
+												KeyTime="0:0:0.02"
+												Value="{liil1il:Static Visibility.Collapsed}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiDataTrigger>
+					</Style.Triggers>
+				</Style>
+			</FrameworkElement.Style>
+		</StackPanel>
+	</Grid>
+</liiil1:dje_zKEQVN852JL84LRJYUDK45F9AHA9KTSL5RHH8HGEJREFHAGFAPVXWZ_ejd>

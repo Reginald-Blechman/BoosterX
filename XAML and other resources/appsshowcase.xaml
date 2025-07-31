@@ -1,0 +1,176 @@
+﻿<liiil1:dje_zBR7K73SNADX8WXGVD32ZQBYH47N26FKK8ZBZWPZPM87A5FWJCGUKX_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF">
+	<Grid
+		Name="MainGrid">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Border
+			Grid.RowSpan="2"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<StackPanel
+			Height="30"
+			Margin="20,10,20,0"
+			VerticalAlignment="Center"
+			Orientation="Horizontal">
+			<Image
+				Width="18"
+				Height="18"
+				RenderOptions.BitmapScalingMode="Fant">
+				<Image.Source>
+					<DrawingImage>
+						<DrawingImage.Drawing>
+							<DrawingGroup
+								ClipGeometry="M0,0 L0,18 L18,18 L18,0 L0,0">
+								<GeometryDrawing
+									liil1il:Name="AppsButtonSvg"
+									Brush="#FFFFFFFF"
+									Geometry="M18,18 M0,0 M9.96445,5.91424 C9.1834,5.1332 9.1834,3.86687 9.96445,3.08582 L12.0858,0.96448 C12.8668,0.183431 14.1332,0.18343 14.9142,0.964478 L17.0356,3.08582 C17.8166,3.86687 17.8166,5.13319 17.0356,5.91424 L14.9142,8.03558 C14.1332,8.81663 12.8668,8.81663 12.0858,8.03558 L9.96445,5.91424 M5.00006,1 C6.10463,1 7.00006,1.89543 7.00006,3 L7.00006,6.00002 C7.00006,7.10459 6.10463,8.00002 5.00006,8.00002 L2.00004,8.00002 C0.895468,8.00002 3.62396E-05,7.1046 3.62396E-05,6.00003 L3.62396E-05,3 C3.62396E-05,1.89543 0.895466,1 2.00003,1 L5.00006,1 M7.00006,13 C7.00006,11.8954 6.10463,11 5.00006,11 L2.00003,11 C0.895466,11 3.62396E-05,11.8954 3.62396E-05,13 L3.62396E-05,16 C3.62396E-05,17.1046 0.895468,18 2.00004,18 L5.00006,18 C6.10463,18 7.00006,17.1046 7.00006,16 L7.00006,13 M15.0001,11 C16.1046,11 17.0001,11.8954 17.0001,13 L17.0001,16 C17.0001,17.1046 16.1046,18 15.0001,18 L12,18 C10.8955,18 10,17.1046 10,16 L10,13 C10,11.8954 10.8955,11 12,11 L15.0001,11" />
+							</DrawingGroup>
+						</DrawingImage.Drawing>
+					</DrawingImage>
+				</Image.Source>
+			</Image>
+			<TextBlock
+				Margin="10,0,0,0"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FontSize="18"
+				FontWeight="Medium"
+				Foreground="#FFFFFFFF"
+				RenderOptions.BitmapScalingMode="Fant"
+				Text="{DynamicResource AppsFeatures}" />
+			<TextBlock />
+		</StackPanel>
+		<Button
+			Grid.Row="0"
+			Margin="0,10,20,0"
+			HorizontalAlignment="Right"
+			Style="{StaticResource InvisibleButton}">
+			<StackPanel
+				Orientation="Horizontal">
+				<TextBlock
+					FontSize="14"
+					FontWeight="Regular"
+					Foreground="#FFFFFFFF"
+					Text="{DynamicResource CheckAll}"
+					TextOptions.TextFormattingMode="Ideal"
+					TextOptions.TextRenderingMode="Aliased" />
+				<li1ii:MaterialIcon
+					MaterialIcon.Name="MatIcon"
+					FrameworkElement.Width="16"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ChevronRight" />
+			</StackPanel>
+		</Button>
+		<Grid
+			Row="1"
+			Width="{Binding ElementName=MainGrid, Path=ActualWidth}">
+			<Grid>
+				<Canvas
+					Name="CarouselCanvas"
+					ClipToBounds="True" />
+				<UIElement.OpacityMask>
+					<LinearGradientBrush
+						StartPoint="1,0.5"
+						EndPoint="0,0.5">
+						<GradientStop
+							Offset="0.8"
+							Color="Red" />
+						<GradientStop
+							Offset="0.98"
+							Color="#00000000" />
+						<GradientStop
+							Offset="0.2"
+							Color="Red" />
+						<GradientStop
+							Offset="0.02"
+							Color="#00FF0000" />
+					</LinearGradientBrush>
+				</UIElement.OpacityMask>
+			</Grid>
+			<Button
+				Width="50"
+				HorizontalAlignment="Left"
+				Style="{StaticResource InvisibleButton}">
+				<li1ii:MaterialIcon
+					MaterialIcon.Name="LeftBtn"
+					FrameworkElement.Width="50"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ChevronLeft"
+					UIElement.Opacity="0" />
+				<FrameworkElement.Triggers>
+					<EventTrigger
+						RoutedEvent="MouseEnter">
+						<BeginStoryboard>
+							<Storyboard>
+								<DoubleAnimation
+									Storyboard.TargetName="LeftBtn"
+									Storyboard.TargetProperty="Opacity"
+									To="1"
+									Duration="0:0:0.2" />
+							</Storyboard>
+						</BeginStoryboard>
+					</EventTrigger>
+					<EventTrigger
+						RoutedEvent="MouseLeave">
+						<BeginStoryboard>
+							<Storyboard>
+								<DoubleAnimation
+									Storyboard.TargetName="LeftBtn"
+									Storyboard.TargetProperty="Opacity"
+									To="0"
+									Duration="0:0:0.2" />
+							</Storyboard>
+						</BeginStoryboard>
+					</EventTrigger>
+				</FrameworkElement.Triggers>
+			</Button>
+			<Button
+				Width="50"
+				HorizontalAlignment="Right"
+				Style="{StaticResource InvisibleButton}">
+				<li1ii:MaterialIcon
+					MaterialIcon.Name="RightBtn"
+					FrameworkElement.Width="50"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ChevronRight"
+					UIElement.Opacity="0" />
+				<FrameworkElement.Triggers>
+					<EventTrigger
+						RoutedEvent="MouseEnter">
+						<BeginStoryboard>
+							<Storyboard>
+								<DoubleAnimation
+									Storyboard.TargetName="RightBtn"
+									Storyboard.TargetProperty="Opacity"
+									To="1"
+									Duration="0:0:0.2" />
+							</Storyboard>
+						</BeginStoryboard>
+					</EventTrigger>
+					<EventTrigger
+						RoutedEvent="MouseLeave">
+						<BeginStoryboard>
+							<Storyboard>
+								<DoubleAnimation
+									Storyboard.TargetName="RightBtn"
+									Storyboard.TargetProperty="Opacity"
+									To="0"
+									Duration="0:0:0.2" />
+							</Storyboard>
+						</BeginStoryboard>
+					</EventTrigger>
+				</FrameworkElement.Triggers>
+			</Button>
+		</Grid>
+	</Grid>
+</liiil1:dje_zBR7K73SNADX8WXGVD32ZQBYH47N26FKK8ZBZWPZPM87A5FWJCGUKX_ejd>

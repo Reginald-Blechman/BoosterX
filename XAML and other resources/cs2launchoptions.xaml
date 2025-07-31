@@ -1,0 +1,89 @@
+﻿<liiil1:dje_zH5YLBSZL4F2PHBSJNM6UDEJ8YG5WWX9QCB9XV3RHBY8FRM53VHM7HB27QDH2R48KNA_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="CS2LaunchOptions">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Orientation="Horizontal">
+			<TextBlock
+				HorizontalAlignment="Left"
+				Style="{DynamicResource TitleStyle}"
+				Text="{DynamicResource LaunchOptions}" />
+			<TextBlock
+				Margin="10,0,5,0"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FontSize="18"
+				FontWeight="Regular"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource Profile}"
+				TextTrimming="CharacterEllipsis" />
+			<ComboBox
+				Height="26"
+				ItemContainerStyle="{DynamicResource theComboBoxItem}"
+				Style="{DynamicResource theComboBox}"
+				ItemsSource="{Binding Profiles}"
+				SelectedValue="{Binding SelectedProfile, Mode=TwoWay}">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<TextBlock
+							Margin="0,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="14"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							TextTrimming="CharacterEllipsis"
+							Text="{Binding FullName}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ComboBox>
+		</StackPanel>
+		<TextBox
+			Name="LaunchOptionsText"
+			Grid.Row="1"
+			Grid.Column="0"
+			Margin="5"
+			Padding="8,5,8,5"
+			VerticalAlignment="Center"
+			HorizontalContentAlignment="Center"
+			VerticalContentAlignment="Center"
+			Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+			CaretBrush="#FFFFFFFF"
+			FontSize="16"
+			FontWeight="Medium"
+			Foreground="#FFFFFFFF"
+			Template="{StaticResource TextBoxBaseControlTemplateForLauchOptions}"
+			TextAlignment="Left"
+			TextWrapping="Wrap"
+			Text="{Binding CSGOLaunchOptions, Mode=TwoWay}" />
+		<ScrollViewer
+			Name="ScrollViewerMain"
+			Grid.Row="2"
+			Margin="0,10,0,0"
+			VerticalAlignment="Top"
+			VerticalContentAlignment="Top"
+			VerticalScrollBarVisibility="Auto">
+			<ItemsControl
+				Name="CSGOLaunchOptions">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<liiil1:dje_zSGDGZJWJKC6URDA79MXPW9LENEGXXAKKKNX5H9GHVKLL7B9VTSRAXCJFKBKF3MHR9Z_ejd
+							FrameworkElement.DataContext="{Binding}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</ScrollViewer>
+	</Grid>
+</liiil1:dje_zH5YLBSZL4F2PHBSJNM6UDEJ8YG5WWX9QCB9XV3RHBY8FRM53VHM7HB27QDH2R48KNA_ejd>

@@ -1,0 +1,582 @@
+﻿<liiil1:dje_zL59VMWHZK2CDBEB93NW9M59LKX6CBK357V9ZE3FFMG7QK8D2BCZ685LZ42359USE72_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:l11iii1="clr-namespace:Markdig.Wpf;assembly=Markdig.Wpf">
+	<UIElement.CommandBindings>
+		<CommandBinding
+			Command="{liil1il:Static l11iii1:Commands.Hyperlink}" />
+		<CommandBinding
+			Command="{liil1il:Static l11iii1:Commands.Image}" />
+	</UIElement.CommandBindings>
+	<Grid
+		MinWidth="150"
+		MaxWidth="680"
+		Margin="0,10,0,10"
+		Opacity="{Binding MainOpacity}">
+		<Border
+			CornerRadius="20">
+			<FrameworkElement.Style>
+				<Style
+					TargetType="{liil1il:Type Border}">
+					<Style.Triggers>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding IsUser}">
+							<DataTrigger.Setters>
+								<Setter
+									Property="Background"
+									Value="#FF000000" />
+								<Setter
+									Property="UIElement.Opacity"
+									Value="0.6" />
+							</DataTrigger.Setters>
+						</DataTrigger>
+						<DataTrigger
+							Value="False"
+							Binding="{Binding IsUser}">
+							<DataTrigger.Setters>
+								<Setter
+									Property="Background"
+									Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}" />
+								<Setter
+									Property="UIElement.Opacity"
+									Value="0.1" />
+							</DataTrigger.Setters>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</FrameworkElement.Style>
+		</Border>
+		<StackPanel
+			Margin="18,13,18,13">
+			<StackPanel
+				Orientation="Horizontal">
+				<TextBlock
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					TextAlignment="Left">
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{liil1il:Type TextBlock}">
+							<Style.Triggers>
+								<DataTrigger
+									Value="True"
+									Binding="{Binding IsUser}">
+									<DataTrigger.Setters>
+										<Setter
+											Property="Text"
+											Value="{liil1il:Static liiil1:dje_z95XM7LSJTZRZ7N2X5FPMRL4DNZ4Q_ejd.dje_z869EDKMN_ejd}" />
+									</DataTrigger.Setters>
+								</DataTrigger>
+								<DataTrigger
+									Value="False"
+									Binding="{Binding IsUser}">
+									<DataTrigger.Setters>
+										<Setter
+											Property="Text"
+											Value="{StaticResource AiAssistant}" />
+									</DataTrigger.Setters>
+								</DataTrigger>
+							</Style.Triggers>
+						</Style>
+					</FrameworkElement.Style>
+				</TextBlock>
+				<Image
+					Width="16"
+					Margin="5,0,0,0"
+					Source="{DynamicResource TweaXBlue}">
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{liil1il:Type Image}">
+							<Style.Triggers>
+								<DataTrigger
+									Value="True"
+									Binding="{Binding IsUser}">
+									<DataTrigger.Setters>
+										<Setter
+											Property="Visibility"
+											Value="Collapsed" />
+									</DataTrigger.Setters>
+								</DataTrigger>
+								<DataTrigger
+									Value="False"
+									Binding="{Binding IsUser}">
+									<DataTrigger.Setters>
+										<Setter
+											Property="Visibility"
+											Value="Visible" />
+									</DataTrigger.Setters>
+								</DataTrigger>
+							</Style.Triggers>
+						</Style>
+					</FrameworkElement.Style>
+				</Image>
+			</StackPanel>
+			<Grid
+				Margin="0,5,0,0">
+				<StackPanel>
+					<l11iii1:MarkdownViewer
+						MarkdownViewer.Name="Viewer"
+						FrameworkElement.Margin="-20"
+						Control.Padding="0,0,0,0"
+						Control.FontFamily="{DynamicResource GlobalFontFamily}"
+						Control.FontSize="16"
+						Control.Foreground="#FFFFFFFF"
+						ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+						ScrollViewer.VerticalScrollBarVisibility="Disabled"
+						MarkdownViewer.Markdown="{Binding Message}" />
+					<Image
+						MaxWidth="320"
+						MaxHeight="180"
+						Stretch="Uniform"
+						Source="{Binding MessageImage}"
+						Visibility="{Binding HasMessageImage}" />
+					<StackPanel
+						Margin="0,0,0,0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Bottom"
+						Orientation="Horizontal"
+						Opacity="{Binding GenOpacity}"
+						Visibility="{Binding GenVisiblity}">
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Width="7"
+								Opacity="0.1"
+								Source="{DynamicResource WhiteCircle}"
+								Visibility="{Binding GenVisiblity}">
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{liil1il:Type Image}">
+										<Style.Triggers>
+											<Trigger
+												Property="Visibility"
+												Value="Visible">
+												<TriggerBase.EnterActions>
+													<BeginStoryboard
+														Name="genOpacityAnimation1">
+														<Storyboard>
+															<DoubleAnimationUsingKeyFrames
+																BeginTime="0:0:0"
+																RepeatBehavior="Forever"
+																Storyboard.TargetProperty="Opacity">
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:0.0"
+																	Value="0.1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:0.5"
+																	Value="1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:1"
+																	Value="0.1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:2"
+																	Value="0.1" />
+															</DoubleAnimationUsingKeyFrames>
+														</Storyboard>
+													</BeginStoryboard>
+												</TriggerBase.EnterActions>
+												<TriggerBase.ExitActions>
+													<StopStoryboard
+														BeginStoryboardName="genOpacityAnimation1" />
+												</TriggerBase.ExitActions>
+											</Trigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</Image>
+							<Image
+								Width="7"
+								Margin="5,0,0,0"
+								Opacity="0.1"
+								Source="{DynamicResource WhiteCircle}"
+								Visibility="{Binding GenVisiblity}">
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{liil1il:Type Image}">
+										<Style.Triggers>
+											<Trigger
+												Property="Visibility"
+												Value="Visible">
+												<TriggerBase.EnterActions>
+													<BeginStoryboard
+														Name="genOpacityAnimation2">
+														<Storyboard>
+															<DoubleAnimationUsingKeyFrames
+																BeginTime="0:0:0.3"
+																RepeatBehavior="Forever"
+																Storyboard.TargetProperty="Opacity">
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:0.0"
+																	Value="0.1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:0.5"
+																	Value="1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:1"
+																	Value="0.1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:2"
+																	Value="0.1" />
+															</DoubleAnimationUsingKeyFrames>
+														</Storyboard>
+													</BeginStoryboard>
+												</TriggerBase.EnterActions>
+												<TriggerBase.ExitActions>
+													<StopStoryboard
+														BeginStoryboardName="genOpacityAnimation2" />
+												</TriggerBase.ExitActions>
+											</Trigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</Image>
+							<Image
+								Width="7"
+								Margin="5,0,0,0"
+								Opacity="0.1"
+								Source="{DynamicResource WhiteCircle}"
+								Visibility="{Binding GenVisiblity}">
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{liil1il:Type Image}">
+										<Style.Triggers>
+											<Trigger
+												Property="Visibility"
+												Value="Visible">
+												<TriggerBase.EnterActions>
+													<BeginStoryboard
+														Name="genOpacityAnimation3">
+														<Storyboard>
+															<DoubleAnimationUsingKeyFrames
+																BeginTime="0:0:0.6"
+																RepeatBehavior="Forever"
+																Storyboard.TargetProperty="Opacity">
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:0.0"
+																	Value="0.1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:0.5"
+																	Value="1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:1"
+																	Value="0.1" />
+																<LinearDoubleKeyFrame
+																	KeyTime="0:0:2"
+																	Value="0.1" />
+															</DoubleAnimationUsingKeyFrames>
+														</Storyboard>
+													</BeginStoryboard>
+												</TriggerBase.EnterActions>
+												<TriggerBase.ExitActions>
+													<StopStoryboard
+														BeginStoryboardName="genOpacityAnimation3" />
+												</TriggerBase.ExitActions>
+											</Trigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</Image>
+						</StackPanel>
+						<TextBox
+							Margin="10,0,0,0"
+							VerticalAlignment="Center"
+							Background="#00FFFFFF"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFDDDDDD"
+							IsReadOnly="True"
+							Template="{StaticResource TextBoxTranparentControlTemplate}"
+							Text="{DynamicResource GeneratingTweak}"
+							TextAlignment="Left"
+							TextWrapping="Wrap" />
+					</StackPanel>
+				</StackPanel>
+				<StackPanel
+					Margin="0,0,0,0"
+					Orientation="Horizontal"
+					Opacity="{Binding TypingOpacity}"
+					Visibility="{Binding TypingVisiblity}">
+					<Image
+						Width="7"
+						Opacity="0.1"
+						Source="{DynamicResource WhiteCircle}"
+						Visibility="{Binding TypingVisiblity}">
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{liil1il:Type Image}">
+								<Style.Triggers>
+									<Trigger
+										Property="Visibility"
+										Value="Visible">
+										<TriggerBase.EnterActions>
+											<BeginStoryboard
+												Name="typingOpacityAnimation1">
+												<Storyboard>
+													<DoubleAnimationUsingKeyFrames
+														BeginTime="0:0:0"
+														RepeatBehavior="Forever"
+														Storyboard.TargetProperty="Opacity">
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:0.0"
+															Value="0.1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:0.5"
+															Value="1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:1"
+															Value="0.1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:2"
+															Value="0.1" />
+													</DoubleAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<StopStoryboard
+												BeginStoryboardName="typingOpacityAnimation1" />
+										</TriggerBase.ExitActions>
+									</Trigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</Image>
+					<Image
+						Width="7"
+						Margin="5,0,0,0"
+						Opacity="0.1"
+						Source="{DynamicResource WhiteCircle}"
+						Visibility="{Binding TypingVisiblity}">
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{liil1il:Type Image}">
+								<Style.Triggers>
+									<Trigger
+										Property="Visibility"
+										Value="Visible">
+										<TriggerBase.EnterActions>
+											<BeginStoryboard
+												Name="typingOpacityAnimation2">
+												<Storyboard>
+													<DoubleAnimationUsingKeyFrames
+														BeginTime="0:0:0.3"
+														RepeatBehavior="Forever"
+														Storyboard.TargetProperty="Opacity">
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:0.0"
+															Value="0.1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:0.5"
+															Value="1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:1"
+															Value="0.1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:2"
+															Value="0.1" />
+													</DoubleAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<StopStoryboard
+												BeginStoryboardName="typingOpacityAnimation2" />
+										</TriggerBase.ExitActions>
+									</Trigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</Image>
+					<Image
+						Width="7"
+						Margin="5,0,0,0"
+						Opacity="0.1"
+						Source="{DynamicResource WhiteCircle}"
+						Visibility="{Binding TypingVisiblity}">
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{liil1il:Type Image}">
+								<Style.Triggers>
+									<Trigger
+										Property="Visibility"
+										Value="Visible">
+										<TriggerBase.EnterActions>
+											<BeginStoryboard
+												Name="typingOpacityAnimation3">
+												<Storyboard>
+													<DoubleAnimationUsingKeyFrames
+														BeginTime="0:0:0.6"
+														RepeatBehavior="Forever"
+														Storyboard.TargetProperty="Opacity">
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:0.0"
+															Value="0.1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:0.5"
+															Value="1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:1"
+															Value="0.1" />
+														<LinearDoubleKeyFrame
+															KeyTime="0:0:2"
+															Value="0.1" />
+													</DoubleAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<StopStoryboard
+												BeginStoryboardName="typingOpacityAnimation3" />
+										</TriggerBase.ExitActions>
+									</Trigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</Image>
+				</StackPanel>
+			</Grid>
+			<StackPanel
+				Margin="0,20,0,0"
+				Visibility="{Binding HasTweak}">
+				<ItemsControl
+					ItemsSource="{Binding Tweaks}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<liiil1:dje_zXTELLZMP9B4ZY3ZF3A9RXH78BQ92UXHM8VLAB45Y9DVAYM6YTSL6B9648M5XYUKNRX_ejd
+								FrameworkElement.DataContext="{Binding}" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</StackPanel>
+		</StackPanel>
+		<StackPanel
+			Margin="0,10,10,0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Orientation="Horizontal">
+			<Button
+				Name="RenewButton">
+				<Image
+					Width="14"
+					Source="{DynamicResource RenewSvg}" />
+				<FrameworkElement.Style>
+					<Style
+						BasedOn="{StaticResource AIButtonStyle}"
+						TargetType="{liil1il:Type Button}">
+						<Style.Triggers>
+							<DataTrigger
+								Value="False"
+								Binding="{Binding IsMessageOnWrite}">
+								<DataTrigger.Setters>
+									<Setter
+										Property="Visibility"
+										Value="Visible" />
+								</DataTrigger.Setters>
+							</DataTrigger>
+							<DataTrigger
+								Value="True"
+								Binding="{Binding IsMessageOnWrite}">
+								<DataTrigger.Setters>
+									<Setter
+										Property="Visibility"
+										Value="Collapsed" />
+								</DataTrigger.Setters>
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</Button>
+			<Button
+				Name="StopButton">
+				<Image
+					Width="10"
+					Source="{DynamicResource StopSvg}" />
+				<FrameworkElement.Style>
+					<Style
+						BasedOn="{StaticResource AIButtonStyle}"
+						TargetType="{liil1il:Type Button}">
+						<Style.Triggers>
+							<DataTrigger
+								Value="True"
+								Binding="{Binding IsMessageOnWrite}">
+								<DataTrigger.Setters>
+									<Setter
+										Property="Visibility"
+										Value="Visible" />
+								</DataTrigger.Setters>
+							</DataTrigger>
+							<DataTrigger
+								Value="False"
+								Binding="{Binding IsMessageOnWrite}">
+								<DataTrigger.Setters>
+									<Setter
+										Property="Visibility"
+										Value="Collapsed" />
+								</DataTrigger.Setters>
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</Button>
+			<FrameworkElement.Style>
+				<Style
+					TargetType="{liil1il:Type StackPanel}">
+					<Style.Triggers>
+						<DataTrigger
+							Value="False"
+							Binding="{Binding IsUser}">
+							<DataTrigger.Setters>
+								<Setter
+									Property="Visibility"
+									Value="Visible" />
+							</DataTrigger.Setters>
+						</DataTrigger>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding IsUser}">
+							<DataTrigger.Setters>
+								<Setter
+									Property="Visibility"
+									Value="Collapsed" />
+							</DataTrigger.Setters>
+						</DataTrigger>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding IsSystemMessage}">
+							<DataTrigger.Setters>
+								<Setter
+									Property="Visibility"
+									Value="Collapsed" />
+							</DataTrigger.Setters>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</FrameworkElement.Style>
+		</StackPanel>
+		<FrameworkElement.Style>
+			<Style
+				TargetType="{liil1il:Type Grid}">
+				<Style.Triggers>
+					<DataTrigger
+						Value="True"
+						Binding="{Binding IsUser}">
+						<DataTrigger.Setters>
+							<Setter
+								Property="HorizontalAlignment"
+								Value="Right" />
+						</DataTrigger.Setters>
+					</DataTrigger>
+					<DataTrigger
+						Value="False"
+						Binding="{Binding IsUser}">
+						<DataTrigger.Setters>
+							<Setter
+								Property="HorizontalAlignment"
+								Value="Left" />
+						</DataTrigger.Setters>
+					</DataTrigger>
+				</Style.Triggers>
+			</Style>
+		</FrameworkElement.Style>
+	</Grid>
+</liiil1:dje_zL59VMWHZK2CDBEB93NW9M59LKX6CBK357V9ZE3FFMG7QK8D2BCZ685LZ42359USE72_ejd>

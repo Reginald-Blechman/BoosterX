@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Style
+		TargetType="{liil1il:Type Image}"
+		liil1il:Key="{liil1il:Type Image}">
+		<Setter
+			Property="FlowDirection"
+			Value="LeftToRight" />
+	</Style>
+	<FontFamily
+		liil1il:Key="GlobalFontFamily">./Resources/Fonts/#Jost</FontFamily>
+</ResourceDictionary>

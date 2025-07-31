@@ -1,0 +1,355 @@
+﻿<liiil1:dje_z77EFLA4PV3MZUEQU3R4HLE3ZWY2VDLH6LQ3W7CVBDKT9UGNX4UJZ3_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="StoreXPage">
+	<Grid
+		Margin="0,20,20,20">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+			<ColumnDefinition
+				Width="300" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Grid.Column="0"
+			Grid.ColumnSpan="2"
+			VerticalAlignment="Center"
+			Orientation="Horizontal">
+			<Button
+				Width="30"
+				Height="30"
+				Margin="5,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500"
+				Command="{Binding GoBackCommand}">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="23"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="StoreX"
+				TextAlignment="Left" />
+			<StackPanel>
+				<StackPanel
+					VerticalAlignment="Center"
+					Orientation="Horizontal">
+					<Grid
+						Margin="24,0,5,0">
+						<Border
+							Background="#FF000000"
+							CornerRadius="20"
+							Opacity="0.6" />
+						<TextBox
+							Name="lll"
+							Width="400"
+							Height="40"
+							Padding="12,0,0,0"
+							HorizontalContentAlignment="Left"
+							VerticalContentAlignment="Center"
+							Background="#00FFFFFF"
+							CaretBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+							FontSize="18"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+							Template="{StaticResource ComboColoredTextBoxTemplate2}"
+							Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+					</Grid>
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+		<Grid
+			Row="0"
+			RowSpan="3"
+			Column="1"
+			Margin="0,40,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<StackPanel
+				Grid.Row="0"
+				VerticalAlignment="Center"
+				Orientation="Horizontal">
+				<Button
+					Name="PopularBtn"
+					Height="40"
+					HorizontalAlignment="Left"
+					BorderThickness="3"
+					RenderOptions.BitmapScalingMode="Fant"
+					Style="{DynamicResource SuperRoundedButtonGray}"
+					Command="{Binding PopularCommand}"
+					IsEnabled="{Binding PopularButtonIsEnabled}">
+					<TextBlock
+						Margin="15,0,15,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource popular}"
+						TextAlignment="Left" />
+				</Button>
+				<Button
+					Name="DefaultBtn"
+					Height="40"
+					Margin="10,0,0,0"
+					HorizontalAlignment="Left"
+					BorderThickness="3"
+					RenderOptions.BitmapScalingMode="Fant"
+					Style="{DynamicResource SuperRoundedButtonGray}"
+					Command="{Binding DefaultCommand}"
+					IsEnabled="{Binding DefaultButtonIsEnabled}">
+					<TextBlock
+						Margin="15,0,15,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource FromMicrosoft}"
+						TextAlignment="Left" />
+				</Button>
+			</StackPanel>
+			<Grid
+				Row="1"
+				RowSpan="3"
+				Margin="0,16,0,0">
+				<Border
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="50" />
+						<RowDefinition
+							Height="*" />
+						<RowDefinition
+							Height="auto" />
+					</Grid.RowDefinitions>
+					<TextBlock
+						Grid.Row="0"
+						Grid.Column="0"
+						Margin="15"
+						VerticalAlignment="Center"
+						FontSize="18"
+						FontWeight="SemiBold"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource willbeinstalled}"
+						TextAlignment="Left" />
+					<ScrollViewer
+						Grid.Row="1"
+						Grid.Column="0"
+						Margin="15,0,15,0"
+						VerticalAlignment="Top"
+						VerticalContentAlignment="Top"
+						HorizontalScrollBarVisibility="Disabled"
+						VerticalScrollBarVisibility="Auto">
+						<StackPanel>
+							<ItemsControl
+								Name="AppXsInstallList"
+								ItemsSource="{Binding AppXsInstallVMs}">
+								<ItemsControl.ItemsPanel>
+									<ItemsPanelTemplate>
+										<StackPanel
+											HorizontalAlignment="Left" />
+									</ItemsPanelTemplate>
+								</ItemsControl.ItemsPanel>
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<liiil1:dje_zM8MTHJRQY2PJXKMKYVU5FPXV2AGQMSZ7BAK7RLZUBJ3NFAL2ANMQ49PNZEHHFBW5BQ_ejd
+											FrameworkElement.DataContext="{Binding}" />
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+							<Grid>
+								<Border
+									Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+									CornerRadius="20"
+									Opacity="0.6" />
+								<StackPanel
+									Margin="15"
+									Orientation="Vertical">
+									<TextBlock
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="SemiBold"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource ItsEmptyHere}"
+										TextAlignment="Left"
+										TextTrimming="CharacterEllipsis"
+										ToolTipService.BetweenShowDelay="5" />
+									<TextBlock
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+										Opacity="0.8"
+										Text="{DynamicResource ChooseAppsToInstall}"
+										TextAlignment="Left"
+										TextWrapping="Wrap" />
+								</StackPanel>
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{liil1il:Type Grid}">
+										<Style.Triggers>
+											<DataTrigger
+												Value="True"
+												Binding="{Binding ElementName=AppXsInstallList, Path=HasItems}">
+												<Setter
+													Property="Visibility"
+													Value="Collapsed" />
+											</DataTrigger>
+											<DataTrigger
+												Value="False"
+												Binding="{Binding ElementName=AppXsInstallList, Path=HasItems}">
+												<Setter
+													Property="Visibility"
+													Value="Visible" />
+											</DataTrigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</Grid>
+						</StackPanel>
+					</ScrollViewer>
+					<StackPanel
+						Grid.Row="2"
+						Grid.Column="0"
+						Margin="20,0,20,0"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Bottom">
+						<Border
+							Grid.Row="1"
+							Width="260"
+							Margin="0,0,0,14"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Bottom">
+							<StackPanel
+								HorizontalAlignment="Left">
+								<TextBlock
+									FontSize="16"
+									FontWeight="Medium"
+									TextWrapping="Wrap"
+									Foreground="{Binding InstallStatusColor}"
+									Opacity="{Binding InstallStatusOpacity}"
+									Text="{Binding InstallStatusText}" />
+								<StackPanel
+									Orientation="Vertical"
+									Opacity="{Binding ProgressOpacity}"
+									Visibility="{Binding ProgressVisibility}">
+									<ProgressBar
+										Width="260"
+										Height="6"
+										Margin="0,5,0,0"
+										Style="{DynamicResource ProgressBarStyleBxThin}"
+										Value="{Binding ProgressValue}" />
+									<TextBlock
+										Margin="0,5,0,0"
+										FontSize="16"
+										FontWeight="Regular"
+										Foreground="#FFF0F8FF"
+										Text="{Binding ProgressText}" />
+								</StackPanel>
+							</StackPanel>
+						</Border>
+						<Border
+							Margin="0,0,0,20"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Bottom">
+							<CheckBox
+								Width="200"
+								Height="40"
+								Content="{Binding InstallButtonContent}"
+								IsChecked="{Binding InstallButtonIsChecked, Mode=TwoWay}">
+								<FrameworkElement.Style>
+									<Style
+										BasedOn="{StaticResource MainAndRedColoredRadioButtonStyle2}"
+										TargetType="{liil1il:Type CheckBox}">
+										<Style.Triggers>
+											<DataTrigger
+												Value="True"
+												Binding="{Binding ElementName=AppXsInstallList, Path=HasItems}">
+												<Setter
+													Property="IsEnabled"
+													Value="True" />
+											</DataTrigger>
+											<DataTrigger
+												Value="False"
+												Binding="{Binding ElementName=AppXsInstallList, Path=HasItems}">
+												<Setter
+													Property="IsEnabled"
+													Value="False" />
+											</DataTrigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</CheckBox>
+						</Border>
+					</StackPanel>
+				</Grid>
+			</Grid>
+		</Grid>
+		<TextBlock
+			Grid.Row="1"
+			Grid.Column="0"
+			Margin="10,8,10,8"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			FontSize="18"
+			FontWeight="Medium"
+			TextTrimming="CharacterEllipsis"
+			Foreground="{Binding StatusColor}"
+			Opacity="{Binding StatusOpacity}"
+			Text="{Binding StatusText}" />
+		<ScrollViewer
+			Name="ScrollViewerMain"
+			Grid.Row="2"
+			Grid.Column="0"
+			Margin="0,0,2,0"
+			VerticalAlignment="Top"
+			VerticalContentAlignment="Bottom">
+			<ItemsControl
+				Name="AppXsList"
+				IsEnabled="{Binding AppXListIsEnabled}"
+				ItemsSource="{Binding AppXVMs}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel
+							HorizontalAlignment="Left" />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<liiil1:dje_zLYVYB3NDBF9TV5FWQJXLGFDWW5882T54JCMZDMDC4FZ9YJZMV66VYSDW2P6A_ejd
+							FrameworkElement.DataContext="{Binding}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</ScrollViewer>
+	</Grid>
+</liiil1:dje_z77EFLA4PV3MZUEQU3R4HLE3ZWY2VDLH6LQ3W7CVBDKT9UGNX4UJZ3_ejd>

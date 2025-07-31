@@ -1,0 +1,1677 @@
+﻿<liiil1:dje_zXTELLZMP9B4ZY3ZF3A9RXH78BQ92UXHM8VLAB45Y9DVAYM6YTSL6B9648M5XYUKNRX_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF">
+	<Grid>
+		<Grid
+			Margin="0,0,0,5">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<Grid
+				Row="0">
+				<Border
+					Background="#FF000000"
+					CacheMode="BitmapCache"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<Grid
+					Margin="15"
+					VerticalAlignment="Center">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="auto" />
+						<ColumnDefinition
+							Width="auto" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="auto" />
+						<RowDefinition
+							Height="auto" />
+						<RowDefinition
+							Height="auto" />
+					</Grid.RowDefinitions>
+					<StackPanel
+						Grid.Row="0"
+						Grid.Column="0"
+						Orientation="Vertical">
+						<StackPanel
+							Orientation="Horizontal">
+							<Button
+								Width="15"
+								Margin="0,-8,10,0"
+								FontSize="24">
+								<FrameworkElement.Style>
+									<Style
+										BasedOn="{StaticResource VioletSimpleTextBtnThin}"
+										TargetType="{liil1il:Type Button}">
+										<Style.Triggers>
+											<DataTrigger
+												Value="False"
+												Binding="{Binding ShowChildList}">
+												<Setter
+													Property="Visibility"
+													Value="Visible" />
+												<Setter
+													Property="Content"
+													Value="+" />
+												<Setter
+													Property="Foreground"
+													Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+											</DataTrigger>
+											<DataTrigger
+												Value="True"
+												Binding="{Binding SignVisibility}">
+												<Setter
+													Property="Visibility"
+													Value="Visible" />
+												<Setter
+													Property="Content"
+													Value="+" />
+												<Setter
+													Property="Foreground"
+													Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}" />
+											</DataTrigger>
+											<DataTrigger
+												Value="True"
+												Binding="{Binding ShowChildList}">
+												<Setter
+													Property="Visibility"
+													Value="Visible" />
+												<Setter
+													Property="Content"
+													Value="−" />
+												<Setter
+													Property="Foreground"
+													Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}" />
+											</DataTrigger>
+											<DataTrigger
+												Value="False"
+												Binding="{Binding SignVisibility}">
+												<Setter
+													Property="Visibility"
+													Value="Collapsed" />
+												<Setter
+													Property="Content"
+													Value="" />
+												<Setter
+													Property="IsEnabled"
+													Value="False" />
+												<Setter
+													Property="Foreground"
+													Value="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}" />
+											</DataTrigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</Button>
+							<li1ii:MaterialIcon
+								FrameworkElement.Width="23"
+								FrameworkElement.Height="23"
+								FrameworkElement.Margin="0,0,5,0"
+								Control.Foreground="#FFFFFFFF"
+								MaterialIcon.Kind="{Binding Icon}" />
+							<CheckBox
+								Name="NameCheckBox"
+								Foreground="#FFFFFFFF"
+								Style="{DynamicResource TweaksButtonStyle}"
+								Content="{Binding Name}"
+								IsChecked="{Binding ShowDescription, Mode=TwoWay}" />
+							<Image
+								Height="20"
+								Margin="10,0,0,0"
+								Source="pack://application:,,,/BoosterX;component/Resources\Images\ProLabel.png"
+								Visibility="{Binding ProVisibility}" />
+							<Border
+								Height="20"
+								Margin="5,0,0,0"
+								VerticalAlignment="Center"
+								Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+								CornerRadius="4"
+								Visibility="{Binding NoSupportVisibility}">
+								<StackPanel
+									Margin="4,1,4,0"
+									Orientation="Horizontal">
+									<TextBlock
+										VerticalAlignment="Center"
+										FontSize="13"
+										FontWeight="Bold"
+										Foreground="#FFFFFFFF"
+										Text="NOT SUPPORTED" />
+									<li1ii:MaterialIcon
+										FrameworkElement.Height="13"
+										FrameworkElement.Margin="2,-1,0,0"
+										Control.Foreground="#FFFFFFFF"
+										MaterialIcon.Kind="Error" />
+								</StackPanel>
+							</Border>
+						</StackPanel>
+						<StackPanel
+							Margin="0,5,0,0"
+							VerticalAlignment="Center"
+							Orientation="Horizontal"
+							Visibility="{Binding WarnTextVisibility}">
+							<li1ii:MaterialIcon
+								FrameworkElement.Height="16"
+								FrameworkElement.VerticalAlignment="Center"
+								Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+								MaterialIcon.Kind="WarningCircle" />
+							<TextBlock
+								Grid.Row="0"
+								Margin="3,2,0,0"
+								VerticalAlignment="Center"
+								FontSize="14"
+								FontWeight="Regular"
+								Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+								Opacity="1"
+								TextAlignment="Left"
+								Text="{Binding WarnText}" />
+						</StackPanel>
+					</StackPanel>
+					<TextBlock
+						Grid.Row="0"
+						Grid.Column="1"
+						Margin="10,0,0,0"
+						VerticalAlignment="Center"
+						FontSize="15"
+						FontWeight="Medium"
+						TextAlignment="Right"
+						Foreground="{Binding StatusForeground}"
+						Opacity="{Binding StatusOpacity}"
+						Text="{Binding Status}" />
+					<CheckBox
+						Name="DefaultCheckBox"
+						Grid.Row="0"
+						Grid.Column="2"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Style="{StaticResource CheckBoxStyle3}"
+						IsChecked="{Binding IsChecked, Mode=TwoWay}"
+						Visibility="{Binding DoubleCBVisibility}" />
+					<CheckBox
+						Grid.Row="0"
+						Grid.Column="2"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Style="{StaticResource CheckBoxStyle4}"
+						IsChecked="{Binding IsChecked, Mode=TwoWay}"
+						Visibility="{Binding DoubleReversedCBVisibility}" />
+					<ComboBox
+						Name="cmbSelect"
+						Grid.Row="0"
+						Grid.Column="2"
+						Height="23"
+						Margin="10,0,0,0"
+						FontSize="13"
+						ItemContainerStyle="{DynamicResource theComboBoxItem}"
+						Style="{StaticResource theComboBox}"
+						ItemsSource="{Binding MultiValues}"
+						SelectedIndex="{Binding SelectedIndex}"
+						Visibility="{Binding MultiVisibility}">
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<TextBlock
+									FontSize="14"
+									FontWeight="Medium"
+									Foreground="{Binding Foreground}"
+									Text="{Binding Name}" />
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ComboBox>
+					<ComboBox
+						Name="CustomValueComboBox"
+						Grid.Row="0"
+						Grid.Column="2"
+						Height="23"
+						Margin="10,0,0,0"
+						FontSize="13"
+						ItemContainerStyle="{DynamicResource theComboBoxItem}"
+						Style="{StaticResource theComboBox}"
+						ItemsSource="{Binding CustomValues}"
+						SelectedItem="{Binding CustomSelectedValue}"
+						Visibility="{Binding CustomVisibility}">
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<TextBlock
+									FontSize="14"
+									FontWeight="Medium"
+									Foreground="{Binding Foreground}"
+									Text="{Binding Name}" />
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ComboBox>
+					<CheckBox
+						Grid.Row="0"
+						Grid.Column="2"
+						Height="30"
+						Margin="10,0,0,0"
+						IsChecked="{Binding IsChecked, Mode=TwoWay}"
+						Visibility="{Binding ImportVisibility}">
+						<FrameworkElement.Style>
+							<Style
+								BasedOn="{StaticResource MainAndRedColoredRadioButtonStyle}"
+								TargetType="{liil1il:Type CheckBox}">
+								<Style.Triggers>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="True">
+										<Setter
+											Property="Content"
+											Value="{StaticResource cancel}" />
+									</Trigger>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="False">
+										<Setter
+											Property="Content"
+											Value="{StaticResource import}" />
+									</Trigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</CheckBox>
+					<CheckBox
+						Grid.Row="0"
+						Grid.Column="2"
+						Height="30"
+						Margin="10,0,0,0"
+						IsChecked="{Binding IsChecked, Mode=TwoWay}"
+						Visibility="{Binding ScriptVisibility}">
+						<FrameworkElement.Style>
+							<Style
+								BasedOn="{StaticResource MainAndRedColoredRadioButtonStyle}"
+								TargetType="{liil1il:Type CheckBox}">
+								<Style.Triggers>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="False">
+										<Setter
+											Property="Content"
+											Value="{StaticResource Run}" />
+									</Trigger>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="True">
+										<Setter
+											Property="Content"
+											Value="{StaticResource cancel}" />
+									</Trigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</CheckBox>
+					<CheckBox
+						Grid.Row="0"
+						Grid.Column="2"
+						Height="30"
+						Margin="10,0,0,0"
+						IsChecked="{Binding IsChecked, Mode=TwoWay}"
+						Visibility="{Binding DebloatVisibility}">
+						<FrameworkElement.Style>
+							<Style
+								BasedOn="{StaticResource MainAndRedColoredRadioButtonStyle}"
+								TargetType="{liil1il:Type CheckBox}">
+								<Style.Triggers>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="True">
+										<Setter
+											Property="Content"
+											Value="{StaticResource cancel}" />
+									</Trigger>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="False">
+										<Setter
+											Property="Content"
+											Value="{StaticResource delete}" />
+									</Trigger>
+									<MultiDataTrigger>
+										<MultiDataTrigger.Conditions>
+											<Condition
+												Value="DEBLOAT"
+												Binding="{Binding TmType}" />
+											<Condition
+												Value="False"
+												Binding="{Binding HasChanges}" />
+											<Condition
+												Value="True"
+												Binding="{Binding IsChecked}" />
+										</MultiDataTrigger.Conditions>
+										<Setter
+											Property="Content"
+											Value="{StaticResource Deleted}" />
+										<Setter
+											Property="IsEnabled"
+											Value="False" />
+									</MultiDataTrigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</CheckBox>
+					<Grid
+						Row="1"
+						Column="0"
+						ColumnSpan="3"
+						Margin="0,10,0,0"
+						Opacity="0"
+						Visibility="Collapsed">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Grid.Column="0"
+							Margin="5,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource EnterCustomValueHex}" />
+						<TextBox
+							Grid.Column="1"
+							Width="95"
+							HorizontalAlignment="Right"
+							FontSize="14"
+							FontWeight="Medium"
+							Foreground="#FF1E1E1E"
+							MaxLength="8"
+							MaxLines="1"
+							Template="{StaticResource TextBoxBaseControlTemplateForTweaks}"
+							TextAlignment="Center"
+							Text="{Binding CustomValue}" />
+						<Button
+							Grid.Column="2"
+							Margin="5,0,0,0"
+							Content="{DynamicResource ok}"
+							Style="{DynamicResource MediumRoundedButtonBlue}"
+							Command="{Binding CustomOkCmd}" />
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{liil1il:Type Grid}">
+								<Style.Triggers>
+									<DataTrigger
+										Value="True"
+										Binding="{Binding CustomValueChangerVisible}">
+										<TriggerBase.EnterActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Opacity"
+														From="0"
+														To="1"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Visible}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														Storyboard.TargetProperty="Opacity"
+														From="1"
+														To="0"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Collapsed}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.ExitActions>
+									</DataTrigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</Grid>
+					<StackPanel
+						Grid.Row="2"
+						Grid.Column="0"
+						Grid.ColumnSpan="3"
+						Margin="0,10,0,0"
+						Opacity="0"
+						Visibility="Collapsed">
+						<TextBlock
+							Margin="0,0,0,0"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFDDDDDD"
+							TextWrapping="Wrap"
+							Text="{Binding Description}"
+							Visibility="{Binding DescriptionVisibility}" />
+						<TextBlock
+							Margin="0,0,0,0"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFDDDDDD"
+							TextWrapping="Wrap"
+							Text="{Binding DescriptionShort}"
+							Visibility="{Binding DescriptionVisibilityReverted}" />
+						<Grid
+							Height="20"
+							Margin="0,10,0,0"
+							HorizontalAlignment="Left"
+							Visibility="{Binding DescriptionVisibilityReverted}">
+							<Border
+								Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z82W2KBY2W2H2UZX34LHGR_ejd}"
+								CornerRadius="10" />
+							<CheckBox
+								Name="ShowFullDescription"
+								Margin="5,2,8,0"
+								Content="{DynamicResource FULLDESCRIPTION}"
+								Foreground="#FFFFFFFF"
+								Style="{DynamicResource DesriptionButtonStyle}"
+								IsChecked="{Binding ShowFullDescription}" />
+						</Grid>
+						<StackPanel
+							Margin="0,10,0,0"
+							Opacity="0"
+							Visibility="Collapsed">
+							<TextBlock
+								FontSize="16"
+								FontWeight="Regular"
+								Foreground="#FFDDDDDD"
+								TextWrapping="Wrap"
+								Text="{Binding DescriptionLong}" />
+							<FrameworkElement.Style>
+								<Style
+									TargetType="{liil1il:Type StackPanel}">
+									<Style.Triggers>
+										<DataTrigger
+											Value="True"
+											Binding="{Binding ElementName=ShowFullDescription, Path=IsChecked}">
+											<TriggerBase.EnterActions>
+												<BeginStoryboard>
+													<Storyboard>
+														<DoubleAnimation
+															BeginTime="0:0:0.2"
+															Storyboard.TargetProperty="Opacity"
+															From="0"
+															To="1"
+															Duration="0:0:0.2" />
+														<ObjectAnimationUsingKeyFrames
+															Storyboard.TargetProperty="Visibility">
+															<DiscreteObjectKeyFrame
+																KeyTime="0:0:0.02"
+																Value="{liil1il:Static Visibility.Visible}" />
+														</ObjectAnimationUsingKeyFrames>
+													</Storyboard>
+												</BeginStoryboard>
+											</TriggerBase.EnterActions>
+											<TriggerBase.ExitActions>
+												<BeginStoryboard>
+													<Storyboard>
+														<DoubleAnimation
+															Storyboard.TargetProperty="Opacity"
+															From="1"
+															To="0"
+															Duration="0:0:0.2" />
+														<ObjectAnimationUsingKeyFrames
+															BeginTime="0:0:0.2"
+															Storyboard.TargetProperty="Visibility">
+															<DiscreteObjectKeyFrame
+																KeyTime="0:0:0.02"
+																Value="{liil1il:Static Visibility.Collapsed}" />
+														</ObjectAnimationUsingKeyFrames>
+													</Storyboard>
+												</BeginStoryboard>
+											</TriggerBase.ExitActions>
+										</DataTrigger>
+									</Style.Triggers>
+								</Style>
+							</FrameworkElement.Style>
+						</StackPanel>
+						<Grid
+							Margin="0,10,0,0"
+							Visibility="{Binding DescriptionVisibilityReverted}">
+							<Border
+								Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+								CornerRadius="20"
+								Opacity="0.3" />
+							<Border
+								BorderBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+								BorderThickness="2"
+								CornerRadius="20" />
+							<StackPanel
+								Margin="15">
+								<TextBlock
+									FontSize="12"
+									FontWeight="Bold"
+									Foreground="#FFDDDDDD"
+									Text="{DynamicResource RECOMENDATION}"
+									TextWrapping="Wrap" />
+								<TextBlock
+									Margin="0,5,0,0"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFDDDDDD"
+									TextWrapping="Wrap"
+									Text="{Binding Recommendation}" />
+								<TextBlock
+									Margin="0,8,0,0"
+									FontSize="16"
+									FontWeight="Regular"
+									Foreground="#FFDDDDDD"
+									TextWrapping="Wrap"
+									Text="{Binding Consider}"
+									Visibility="{Binding ConsiderVisibility}" />
+							</StackPanel>
+						</Grid>
+						<StackPanel
+							Margin="0,10,0,0"
+							Orientation="Horizontal"
+							Visibility="{Binding ForceOnOffVisibility}">
+							<Button
+								Margin="0,0,10,0"
+								Content="{DynamicResource ForceOn}"
+								Style="{DynamicResource MediumRoundedButtonDarkBlue}"
+								ToolTip="{DynamicResource ForceOnDesc}"
+								ToolTipService.BetweenShowDelay="1000"
+								ToolTipService.InitialShowDelay="500"
+								Command="{Binding ForceOn}" />
+							<Button
+								Content="{DynamicResource ForceOff}"
+								Style="{DynamicResource MediumRoundedButtonDarkBlue}"
+								ToolTip="{DynamicResource ForceOffDesc}"
+								ToolTipService.BetweenShowDelay="1000"
+								ToolTipService.InitialShowDelay="500"
+								Command="{Binding ForceOff}" />
+						</StackPanel>
+						<Grid
+							Margin="0,10,0,0">
+							<StackPanel
+								HorizontalAlignment="Left"
+								Orientation="Horizontal">
+								<CheckBox
+									Name="ShowIncludedTweaksButton"
+									Margin="-5,0,0,0"
+									Content="{DynamicResource ShowWhatTweakChanges}"
+									Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+									Style="{DynamicResource TweaksButtonStyle}"
+									IsChecked="{Binding ShowTweaks}" />
+								<Image
+									Height="20"
+									Margin="10,0,0,0"
+									Source="pack://application:,,,/BoosterX;component/Resources\Images\ProLabel.png" />
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{liil1il:Type StackPanel}">
+										<Style.Triggers>
+											<MultiDataTrigger>
+												<MultiDataTrigger.Conditions>
+													<Condition
+														Value="False"
+														Binding="{Binding ShowIncluded2}" />
+												</MultiDataTrigger.Conditions>
+												<Setter
+													Property="Visibility"
+													Value="Collapsed" />
+											</MultiDataTrigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</StackPanel>
+							<StackPanel
+								HorizontalAlignment="Right"
+								Orientation="Horizontal">
+								<TextBlock
+									Name="DeleteStatusText"
+									Margin="10,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									FontSize="16"
+									FontWeight="Medium"
+									Foreground="#FFFFFFFF"
+									Opacity="0"
+									Text=""
+									TextTrimming="CharacterEllipsis"
+									TextWrapping="Wrap"
+									Visibility="Collapsed" />
+								<Button
+									Margin="10,0,0,0"
+									Content="{DynamicResource Edit}"
+									Style="{DynamicResource MediumRoundedButtonBlue}"
+									Command="{Binding EditCommand}" />
+								<Button
+									Name="DeleteButton"
+									Margin="10,0,0,0"
+									Content="{DynamicResource Delete}"
+									Style="{DynamicResource MediumRoundedButtonRed}" />
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{liil1il:Type StackPanel}">
+										<Style.Triggers>
+											<MultiDataTrigger>
+												<MultiDataTrigger.Conditions>
+													<Condition
+														Value="False"
+														Binding="{Binding IsEditable}" />
+												</MultiDataTrigger.Conditions>
+												<Setter
+													Property="Visibility"
+													Value="Collapsed" />
+											</MultiDataTrigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</StackPanel>
+						</Grid>
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{liil1il:Type StackPanel}">
+								<Style.Triggers>
+									<DataTrigger
+										Value="True"
+										Binding="{Binding ElementName=NameCheckBox, Path=IsChecked}">
+										<TriggerBase.EnterActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Opacity"
+														From="0"
+														To="1"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Visible}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														Storyboard.TargetProperty="Opacity"
+														From="1"
+														To="0"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Collapsed}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.ExitActions>
+									</DataTrigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</StackPanel>
+				</Grid>
+			</Grid>
+			<StackPanel
+				Grid.Row="1"
+				Opacity="0"
+				Visibility="Collapsed">
+				<ItemsControl
+					Margin="20,0,0,0"
+					ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+					ScrollViewer.IsDeferredScrollingEnabled="False"
+					VirtualizingPanel.ScrollUnit="Pixel"
+					VirtualizingPanel.VirtualizationMode="Recycling"
+					ItemsSource="{Binding TweakInfoVMs}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<liiil1:dje_zSPXA4U6TGH4EZLZWYBNZPUGYYH3MKEQHQH67V3XKHRQQWCNCZ3VY3S6DGVGGQKSQHSCA2JLT2PLZCZA_ejd
+								FrameworkElement.DataContext="{Binding}" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{liil1il:Type StackPanel}">
+						<Style.Triggers>
+							<MultiDataTrigger>
+								<MultiDataTrigger.Conditions>
+									<Condition
+										Value="True"
+										Binding="{Binding ElementName=ShowIncludedTweaksButton, Path=IsChecked}" />
+									<Condition
+										Value="True"
+										Binding="{Binding ElementName=NameCheckBox, Path=IsChecked}" />
+								</MultiDataTrigger.Conditions>
+								<TriggerBase.EnterActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Opacity"
+												From="0"
+												To="1"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Visible}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.EnterActions>
+								<TriggerBase.ExitActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetProperty="Opacity"
+												From="1"
+												To="0"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Collapsed}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.ExitActions>
+							</MultiDataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</StackPanel>
+			<StackPanel
+				Grid.Row="2"
+				HorizontalAlignment="Right"
+				Orientation="Horizontal">
+				<TextBlock
+					Name="StatusText"
+					Margin="10,10,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="16"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					Opacity="0"
+					Text=""
+					TextTrimming="CharacterEllipsis"
+					TextWrapping="Wrap"
+					Visibility="Collapsed" />
+				<Button
+					Name="ApplyButton"
+					Grid.Row="2"
+					Grid.Column="0"
+					Height="34"
+					Margin="10,10,0,0"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Bottom"
+					Style="{DynamicResource ApplyButtonStyleRound}"
+					Visibility="{Binding ApplyVisibility}">
+					<ContentControl.Content>
+						<StackPanel
+							Margin="10,0,10,0"
+							Orientation="Horizontal">
+							<Image
+								Width="15"
+								Margin="0,0,8,0"
+								Source="{StaticResource ApplyFilled}" />
+							<TextBlock
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="15"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource apply}" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+			</StackPanel>
+			<StackPanel
+				Grid.Row="2"
+				HorizontalAlignment="Left"
+				Orientation="Horizontal">
+				<Button
+					Name="AddButton"
+					Grid.Row="2"
+					Grid.Column="0"
+					Height="34"
+					Margin="0,10,10,0"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Bottom"
+					Style="{DynamicResource ApplyButtonLightBlueStyle}"
+					Visibility="{Binding AddVisibility}">
+					<ContentControl.Content>
+						<StackPanel
+							Margin="10,0,10,0"
+							Orientation="Horizontal">
+							<li1ii:MaterialIcon
+								FrameworkElement.Width="18"
+								FrameworkElement.Margin="0,0,8,0"
+								Control.Foreground="#FFFFFFFF"
+								MaterialIcon.Kind="Star" />
+							<TextBlock
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="15"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource AddToMyTweaks}" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+				<TextBlock
+					Name="StatusText2"
+					Margin="10,10,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="16"
+					FontWeight="Medium"
+					Foreground="#FFFFFFFF"
+					Opacity="0"
+					Text=""
+					TextTrimming="CharacterEllipsis"
+					TextWrapping="Wrap"
+					Visibility="Collapsed" />
+			</StackPanel>
+			<Grid
+				Row="3"
+				Opacity="0"
+				Visibility="Collapsed">
+				<ItemsControl
+					Grid.Row="3"
+					Margin="20,10,0,0"
+					ItemsSource="{Binding Childs}">
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<VirtualizingStackPanel />
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<liiil1:dje_zXTELLZMP9B4ZY3ZF3A9RXH78BQ92UXHM8VLAB45Y9DVAYM6YTSL6B9648M5XYUKNRX_ejd
+								FrameworkElement.DataContext="{Binding}" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{liil1il:Type Grid}">
+						<Style.Triggers>
+							<DataTrigger
+								Value="True"
+								Binding="{Binding ShowChildList}">
+								<TriggerBase.EnterActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Opacity"
+												From="0"
+												To="1"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Visible}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.EnterActions>
+								<TriggerBase.ExitActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetProperty="Opacity"
+												From="1"
+												To="0"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Collapsed}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.ExitActions>
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</Grid>
+			<FrameworkElement.Style>
+				<Style
+					TargetType="{liil1il:Type Grid}">
+					<Style.Triggers>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition
+									Value="True"
+									Binding="{Binding OnEdit, Mode=OneWay}" />
+							</MultiDataTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetProperty="Opacity"
+											From="1"
+											To="0"
+											Duration="0:0:0.2" />
+										<ObjectAnimationUsingKeyFrames
+											BeginTime="0:0:0.2"
+											Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame
+												KeyTime="0:0:0.02"
+												Value="{liil1il:Static Visibility.Collapsed}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											BeginTime="0:0:0.2"
+											Storyboard.TargetProperty="Opacity"
+											From="0"
+											To="1"
+											Duration="0:0:0.2" />
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame
+												KeyTime="0:0:0.02"
+												Value="{liil1il:Static Visibility.Visible}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiDataTrigger>
+					</Style.Triggers>
+				</Style>
+			</FrameworkElement.Style>
+		</Grid>
+		<Grid
+			Row="0"
+			Margin="0,0,0,5"
+			Visibility="Collapsed">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<Grid
+				Margin="0,0,0,5">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+				</Grid.RowDefinitions>
+				<Border
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<StackPanel
+					Margin="15">
+					<Button
+						HorizontalAlignment="Left"
+						Cursor="Hand"
+						Style="{DynamicResource InvisibleButton}"
+						Command="{Binding ChangeIcon}">
+						<StackPanel
+							Orientation="Horizontal">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="16"
+								FontWeight="Medium"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource ChooseIcon}" />
+							<li1ii:MaterialIcon
+								FrameworkElement.Height="25"
+								FrameworkElement.Margin="5,0,0,0"
+								Control.Foreground="#FFFFFFFF"
+								MaterialIcon.Kind="{Binding IconB}" />
+						</StackPanel>
+					</Button>
+					<Grid
+						Margin="0,10,0,0"
+						HorizontalAlignment="Left"
+						Opacity="0"
+						Visibility="Collapsed">
+						<Border
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z82W2KBY2W2H2UZX34LHGR_ejd}"
+							CornerRadius="5"
+							Opacity="0.2" />
+						<ListView
+							Grid.Row="0"
+							Grid.Column="0"
+							MaxWidth="320"
+							MaxHeight="200"
+							Margin="5,5,0,0"
+							ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+							ScrollViewer.IsDeferredScrollingEnabled="False"
+							VirtualizingPanel.ScrollUnit="Pixel"
+							VirtualizingPanel.VirtualizationMode="Standard"
+							ItemsSource="{Binding AllIcons}">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<Button
+										Width="25"
+										Height="25"
+										Margin="0,0,5,5"
+										Style="{DynamicResource InvisibleButton}"
+										Command="{Binding DataContext.IconChangeRequest, RelativeSource={RelativeSource AncestorType={liil1il:Type ListView}}}"
+										CommandParameter="{Binding}">
+										<li1ii:MaterialIcon
+											Control.Foreground="#FFFFFFFF"
+											MaterialIcon.Kind="{Binding}" />
+									</Button>
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+							<ItemsControl.ItemsPanel>
+								<ItemsPanelTemplate>
+									<WrapPanel
+										Orientation="Horizontal" />
+								</ItemsPanelTemplate>
+							</ItemsControl.ItemsPanel>
+							<ItemsControl.ItemContainerStyle>
+								<Style
+									TargetType="{liil1il:Type ListViewItem}">
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{liil1il:Type ListBoxItem}">
+												<Border
+													Name="RootBorder">
+													<ContentPresenter />
+												</Border>
+												<ControlTemplate.Triggers>
+													<Trigger
+														Property="UIElement.IsMouseOver"
+														Value="True">
+														<Setter
+															TargetName="RootBorder"
+															Property="BorderBrush"
+															Value="#00FFFFFF" />
+														<Setter
+															TargetName="RootBorder"
+															Property="BorderThickness"
+															Value="0" />
+													</Trigger>
+												</ControlTemplate.Triggers>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ItemsControl.ItemContainerStyle>
+						</ListView>
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{liil1il:Type Grid}">
+								<Style.Triggers>
+									<MultiDataTrigger>
+										<MultiDataTrigger.Conditions>
+											<Condition
+												Value="True"
+												Binding="{Binding ChoosingIcon}" />
+										</MultiDataTrigger.Conditions>
+										<TriggerBase.EnterActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Opacity"
+														From="0"
+														To="1"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Visible}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.EnterActions>
+										<TriggerBase.ExitActions>
+											<BeginStoryboard>
+												<Storyboard>
+													<DoubleAnimation
+														Storyboard.TargetProperty="Opacity"
+														From="1"
+														To="0"
+														Duration="0:0:0.2" />
+													<ObjectAnimationUsingKeyFrames
+														BeginTime="0:0:0.2"
+														Storyboard.TargetProperty="Visibility">
+														<DiscreteObjectKeyFrame
+															KeyTime="0:0:0.02"
+															Value="{liil1il:Static Visibility.Collapsed}" />
+													</ObjectAnimationUsingKeyFrames>
+												</Storyboard>
+											</BeginStoryboard>
+										</TriggerBase.ExitActions>
+									</MultiDataTrigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</Grid>
+					<TextBlock
+						Margin="0,10,0,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource NameIs}" />
+					<Grid
+						Margin="0,5,0,0">
+						<Border
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUQZKBFFY5A4QNKC2YZ2EV_ejd}"
+							CornerRadius="5"
+							Opacity="1" />
+						<TextBox
+							Margin="5,3,5,3"
+							AcceptsReturn="True"
+							CaretBrush="#FFFFFFFF"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Template="{DynamicResource TBTransparent}"
+							TextWrapping="Wrap"
+							Text="{Binding NameB, Mode=TwoWay}" />
+					</Grid>
+					<TextBlock
+						Margin="0,10,0,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource DescIs}" />
+					<Grid
+						Margin="0,5,0,0">
+						<Border
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUQZKBFFY5A4QNKC2YZ2EV_ejd}"
+							CornerRadius="5"
+							Opacity="1" />
+						<TextBox
+							Margin="5,3,5,3"
+							AcceptsReturn="True"
+							CaretBrush="#FFFFFFFF"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Template="{DynamicResource TBTransparent}"
+							TextWrapping="Wrap"
+							Text="{Binding DescB, Mode=TwoWay}" />
+					</Grid>
+					<TextBlock
+						Margin="0,10,0,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource ChooseTweakType}" />
+					<CheckBox
+						HorizontalAlignment="Left"
+						Style="{DynamicResource TweakTypeSwitcher}"
+						IsChecked="{Binding IsScript, Mode=TwoWay}" />
+				</StackPanel>
+			</Grid>
+			<Grid
+				Row="1"
+				Margin="0,0,0,0">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="auto" />
+				</Grid.RowDefinitions>
+				<ItemsControl
+					Grid.Row="0"
+					Margin="20,0,0,0"
+					ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+					ScrollViewer.IsDeferredScrollingEnabled="False"
+					VirtualizingPanel.ScrollUnit="Pixel"
+					VirtualizingPanel.VirtualizationMode="Recycling"
+					ItemsSource="{Binding TweakStepsDouble}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<liiil1:dje_zSPXA4U6TGH4EZLZWYBNZPUGYYH3MKEQHQH67V3XKHRQQWCNCZ3VY3S6DGVGGQKSQHSCA2JLT2PLZCZA_ejd
+								FrameworkElement.DataContext="{Binding}" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{liil1il:Type ItemsControl}">
+							<Style.Triggers>
+								<MultiDataTrigger>
+									<MultiDataTrigger.Conditions>
+										<Condition
+											Value="False"
+											Binding="{Binding IsScript, Mode=OneWay}" />
+									</MultiDataTrigger.Conditions>
+									<TriggerBase.EnterActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Opacity"
+													From="0"
+													To="1"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Visible}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.EnterActions>
+									<TriggerBase.ExitActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetProperty="Opacity"
+													From="1"
+													To="0"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Collapsed}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.ExitActions>
+								</MultiDataTrigger>
+							</Style.Triggers>
+						</Style>
+					</FrameworkElement.Style>
+				</ItemsControl>
+				<ItemsControl
+					Grid.Row="0"
+					Margin="20,0,0,0"
+					ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+					ScrollViewer.IsDeferredScrollingEnabled="False"
+					VirtualizingPanel.ScrollUnit="Pixel"
+					VirtualizingPanel.VirtualizationMode="Recycling"
+					Visibility="Collapsed"
+					ItemsSource="{Binding TweakStepsScript}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<liiil1:dje_zSPXA4U6TGH4EZLZWYBNZPUGYYH3MKEQHQH67V3XKHRQQWCNCZ3VY3S6DGVGGQKSQHSCA2JLT2PLZCZA_ejd
+								FrameworkElement.DataContext="{Binding}" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{liil1il:Type ItemsControl}">
+							<Style.Triggers>
+								<MultiDataTrigger>
+									<MultiDataTrigger.Conditions>
+										<Condition
+											Value="True"
+											Binding="{Binding IsScript, Mode=OneWay}" />
+									</MultiDataTrigger.Conditions>
+									<TriggerBase.EnterActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Opacity"
+													From="0"
+													To="1"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Visible}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.EnterActions>
+									<TriggerBase.ExitActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetProperty="Opacity"
+													From="1"
+													To="0"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Collapsed}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.ExitActions>
+								</MultiDataTrigger>
+							</Style.Triggers>
+						</Style>
+					</FrameworkElement.Style>
+				</ItemsControl>
+				<StackPanel
+					Grid.Row="2"
+					Visibility="Collapsed">
+					<TextBlock
+						Margin="5,10,0,0"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource AddElement}" />
+					<StackPanel
+						Orientation="Horizontal">
+						<Button
+							Height="34"
+							Margin="5,5,5,0"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Bottom"
+							Style="{DynamicResource ApplyButtonLightBlueStyle}"
+							Command="{Binding AddRegistry}">
+							<ContentControl.Content>
+								<StackPanel
+									Margin="10,0,10,0"
+									Orientation="Horizontal">
+									<Image
+										Width="16"
+										Margin="0,0,5,0"
+										Source="{DynamicResource RegistrySvg}" />
+									<TextBlock
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource Registry}" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+						<Button
+							Height="34"
+							Margin="5,5,5,0"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Bottom"
+							Style="{DynamicResource ApplyButtonLightBlueStyle}"
+							Command="{Binding AddTask}">
+							<ContentControl.Content>
+								<StackPanel
+									Margin="10,0,10,0"
+									Orientation="Horizontal">
+									<li1ii:MaterialIcon
+										FrameworkElement.Width="18"
+										FrameworkElement.Margin="0,0,5,0"
+										Control.Foreground="#FFFFFFFF"
+										MaterialIcon.Kind="TaskAdd" />
+									<TextBlock
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource Task}" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+						<Button
+							Height="34"
+							Margin="5,5,5,0"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Bottom"
+							Style="{DynamicResource ApplyButtonLightBlueStyle}"
+							Command="{Binding AddBcdedit}">
+							<ContentControl.Content>
+								<StackPanel
+									Margin="10,0,10,0"
+									Orientation="Horizontal">
+									<li1ii:MaterialIcon
+										FrameworkElement.Width="18"
+										FrameworkElement.Margin="0,0,5,0"
+										Control.Foreground="#FFFFFFFF"
+										MaterialIcon.Kind="Power" />
+									<TextBlock
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource BcdeditTweak}" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+						<Button
+							Height="34"
+							Margin="5,5,5,0"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Bottom"
+							Style="{DynamicResource ApplyButtonLightBlueStyle}"
+							Command="{Binding AddDevice}">
+							<ContentControl.Content>
+								<StackPanel
+									Margin="10,0,10,0"
+									Orientation="Horizontal">
+									<li1ii:MaterialIcon
+										FrameworkElement.Width="18"
+										FrameworkElement.Margin="0,0,5,0"
+										Control.Foreground="#FFFFFFFF"
+										MaterialIcon.Kind="Devices" />
+									<TextBlock
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										FontSize="15"
+										FontWeight="Regular"
+										Foreground="#FFFFFFFF"
+										Text="{DynamicResource Device}" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+					</StackPanel>
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{liil1il:Type StackPanel}">
+							<Style.Triggers>
+								<MultiDataTrigger>
+									<MultiDataTrigger.Conditions>
+										<Condition
+											Value="False"
+											Binding="{Binding IsScript}" />
+									</MultiDataTrigger.Conditions>
+									<TriggerBase.EnterActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Opacity"
+													From="0"
+													To="1"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Visible}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.EnterActions>
+									<TriggerBase.ExitActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetProperty="Opacity"
+													From="1"
+													To="0"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Collapsed}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.ExitActions>
+								</MultiDataTrigger>
+							</Style.Triggers>
+						</Style>
+					</FrameworkElement.Style>
+				</StackPanel>
+			</Grid>
+			<Grid
+				Row="2"
+				Margin="0,10,0,20">
+				<StackPanel
+					HorizontalAlignment="Right"
+					Orientation="Horizontal">
+					<TextBlock
+						Name="SaveStatusText"
+						Margin="10,0,0,0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Opacity="0"
+						Text=""
+						TextTrimming="CharacterEllipsis"
+						TextWrapping="Wrap"
+						Visibility="Collapsed" />
+					<Button
+						Height="34"
+						Margin="10,0,0,0"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Bottom"
+						Style="{DynamicResource ApplyButtonGray2Style}"
+						Command="{Binding CancelEditCommand}">
+						<ContentControl.Content>
+							<StackPanel
+								Margin="10,0,10,0"
+								Orientation="Horizontal">
+								<li1ii:MaterialIcon
+									FrameworkElement.Width="18"
+									FrameworkElement.Margin="0,0,5,0"
+									Control.Foreground="#FFFFFFFF"
+									MaterialIcon.Kind="Cancel" />
+								<TextBlock
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="15"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource cancel}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+					<Button
+						Name="SaveButton"
+						Height="34"
+						Margin="10,0,10,0"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Bottom"
+						Style="{DynamicResource ApplyButtonStyle}">
+						<ContentControl.Content>
+							<StackPanel
+								Margin="10,0,10,0"
+								Orientation="Horizontal">
+								<li1ii:MaterialIcon
+									FrameworkElement.Width="18"
+									FrameworkElement.Margin="0,0,5,0"
+									Control.Foreground="#FFFFFFFF"
+									MaterialIcon.Kind="ContentSave" />
+								<TextBlock
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="15"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource save}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+				</StackPanel>
+			</Grid>
+			<FrameworkElement.Style>
+				<Style
+					TargetType="{liil1il:Type Grid}">
+					<Style.Triggers>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition
+									Value="True"
+									Binding="{Binding OnEdit}" />
+							</MultiDataTrigger.Conditions>
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											BeginTime="0:0:0.2"
+											Storyboard.TargetProperty="Opacity"
+											From="0"
+											To="1"
+											Duration="0:0:0.2" />
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame
+												KeyTime="0:0:0.02"
+												Value="{liil1il:Static Visibility.Visible}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetProperty="Opacity"
+											From="1"
+											To="0"
+											Duration="0:0:0.2" />
+										<ObjectAnimationUsingKeyFrames
+											BeginTime="0:0:0.2"
+											Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame
+												KeyTime="0:0:0.02"
+												Value="{liil1il:Static Visibility.Collapsed}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</MultiDataTrigger>
+					</Style.Triggers>
+				</Style>
+			</FrameworkElement.Style>
+		</Grid>
+	</Grid>
+</liiil1:dje_zXTELLZMP9B4ZY3ZF3A9RXH78BQ92UXHM8VLAB45Y9DVAYM6YTSL6B9648M5XYUKNRX_ejd>

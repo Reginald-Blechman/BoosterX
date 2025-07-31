@@ -1,0 +1,30 @@
+﻿<liiil1:dje_zXNNJLKZGU3XN9MK85ZPHRMHN6E5ELSTJG7NE358T5V8U64Z_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Grid>
+		<ItemsControl
+			Name="ItemsCon"
+			Margin="0,10,0,0"
+			ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+			ScrollViewer.VerticalScrollBarVisibility="Disabled"
+			VirtualizingPanel.ScrollUnit="Pixel"
+			VirtualizingPanel.VirtualizationMode="Standard">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<VirtualizingStackPanel />
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+			<Control.Template>
+				<ControlTemplate>
+					<ScrollViewer>
+						<ItemsPresenter />
+					</ScrollViewer>
+				</ControlTemplate>
+			</Control.Template>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<liiil1:dje_z8KE4Q3J29T2VV4CKAXXUTUV9Z5P2A6TCX9PKSCGFF3HW2RZ_ejd
+						FrameworkElement.Margin="0,0,0,5" />
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</Grid>
+</liiil1:dje_zXNNJLKZGU3XN9MK85ZPHRMHN6E5ELSTJG7NE358T5V8U64Z_ejd>

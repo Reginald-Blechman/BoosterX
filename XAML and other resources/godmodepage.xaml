@@ -1,0 +1,213 @@
+﻿<liiil1:dje_zC2NJRMFW869HG6SMD7D73TQX3AHTPYGHL3SJYXUQ9Z8E87R726PZ5_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="GodModePage">
+	<Grid
+		Width="890"
+		Margin="0,20,20,20">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Orientation="Horizontal">
+			<Button
+				Name="BackButton"
+				Width="30"
+				Height="30"
+				Margin="10,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Grid.Row="0"
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="20"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="GodMode"
+				TextAlignment="Left" />
+		</StackPanel>
+		<Grid
+			Row="1"
+			Width="880"
+			Height="650"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="*" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<Border
+				Grid.Row="0"
+				Grid.RowSpan="2"
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<Grid
+				Column="1"
+				Margin="40,40,40,20">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="*" />
+				</Grid.RowDefinitions>
+				<StackPanel
+					Grid.Row="0"
+					Grid.Column="0">
+					<TextBlock
+						VerticalAlignment="Center"
+						FontSize="18"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource godmodetext1}"
+						TextAlignment="Left"
+						TextWrapping="Wrap" />
+				</StackPanel>
+				<Grid
+					Row="1"
+					Column="0"
+					Margin="0,20,0,0"
+					AllowDrop="True">
+					<Border
+						Name="PutBorder"
+						Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+						CornerRadius="10"
+						Opacity="0.05" />
+					<Rectangle
+						Opacity="0.15"
+						RadiusX="9.5"
+						RadiusY="9.5"
+						SnapsToDevicePixels="True"
+						Stroke="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+						StrokeDashArray="10 5"
+						StrokeThickness="1"
+						Width="{Binding ElementName=PutBorder, Path=Width}"
+						Height="{Binding ElementName=PutBorder, Path=Height}" />
+					<StackPanel
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center">
+						<TextBlock
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+							Opacity="0.5"
+							Text="{DynamicResource chooseordrop}"
+							TextAlignment="Left"
+							TextWrapping="Wrap" />
+						<Button
+							Name="ChooseFileButton"
+							Height="40"
+							Margin="0,10,0,0"
+							HorizontalAlignment="Center"
+							Style="{DynamicResource MediumRoundedButtonBlueNoConent}">
+							<StackPanel
+								Margin="20,0,20,0"
+								Orientation="Horizontal">
+								<li1ii:MaterialIcon
+									FrameworkElement.Width="18"
+									Control.Foreground="#FFFFFFFF"
+									MaterialIcon.Kind="File" />
+								<TextBlock
+									Margin="5,0,0,0"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									FontSize="18"
+									FontWeight="Regular"
+									Foreground="#FFFFFFFF"
+									RenderOptions.BitmapScalingMode="Fant"
+									Text="{DynamicResource ChooseFile}"
+									TextAlignment="Left" />
+							</StackPanel>
+						</Button>
+					</StackPanel>
+				</Grid>
+			</Grid>
+			<Grid
+				Row="1"
+				Column="0"
+				Height="40"
+				Margin="40,20,40,40"
+				VerticalAlignment="Bottom">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="auto" />
+				</Grid.ColumnDefinitions>
+				<Grid
+					Row="0"
+					Column="0">
+					<Border
+						Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+						CornerRadius="15"
+						Opacity="0.6" />
+					<TextBox
+						Name="lll"
+						Height="40"
+						Padding="12,0,0,0"
+						HorizontalContentAlignment="Left"
+						VerticalContentAlignment="Center"
+						Background="#00FFFFFF"
+						CaretBrush="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+						FontSize="18"
+						FontWeight="Regular"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zBHWQM3TLFWTMTC2_ejd}"
+						Opacity="0.5"
+						Template="{StaticResource TextBoxTranparentControlTemplate}"
+						Text="{DynamicResource TrustedCmdText}" />
+				</Grid>
+				<Button
+					Grid.Column="4"
+					Height="40"
+					Margin="20,0,0,0"
+					Style="{DynamicResource MediumRoundedButtonBlueNoConent}">
+					<StackPanel
+						Margin="20,0,20,0"
+						Orientation="Horizontal">
+						<li1ii:MaterialIcon
+							FrameworkElement.Width="18"
+							Control.Foreground="#FFFFFFFF"
+							MaterialIcon.Kind="CogPlayOutline" />
+						<TextBlock
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource Run}"
+							TextAlignment="Left" />
+					</StackPanel>
+				</Button>
+			</Grid>
+		</Grid>
+	</Grid>
+</liiil1:dje_zC2NJRMFW869HG6SMD7D73TQX3AHTPYGHL3SJYXUQ9Z8E87R726PZ5_ejd>

@@ -1,0 +1,147 @@
+﻿<liiil1:dje_zUDE23GUASL6NYX8CQDMSLA4C6R2XKAXD7HMGF9HUTVVRXLH4DFAC5J9ZTWGQ_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="StoreXWelcomePage">
+	<Grid
+		Name="MainGrid"
+		Width="890"
+		Margin="0,20,20,20">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Grid.Column="0"
+			Orientation="Horizontal">
+			<Button
+				Name="BackButton"
+				Width="30"
+				Height="30"
+				Margin="10,0,0,0"
+				Style="{DynamicResource BorderOutlineButtonStyle}"
+				ToolTip="{DynamicResource Back}"
+				ToolTipService.BetweenShowDelay="500"
+				ToolTipService.InitialShowDelay="500">
+				<li1ii:MaterialIcon
+					FrameworkElement.Width="25"
+					FrameworkElement.Height="25"
+					Control.Foreground="#FFFFFFFF"
+					MaterialIcon.Kind="ArrowLeft"
+					RenderOptions.BitmapScalingMode="Fant" />
+			</Button>
+			<TextBlock
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				FontSize="23"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="StoreX"
+				TextAlignment="Left" />
+		</StackPanel>
+		<Grid
+			Row="1"
+			Width="880"
+			Height="660"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Border
+				Grid.Column="0"
+				Grid.ColumnSpan="2"
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<Border
+				Grid.Column="0"
+				Width="420"
+				Height="640"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				CornerRadius="16">
+				<Border.Background>
+					<ImageBrush
+						ImageSource="pack://application:,,,/BoosterX;component/Resources/Images/StoreX/StoreXMain.png"
+						Stretch="UniformToFill" />
+				</Border.Background>
+			</Border>
+			<Grid
+				Column="1">
+				<StackPanel>
+					<Image
+						Height="24"
+						Margin="30,50,0,0"
+						HorizontalAlignment="Left"
+						RenderOptions.BitmapScalingMode="HighQuality"
+						Source="pack://application:,,,/BoosterX;component/Resources/Images/StoreX/StoreXText.png" />
+					<TextBlock
+						Margin="30,10,0,0"
+						VerticalAlignment="Center"
+						FontSize="22"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						RenderOptions.BitmapScalingMode="Fant"
+						Text="{DynamicResource StoreXSlogan}"
+						TextAlignment="Left" />
+					<Grid
+						Margin="20,50,30,0">
+						<Border
+							Grid.Column="0"
+							Grid.ColumnSpan="2"
+							Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							CornerRadius="16"
+							Opacity="0.1" />
+						<TextBlock
+							Margin="20"
+							VerticalAlignment="Center"
+							FontSize="18"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							RenderOptions.BitmapScalingMode="Fant"
+							Text="{DynamicResource StoreXDesc}"
+							TextAlignment="Left"
+							TextWrapping="Wrap" />
+					</Grid>
+				</StackPanel>
+				<Grid
+					HorizontalAlignment="Right"
+					VerticalAlignment="Bottom">
+					<StackPanel
+						Grid.Row="0"
+						Grid.Column="0"
+						Margin="20"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Bottom"
+						Orientation="Horizontal">
+						<CheckBox
+							Content="{DynamicResource DoNotShow}"
+							IsChecked="False"
+							Style="{StaticResource RealCheckBoxStyle}" />
+						<Button
+							Height="40"
+							Margin="10,0,0,0"
+							Style="{StaticResource ApplyButtonStyle}">
+							<StackPanel
+								Margin="20,0,20,0"
+								Orientation="Horizontal">
+								<TextBlock
+									FontSize="16"
+									FontWeight="Medium"
+									Foreground="#FFFFFFFF"
+									Text="{DynamicResource continue}"
+									TextAlignment="Left"
+									TextWrapping="Wrap" />
+							</StackPanel>
+						</Button>
+					</StackPanel>
+				</Grid>
+			</Grid>
+		</Grid>
+	</Grid>
+</liiil1:dje_zUDE23GUASL6NYX8CQDMSLA4C6R2XKAXD7HMGF9HUTVVRXLH4DFAC5J9ZTWGQ_ejd>

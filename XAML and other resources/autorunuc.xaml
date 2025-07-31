@@ -1,0 +1,348 @@
+﻿<liiil1:dje_zBPV4E4PT3BXKLKQU3WTJVXXGMSPMKNNSMT7ZYYYJYC9L6RLSBNBLJZURVVDJLULHDX_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF">
+	<Grid
+		Margin="0,0,0,5">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="auto" />
+		</Grid.RowDefinitions>
+		<Border
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<StackPanel
+			Margin="5,5,15,5">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="auto" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="auto" />
+				</Grid.RowDefinitions>
+				<StackPanel
+					Grid.Row="0"
+					Grid.Column="0"
+					Orientation="Horizontal">
+					<Image
+						Width="44"
+						Height="44"
+						RenderOptions.BitmapScalingMode="Fant"
+						SnapsToDevicePixels="True"
+						Source="{Binding Icon}">
+						<UIElement.Clip>
+							<RectangleGeometry
+								RadiusX="15"
+								RadiusY="15"
+								Rect="0,0,44,44" />
+						</UIElement.Clip>
+					</Image>
+					<CheckBox
+						Name="AutorunCheckBox"
+						Foreground="#FFFFFFFF"
+						Style="{DynamicResource TweaksButtonStyle}"
+						Content="{Binding NameClean}" />
+				</StackPanel>
+				<StackPanel
+					Grid.Row="0"
+					Grid.Column="1"
+					Margin="10,0,0,0"
+					Orientation="Horizontal">
+					<TextBlock
+						Grid.Row="0"
+						Grid.Column="1"
+						Margin="10,0,0,0"
+						VerticalAlignment="Center"
+						FontSize="15"
+						FontWeight="Medium"
+						TextAlignment="Right"
+						Foreground="{Binding StatusForeground}"
+						Opacity="{Binding StatusOpacity}"
+						Text="{Binding StatusText}" />
+					<CheckBox
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						IsEnabled="True"
+						Style="{DynamicResource CheckBoxStyle3}"
+						IsChecked="{Binding NewStatus, Mode=TwoWay}" />
+					<CheckBox
+						Height="30"
+						Margin="10,0,-2,0"
+						Cursor="Hand"
+						IsChecked="{Binding ToDelete, Mode=TwoWay}">
+						<FrameworkElement.Style>
+							<Style
+								BasedOn="{StaticResource MainAndRedColoredRadioButtonStyle}"
+								TargetType="{liil1il:Type CheckBox}">
+								<Style.Triggers>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="True">
+										<Setter
+											Property="Content"
+											Value="{StaticResource cancel}" />
+									</Trigger>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="False">
+										<Setter
+											Property="Content"
+											Value="{StaticResource Delete}" />
+									</Trigger>
+								</Style.Triggers>
+							</Style>
+						</FrameworkElement.Style>
+					</CheckBox>
+				</StackPanel>
+			</Grid>
+			<StackPanel
+				Opacity="0"
+				Orientation="Horizontal"
+				Visibility="Collapsed">
+				<Image
+					Width="11.5"
+					Margin="15,0,0,0"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Top"
+					Source="{StaticResource UnderLine}" />
+				<StackPanel
+					Margin="5,10,0,0"
+					Orientation="Vertical">
+					<StackPanel
+						Orientation="Horizontal">
+						<Button
+							Margin="0,0,0,10"
+							HorizontalAlignment="Left"
+							Cursor="Hand"
+							FontSize="14"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+							Style="{StaticResource InvisibleButton}">
+							<ContentControl.Content>
+								<StackPanel
+									Orientation="Horizontal">
+									<TextBlock
+										Text="{DynamicResource OpenLocation}" />
+									<li1ii:MaterialIcon
+										FrameworkElement.Width="16"
+										FrameworkElement.Margin="5,0,0,0"
+										Control.Foreground="#FFFFFFFF"
+										MaterialIcon.Kind="OpenInNew" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+						<Button
+							Margin="20,0,0,10"
+							HorizontalAlignment="Left"
+							Cursor="Hand"
+							FontSize="14"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+							Style="{StaticResource InvisibleButton}">
+							<ContentControl.Content>
+								<StackPanel
+									Orientation="Horizontal">
+									<TextBlock
+										Text="{DynamicResource OpenFileFolderLocation}" />
+									<li1ii:MaterialIcon
+										FrameworkElement.Width="16"
+										FrameworkElement.Margin="5,0,0,0"
+										Control.Foreground="#FFFFFFFF"
+										MaterialIcon.Kind="FolderOpenOutline" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+					</StackPanel>
+					<StackPanel
+						Orientation="Horizontal"
+						Visibility="{Binding ChangeToTaskVisibility}">
+						<Button
+							Margin="0,0,0,10"
+							HorizontalAlignment="Left"
+							Cursor="Hand"
+							FontSize="14"
+							FontWeight="Regular"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+							Style="{StaticResource InvisibleButton}"
+							Command="{Binding ChangeToTaskCmd}">
+							<ContentControl.Content>
+								<StackPanel
+									Orientation="Horizontal">
+									<TextBlock
+										Text="{DynamicResource ChangeToTask}" />
+									<li1ii:MaterialIcon
+										FrameworkElement.Width="16"
+										FrameworkElement.Margin="5,0,0,0"
+										Control.Foreground="#FFFFFFFF"
+										MaterialIcon.Kind="Export" />
+								</StackPanel>
+							</ContentControl.Content>
+						</Button>
+					</StackPanel>
+					<StackPanel
+						Margin="0,0,0,6"
+						Orientation="Horizontal">
+						<TextBlock
+							Width="200"
+							DataContext="{DynamicResource Name}"
+							Style="{StaticResource MainColor2TextBlockStyle}"
+							Text="{Binding Path=., StringFormat={}{0}:}" />
+						<TextBlock
+							HorizontalAlignment="Stretch"
+							Style="{StaticResource WhiteTextBlockStyle}"
+							TextWrapping="Wrap"
+							Text="{Binding Name}" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,0,0,6"
+						Orientation="Horizontal">
+						<TextBlock
+							Width="200"
+							DataContext="{DynamicResource Path}"
+							Style="{StaticResource MainColor2TextBlockStyle}"
+							Text="{Binding Path=., StringFormat={}{0}:}" />
+						<TextBlock
+							HorizontalAlignment="Stretch"
+							Style="{StaticResource WhiteTextBlockStyle}"
+							TextWrapping="Wrap"
+							Text="{Binding ARPath}" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,0,0,6"
+						Orientation="Horizontal">
+						<TextBlock
+							Width="200"
+							DataContext="{DynamicResource Type}"
+							Style="{StaticResource MainColor2TextBlockStyle}"
+							Text="{Binding Path=., StringFormat={}{0}:}" />
+						<TextBlock
+							TextWrapping="Wrap"
+							Width="{Binding ElementName=WidthBorder, Path=ActualWidth}">
+							<FrameworkElement.Style>
+								<Style
+									BasedOn="{StaticResource WhiteTextBlockStyle}"
+									TargetType="{liil1il:Type TextBlock}">
+									<Style.Triggers>
+										<DataTrigger
+											Value="{liil1il:Static liiil1:dje_zRZMNULDC5BTJC2KLAMD28MSVW4VJ32CY3CF4SQTRUH394YCYCFTWVVLS4XBRS7DY8A_ejd.Service}"
+											Binding="{Binding Type}">
+											<Setter
+												Property="Text"
+												Value="{DynamicResource Service}" />
+										</DataTrigger>
+										<DataTrigger
+											Value="{liil1il:Static liiil1:dje_zRZMNULDC5BTJC2KLAMD28MSVW4VJ32CY3CF4SQTRUH394YCYCFTWVVLS4XBRS7DY8A_ejd.Registry}"
+											Binding="{Binding Type}">
+											<Setter
+												Property="Text"
+												Value="{DynamicResource RegistryKey}" />
+										</DataTrigger>
+										<DataTrigger
+											Value="{liil1il:Static liiil1:dje_zRZMNULDC5BTJC2KLAMD28MSVW4VJ32CY3CF4SQTRUH394YCYCFTWVVLS4XBRS7DY8A_ejd.File}"
+											Binding="{Binding Type}">
+											<Setter
+												Property="Text"
+												Value="{DynamicResource File}" />
+										</DataTrigger>
+										<DataTrigger
+											Value="{liil1il:Static liiil1:dje_zRZMNULDC5BTJC2KLAMD28MSVW4VJ32CY3CF4SQTRUH394YCYCFTWVVLS4XBRS7DY8A_ejd.Task}"
+											Binding="{Binding Type}">
+											<Setter
+												Property="Text"
+												Value="{DynamicResource Task}" />
+										</DataTrigger>
+									</Style.Triggers>
+								</Style>
+							</FrameworkElement.Style>
+						</TextBlock>
+					</StackPanel>
+					<StackPanel
+						Margin="0,0,0,6"
+						Orientation="Horizontal">
+						<TextBlock
+							Width="200"
+							DataContext="{DynamicResource Description}"
+							Style="{StaticResource MainColor2TextBlockStyle}"
+							Text="{Binding Path=., StringFormat={}{0}:}" />
+						<TextBlock
+							Style="{StaticResource WhiteTextBlockStyle}"
+							TextWrapping="Wrap"
+							Width="{Binding ElementName=WidthBorder, Path=ActualWidth}"
+							Text="{Binding Path=Description}" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,0,0,6"
+						Orientation="Horizontal">
+						<TextBlock
+							Width="200"
+							DataContext="{DynamicResource Runs}"
+							Style="{StaticResource MainColor2TextBlockStyle}"
+							Text="{Binding Path=., StringFormat={}{0}:}" />
+						<TextBlock
+							Style="{StaticResource WhiteTextBlockStyle}"
+							TextWrapping="Wrap"
+							Width="{Binding ElementName=WidthBorder, Path=ActualWidth}"
+							Text="{Binding Runs}" />
+					</StackPanel>
+				</StackPanel>
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{liil1il:Type StackPanel}">
+						<Style.Triggers>
+							<DataTrigger
+								Value="True"
+								Binding="{Binding ElementName=AutorunCheckBox, Path=IsChecked}">
+								<TriggerBase.EnterActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Opacity"
+												From="0"
+												To="1"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Visible}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.EnterActions>
+								<TriggerBase.ExitActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetProperty="Opacity"
+												From="1"
+												To="0"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Collapsed}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.ExitActions>
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</liiil1:dje_zBPV4E4PT3BXKLKQU3WTJVXXGMSPMKNNSMT7ZYYYJYC9L6RLSBNBLJZURVVDJLULHDX_ejd>

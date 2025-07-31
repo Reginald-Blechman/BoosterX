@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Style
+		TargetType="{liil1il:Type Window}"
+		liil1il:Key="fadeWin">
+		<Style.Triggers>
+			<EventTrigger
+				RoutedEvent="Window.Loaded">
+				<BeginStoryboard>
+					<Storyboard
+						Name="FormFade">
+						<DoubleAnimation
+							Name="FormFadeAnimation"
+							AutoReverse="False"
+							RepeatBehavior="1x"
+							Storyboard.TargetProperty="(Window.Opacity)"
+							From="0.0"
+							To="1.0"
+							Duration="0:0:0.4" />
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+		</Style.Triggers>
+	</Style>
+</ResourceDictionary>

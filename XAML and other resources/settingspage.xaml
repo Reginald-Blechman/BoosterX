@@ -1,0 +1,69 @@
+﻿<liiil1:dje_zWT2KUZCDV7SNNFXMRLPD6XNJYLB3P7H4UXDGKCFV223H5EQ_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	Page.Title="SettingsPage">
+	<Grid
+		Margin="0,20,20,20">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel
+			Grid.Row="0"
+			Width="800"
+			Orientation="Horizontal">
+			<TextBlock
+				Grid.Row="0"
+				Margin="10,5,0,0"
+				VerticalAlignment="Center"
+				FontSize="20"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource settings}"
+				TextAlignment="Left" />
+		</StackPanel>
+		<Grid
+			Row="1"
+			Column="0"
+			Width="800"
+			MaxWidth="800"
+			HorizontalAlignment="Center">
+			<ListView
+				Margin="0,10,0,0"
+				ItemContainerStyle="{StaticResource ListViewTransConStyle}"
+				ScrollViewer.CanContentScroll="False"
+				ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+				ScrollViewer.IsDeferredScrollingEnabled="False"
+				VirtualizingPanel.ScrollUnit="Pixel"
+				VirtualizingPanel.VirtualizationMode="Standard"
+				MaxHeight="{Binding ElementName=ListGridForHeight, Path=ActualHeight}"
+				ItemsSource="{Binding SettingItemsCollectionView, Mode=OneWay}">
+				<ItemsControl.GroupStyle>
+					<GroupStyle>
+						<GroupStyle.HeaderTemplate>
+							<DataTemplate>
+								<TextBlock
+									Margin="10,20,10,10"
+									FontSize="20"
+									FontWeight="Medium"
+									Foreground="#FFFFFFFF"
+									TextAlignment="Left"
+									Text="{Binding Name}" />
+							</DataTemplate>
+						</GroupStyle.HeaderTemplate>
+					</GroupStyle>
+				</ItemsControl.GroupStyle>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<liiil1:dje_zYGJK2LCUW4HPYT3RT7MLMTFBY4X4WYCY7QXWPBUUMTN5FYRNDK2XQ_ejd
+							FrameworkElement.DataContext="{Binding}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ListView>
+		</Grid>
+	</Grid>
+</liiil1:dje_zWT2KUZCDV7SNNFXMRLPD6XNJYLB3P7H4UXDGKCFV223H5EQ_ejd>

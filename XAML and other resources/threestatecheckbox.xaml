@@ -1,0 +1,191 @@
+﻿<liiil1:dje_zXNNJLKZGU3XN9MK85ZPHRMHN6QJQ3PZ4M67CWC9PZ9X3X95XSMR63_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	FrameworkElement.Width="60"
+	FrameworkElement.Height="25">
+	<FrameworkElement.Resources>
+		<ResourceDictionary />
+	</FrameworkElement.Resources>
+	<Grid>
+		<CheckBox
+			Name="Blocked"
+			Visibility="Collapsed"
+			Foreground="{Binding IsRed}" />
+		<StackPanel
+			HorizontalAlignment="Center"
+			Orientation="Horizontal">
+			<Border
+				Width="20"
+				Height="19"
+				Background="#FFFFFFFF"
+				CornerRadius="10">
+				<UIElement.Effect>
+					<DropShadowEffect
+						liil1il:Name="ShadowBlue"
+						BlurRadius="0"
+						Opacity="0"
+						ShadowDepth="0"
+						Color="#2E5CFF" />
+				</UIElement.Effect>
+			</Border>
+			<Border
+				Width="20"
+				Height="19"
+				Background="#FFFFFFFF"
+				CornerRadius="10">
+				<UIElement.Effect>
+					<DropShadowEffect
+						liil1il:Name="ShadowRed"
+						BlurRadius="0"
+						Opacity="0"
+						ShadowDepth="0"
+						Color="#E12929" />
+				</UIElement.Effect>
+			</Border>
+		</StackPanel>
+		<CheckBox
+			Name="ChBx"
+			Grid.Column="2"
+			Margin="-10,0,0,0"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Style="{StaticResource CheckBoxStyle3}"
+			IsChecked="{Binding IsDisabled}" />
+		<Button
+			Width="23"
+			Height="20"
+			HorizontalAlignment="Left"
+			Style="{DynamicResource InvisibleButton}">
+			<FrameworkElement.Triggers>
+				<EventTrigger
+					RoutedEvent="MouseEnter">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowBlue"
+								Storyboard.TargetProperty="Opacity"
+								From="0"
+								To="1"
+								Duration="0:0:0.1" />
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowBlue"
+								Storyboard.TargetProperty="BlurRadius"
+								From="0"
+								To="20"
+								Duration="0:0:0.1" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+				<EventTrigger
+					RoutedEvent="MouseLeave">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowBlue"
+								Storyboard.TargetProperty="Opacity"
+								From="1"
+								To="0"
+								Duration="0:0:0.1" />
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowBlue"
+								Storyboard.TargetProperty="BlurRadius"
+								From="20"
+								To="0"
+								Duration="0:0:0.1" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+			</FrameworkElement.Triggers>
+		</Button>
+		<Button
+			Width="23"
+			Height="20"
+			HorizontalAlignment="Right"
+			Style="{DynamicResource InvisibleButton}">
+			<FrameworkElement.Triggers>
+				<EventTrigger
+					RoutedEvent="MouseEnter">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowRed"
+								Storyboard.TargetProperty="Opacity"
+								From="0"
+								To="1"
+								Duration="0:0:0.1" />
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowRed"
+								Storyboard.TargetProperty="BlurRadius"
+								From="0"
+								To="20"
+								Duration="0:0:0.1" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+				<EventTrigger
+					RoutedEvent="MouseLeave">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowRed"
+								Storyboard.TargetProperty="Opacity"
+								From="1"
+								To="0"
+								Duration="0:0:0.1" />
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowRed"
+								Storyboard.TargetProperty="BlurRadius"
+								From="20"
+								To="0"
+								Duration="0:0:0.1" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+			</FrameworkElement.Triggers>
+		</Button>
+		<Button
+			Width="15"
+			Height="20"
+			HorizontalAlignment="Center"
+			Style="{DynamicResource InvisibleButton}">
+			<FrameworkElement.Triggers>
+				<EventTrigger
+					RoutedEvent="MouseEnter">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowRed"
+								Storyboard.TargetProperty="Opacity"
+								From="0"
+								To="1"
+								Duration="0:0:0.1" />
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowRed"
+								Storyboard.TargetProperty="BlurRadius"
+								From="0"
+								To="20"
+								Duration="0:0:0.1" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+				<EventTrigger
+					RoutedEvent="MouseLeave">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowRed"
+								Storyboard.TargetProperty="Opacity"
+								From="1"
+								To="0"
+								Duration="0:0:0.1" />
+							<DoubleAnimation
+								Storyboard.TargetName="ShadowRed"
+								Storyboard.TargetProperty="BlurRadius"
+								From="20"
+								To="0"
+								Duration="0:0:0.1" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+			</FrameworkElement.Triggers>
+		</Button>
+	</Grid>
+</liiil1:dje_zXNNJLKZGU3XN9MK85ZPHRMHN6QJQ3PZ4M67CWC9PZ9X3X95XSMR63_ejd>

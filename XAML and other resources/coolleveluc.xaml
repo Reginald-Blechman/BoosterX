@@ -1,0 +1,193 @@
+﻿<liiil1:dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundInactive">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zJKFAUYR2VH4E73A68QQ3PJASZCRA_ejd}"
+					Duration="0:0:0.3" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundRed">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}"
+					Duration="0:0:0.3" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundYellow">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zH2C6P3HHD4TV29CYHNS73_ejd}"
+					Duration="0:0:0.3" />
+			</Storyboard>
+			<Storyboard
+				liil1il:Key="AnimateLevelBackgroundMain">
+				<ColorAnimation
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}"
+					Duration="0:0:0.3" />
+			</Storyboard>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid
+		Name="RootGrid">
+		<Border
+			BorderBrush="#FF4D608D"
+			BorderThickness="2"
+			CornerRadius="20"
+			Opacity="1" />
+		<Grid
+			Margin="15">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="auto" />
+				</Grid.ColumnDefinitions>
+				<StackPanel
+					Grid.Column="0"
+					VerticalAlignment="Center"
+					Orientation="Horizontal">
+					<TextBlock
+						Name="LevelNameTB"
+						FontSize="16"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						Text=""
+						TextAlignment="Left" />
+					<Image
+						Name="LevelNameTBTip"
+						Width="16"
+						Margin="10,0,0,0"
+						Source="{StaticResource iSvg}"
+						ToolTipService.BetweenShowDelay="0"
+						ToolTipService.InitialShowDelay="0" />
+				</StackPanel>
+				<StackPanel
+					Grid.Column="1"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Center"
+					FlowDirection="LeftToRight"
+					Orientation="Horizontal">
+					<TextBlock
+						Name="PercentTextBlock"
+						FontSize="22"
+						FontWeight="Bold"
+						Foreground="#FFFFFFFF"
+						Text="0"
+						TextAlignment="Left" />
+					<TextBlock
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						FontSize="22"
+						FontWeight="Bold"
+						Foreground="#FFFFFFFF"
+						Text="%"
+						TextAlignment="Left" />
+				</StackPanel>
+			</Grid>
+			<Grid
+				Row="1"
+				Height="20">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition
+						Width="5" />
+					<ColumnDefinition />
+					<ColumnDefinition
+						Width="5" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Border
+					Name="BlurLevel1"
+					Grid.Column="0"
+					Height="3"
+					Margin="1"
+					VerticalAlignment="Bottom"
+					Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+					Opacity="0">
+					<UIElement.Effect>
+						<DropShadowEffect
+							BlurRadius="8"
+							Direction="-90"
+							ShadowDepth="1"
+							Color="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zKUGX8VZG8GQJ6GA_ejd}" />
+					</UIElement.Effect>
+				</Border>
+				<Border
+					Name="Level1"
+					Grid.Column="0"
+					Height="5"
+					VerticalAlignment="Bottom"
+					Background="#FF4D608D"
+					CornerRadius="2.5" />
+				<Border
+					Name="BlurLevel2"
+					Grid.Column="2"
+					Height="3"
+					Margin="1"
+					VerticalAlignment="Bottom"
+					Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+					Opacity="0">
+					<UIElement.Effect>
+						<DropShadowEffect
+							BlurRadius="8"
+							Direction="-90"
+							ShadowDepth="1"
+							Color="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zH2C6P3HHD4TV29CYHNS73_ejd}" />
+					</UIElement.Effect>
+				</Border>
+				<Border
+					Name="Level2"
+					Grid.Column="2"
+					Height="5"
+					VerticalAlignment="Bottom"
+					Background="#FF4D608D"
+					CornerRadius="2.5" />
+				<Border
+					Name="BlurLevel3"
+					Grid.Column="4"
+					Height="3"
+					Margin="1"
+					VerticalAlignment="Bottom"
+					Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+					Opacity="0">
+					<UIElement.Effect>
+						<DropShadowEffect
+							BlurRadius="8"
+							Direction="-90"
+							ShadowDepth="1"
+							Color="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRFTDSNNMSNMN6WA_ejd}" />
+					</UIElement.Effect>
+				</Border>
+				<Border
+					Name="Level3"
+					Grid.Column="4"
+					Height="5"
+					VerticalAlignment="Bottom"
+					Background="#FF4D608D"
+					CornerRadius="2.5" />
+			</Grid>
+			<TextBlock
+				Name="LevelTextTB"
+				Grid.Row="3"
+				Margin="0,15,0,0"
+				FontSize="16"
+				FontWeight="Regular"
+				Foreground="#FFFFFFFF"
+				Text=""
+				TextAlignment="Right" />
+		</Grid>
+	</Grid>
+</liiil1:dje_z4K7AHT6VERGA53N84GEQX3JDJMGSGJ7NL29QYGNE8SMF9HHNE2RDHTN6XQ6VJ5VQTYQWK47YQX3B44Z_ejd>

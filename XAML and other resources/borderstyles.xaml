@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Style
+		TargetType="{liil1il:Type Border}"
+		liil1il:Key="ButtonBorderStyle">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Style.Triggers>
+			<EventTrigger
+				RoutedEvent="MouseEnter">
+				<TriggerBase.EnterActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<ColorAnimation
+								BeginTime="0:0:0.1"
+								Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+								To="#00CAEC"
+								Duration="0:0:0.25" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.EnterActions>
+				<TriggerBase.ExitActions>
+					<BeginStoryboard>
+						<Storyboard>
+							<ColorAnimation
+								BeginTime="0:0:0.1"
+								Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+								To="Transparent"
+								Duration="0:0:0.25" />
+						</Storyboard>
+					</BeginStoryboard>
+				</TriggerBase.ExitActions>
+			</EventTrigger>
+		</Style.Triggers>
+	</Style>
+</ResourceDictionary>

@@ -1,0 +1,58 @@
+﻿<liiil1:dje_zPF5HHH9TW8WPJUYEJDRWV_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/ButtonStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/WindowStyle.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/BorderStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/FrameResources.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/TextBlockStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/TextBoxStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/ProgressBarStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/ScrollStyle.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/ComboBoxStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/CheckBoxStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/GridStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/ListViewStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/StackPanelStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/GlobalToolTipStyle.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/GlobalSetters.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/SharedStyles/MarkdownStyles.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/Svg/SvgIcons.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/Svg/SvgForGames.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/Svg/SvgForLearn.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/BoosterX;component/Resources/Localization/ru-RU.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+			<Style
+				TargetType="{liil1il:Type FrameworkElement}"
+				liil1il:Key="{liil1il:Type FrameworkElement}">
+				<Setter
+					Property="FrameworkElement.UseLayoutRounding"
+					Value="True" />
+				<Setter
+					Property="UIElement.SnapsToDevicePixels"
+					Value="True" />
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</liiil1:dje_zPF5HHH9TW8WPJUYEJDRWV_ejd>

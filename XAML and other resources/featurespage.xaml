@@ -1,0 +1,316 @@
+﻿<liiil1:dje_zYKWNAHPAA2WHHRJF4X7EG3NQ8TW4LTJ4MDTW787U8ZU6EPEUUSCU2XC89GWA_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml"
+	Page.Title="FeaturesPage">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid
+			Row="0"
+			Column="0"
+			Width="625"
+			HorizontalAlignment="Left">
+			<Border
+				Background="#FF000000"
+				CornerRadius="20"
+				Opacity="0.6" />
+			<StackPanel
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Center"
+				Orientation="Horizontal">
+				<Button
+					Name="EnableAllButton"
+					Width="150"
+					Height="36"
+					Margin="6.5,0,0,0"
+					Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+					Style="{DynamicResource TweakingTopButton}">
+					<ContentControl.Content>
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Width="15"
+								Margin="0,0,8,0"
+								Source="{StaticResource SpeedometerLow}" />
+							<TextBlock
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="16"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource default}" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+				<Button
+					Name="OptimalButton"
+					Width="150"
+					Height="36"
+					Margin="4,0,0,0"
+					Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGR5QHU2M7DAPA2_ejd}"
+					Style="{DynamicResource TweakingTopButtonPRO}"
+					ToolTip="{DynamicResource prorequired}"
+					ToolTipService.BetweenShowDelay="50"
+					ToolTipService.InitialShowDelay="50">
+					<ContentControl.Content>
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Width="15"
+								Margin="0,0,8,0"
+								Source="{StaticResource SpeedometerMiddle}" />
+							<TextBlock
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="16"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource optimal}" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+				<Button
+					Name="DisableAllButton"
+					Width="150"
+					Height="36"
+					Margin="4,0,0,0"
+					Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+					Style="{DynamicResource TweakingTopButtonPRO}"
+					ToolTip="{DynamicResource prorequired}"
+					ToolTipService.BetweenShowDelay="50"
+					ToolTipService.InitialShowDelay="50">
+					<ContentControl.Content>
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Width="15"
+								Margin="0,0,8,0"
+								Source="{StaticResource SpeedometerMax}" />
+							<TextBlock
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="16"
+								FontWeight="Regular"
+								Foreground="#FFFFFFFF"
+								Text="{DynamicResource maximum}" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+			</StackPanel>
+			<Button
+				Name="UpdateButton"
+				Width="150"
+				Height="36"
+				Margin="0,0,6,0"
+				HorizontalAlignment="Right"
+				Background="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z2B5DBTEJ9B4VE9Z_ejd}"
+				Style="{DynamicResource TweakingTopButton}">
+				<ContentControl.Content>
+					<StackPanel
+						Orientation="Horizontal">
+						<Image
+							Width="15"
+							Margin="0,0,8,0"
+							Source="{StaticResource RefreshIcon}" />
+						<TextBlock
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="Regular"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource update}" />
+					</StackPanel>
+				</ContentControl.Content>
+			</Button>
+		</Grid>
+		<Grid
+			Row="1"
+			Column="0"
+			Margin="0,10,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<StackPanel
+				Grid.Row="0">
+				<StackPanel
+					HorizontalAlignment="Left"
+					Orientation="Horizontal">
+					<CheckBox
+						Name="TipCheckBox"
+						Content="{DynamicResource Tip}"
+						Style="{DynamicResource TipCheckBoxStyle}" />
+				</StackPanel>
+				<StackPanel
+					Margin="10,5,10,0"
+					Opacity="0"
+					Visibility="Collapsed">
+					<StackPanel
+						Orientation="Horizontal">
+						<TextBlock
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="SemiBold"
+							Foreground="#FFFFFFFF"
+							Text="{DynamicResource RecommendedToClick}" />
+						<TextBlock
+							Margin="5,0,0,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							FontSize="16"
+							FontWeight="SemiBold"
+							Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_z7Y3AEKDZ_ejd}"
+							Text="{DynamicResource optimal}" />
+					</StackPanel>
+					<TextBlock
+						Margin="0,10,0,0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FontSize="14"
+						FontWeight="Regular"
+						Foreground="#FFFFFFFF"
+						Opacity="0.9"
+						Text="{DynamicResource FeaturesDesc}"
+						TextWrapping="Wrap" />
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{liil1il:Type StackPanel}">
+							<Style.Triggers>
+								<DataTrigger
+									Value="True"
+									Binding="{Binding ElementName=TipCheckBox, Path=IsChecked}">
+									<TriggerBase.EnterActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Opacity"
+													From="0"
+													To="1"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Visible}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.EnterActions>
+									<TriggerBase.ExitActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetProperty="Opacity"
+													From="1"
+													To="0"
+													Duration="0:0:0.2" />
+												<ObjectAnimationUsingKeyFrames
+													BeginTime="0:0:0.2"
+													Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame
+														KeyTime="0:0:0.02"
+														Value="{liil1il:Static Visibility.Collapsed}" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.ExitActions>
+								</DataTrigger>
+							</Style.Triggers>
+						</Style>
+					</FrameworkElement.Style>
+				</StackPanel>
+			</StackPanel>
+			<Grid
+				Name="UpdatesGrid"
+				Row="1"
+				MaxHeight="200"
+				Margin="0,10,0,0"
+				VerticalAlignment="Top"
+				Opacity="0"
+				Visibility="Collapsed">
+				<Border
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<TextBlock
+					Margin="20"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					FontSize="16"
+					FontWeight="SemiBold"
+					Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+					Text="{DynamicResource UpdatesError}"
+					TextWrapping="Wrap" />
+			</Grid>
+			<Grid
+				Name="ErrorGrid"
+				Row="1"
+				MaxHeight="200"
+				Margin="0,10,0,0"
+				VerticalAlignment="Top"
+				Opacity="0"
+				Visibility="Collapsed">
+				<Border
+					Background="#FF000000"
+					CornerRadius="20"
+					Opacity="0.6" />
+				<TextBlock
+					Name="ErrorText"
+					Margin="20,20,20,20"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontSize="16"
+					FontWeight="SemiBold"
+					Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zUA9MYQN4ZPV2ETZ_ejd}"
+					TextWrapping="Wrap" />
+			</Grid>
+			<liiil1:dje_zXNNJLKZGU3XN9MK85ZPHRMHN6E5ELSTJG7NE358T5V8U64Z_ejd
+				dje_zXNNJLKZGU3XN9MK85ZPHRMHN6E5ELSTJG7NE358T5V8U64Z_ejd.Name="AnimationGif"
+				Grid.Row="2"
+				FrameworkElement.VerticalAlignment="Top"
+				UIElement.Opacity="0"
+				UIElement.Visibility="Collapsed" />
+			<ItemsControl
+				Name="ItemsForHiding"
+				Grid.Row="2"
+				Margin="0,10,0,0"
+				Opacity="0"
+				ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+				VirtualizingPanel.ScrollUnit="Pixel"
+				VirtualizingPanel.VirtualizationMode="Standard"
+				Visibility="Visible"
+				ItemsSource="{Binding Tweaks}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<VirtualizingStackPanel />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<Control.Template>
+					<ControlTemplate>
+						<ScrollViewer>
+							<ItemsPresenter />
+						</ScrollViewer>
+					</ControlTemplate>
+				</Control.Template>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<liiil1:dje_zXTELLZMP9B4ZY3ZF3A9RXH78BQ92UXHM8VLAB45Y9DVAYM6YTSL6B9648M5XYUKNRX_ejd
+							FrameworkElement.DataContext="{Binding}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</Grid>
+	</Grid>
+</liiil1:dje_zYKWNAHPAA2WHHRJF4X7EG3NQ8TW4LTJ4MDTW787U8ZU6EPEUUSCU2XC89GWA_ejd>

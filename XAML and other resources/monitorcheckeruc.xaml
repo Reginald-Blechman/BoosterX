@@ -1,0 +1,150 @@
+﻿<liiil1:dje_z2JLZCGZ3QXEER9XV34JWZVWRQJNTUTLFJF8HLJEVV6Y93Y5NX8GDXSFE2Y4GSASABBJA8N8LZCCJQC2_ejd xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:li1ii="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF">
+	<Grid>
+		<Border
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Grid
+			Width="auto"
+			Height="auto"
+			Margin="0">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<Grid
+				Row="0"
+				Margin="15">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="Auto" />
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<CheckBox
+					Name="NameCheckBox"
+					Grid.Column="0"
+					Content="{DynamicResource Monitors}"
+					Foreground="#FFFFFFFF"
+					Style="{StaticResource TweaksButtonStyleBold}" />
+				<StackPanel
+					Name="AttentionNeededPanel"
+					Grid.Column="2"
+					HorizontalAlignment="Right"
+					Orientation="Horizontal">
+					<TextBlock
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+						Text="{DynamicResource AttentionNeeded}" />
+					<li1ii:MaterialIcon
+						FrameworkElement.Width="23"
+						FrameworkElement.Height="23"
+						FrameworkElement.Margin="10,0,0,0"
+						Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zSYYZ9DTVXRCFXBZ_ejd}"
+						MaterialIcon.Kind="AlertCircleOutline"
+						RenderOptions.BitmapScalingMode="Fant" />
+				</StackPanel>
+				<StackPanel
+					Name="AllGoodPanel"
+					Grid.Column="2"
+					HorizontalAlignment="Right"
+					Orientation="Horizontal">
+					<TextBlock
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGEEN2XWKB2ZUBQ_ejd}"
+						Text="{DynamicResource AllGood}" />
+					<li1ii:MaterialIcon
+						FrameworkElement.Width="23"
+						FrameworkElement.Height="23"
+						FrameworkElement.Margin="10,0,0,0"
+						Control.Foreground="{liil1il:Static liiil1:dje_zG25CMVCNLAXR669QGY4VQH2TVB3HB4JJZQ_ejd.dje_zRGEEN2XWKB2ZUBQ_ejd}"
+						MaterialIcon.Kind="ThumbsUp"
+						RenderOptions.BitmapScalingMode="Fant" />
+				</StackPanel>
+			</Grid>
+			<StackPanel
+				Grid.Row="1"
+				Margin="20,0,20,20"
+				Opacity="0"
+				Visibility="Collapsed">
+				<TextBlock
+					FontSize="16"
+					FontWeight="Regular"
+					Foreground="#FFDDDDDD"
+					Text="{DynamicResource MonitorsDesc}"
+					TextWrapping="Wrap" />
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{liil1il:Type StackPanel}">
+						<Style.Triggers>
+							<DataTrigger
+								Value="True"
+								Binding="{Binding ElementName=NameCheckBox, Path=IsChecked}">
+								<TriggerBase.EnterActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Opacity"
+												From="0"
+												To="1"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Visible}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.EnterActions>
+								<TriggerBase.ExitActions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetProperty="Opacity"
+												From="1"
+												To="0"
+												Duration="0:0:0.2" />
+											<ObjectAnimationUsingKeyFrames
+												BeginTime="0:0:0.2"
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame
+													KeyTime="0:0:0.02"
+													Value="{liil1il:Static Visibility.Collapsed}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</BeginStoryboard>
+								</TriggerBase.ExitActions>
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</StackPanel>
+			<ItemsControl
+				Name="MonitorsItemsControl"
+				Grid.Row="2"
+				ScrollViewer.CanContentScroll="False"
+				ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<liiil1:dje_zKCNXJGFS3RRDW6CZXPKRMQM74LY4AZFKLU6WHN395XNCQ6TAVH77EKKHX2U9DENVDCRVNQHWAY36JEGHZK3NA_ejd
+							FrameworkElement.DataContext="{Binding}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</Grid>
+	</Grid>
+</liiil1:dje_z2JLZCGZ3QXEER9XV34JWZVWRQJNTUTLFJF8HLJEVV6Y93Y5NX8GDXSFE2Y4GSASABBJA8N8LZCCJQC2_ejd>

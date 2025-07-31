@@ -1,0 +1,109 @@
+﻿<liiil1:dje_z9DL9HRJ5NJS2KUNGS9G5P7PUH4NWFDYGS7DJ2RQ8TR4A3V748LWUYZQ38EGP4HKRK3_ejd xmlns:liil1il="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:liiil1="clr-namespace:-" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	Page.Title="ILFirst">
+	<Grid
+		Row="1"
+		Width="880"
+		Height="650"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Center">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="auto" />
+		</Grid.RowDefinitions>
+		<Border
+			Grid.Row="0"
+			Grid.RowSpan="1"
+			Grid.Column="0"
+			Grid.ColumnSpan="2"
+			Background="#FF000000"
+			CornerRadius="20"
+			Opacity="0.6" />
+		<Border
+			Grid.Row="1"
+			Grid.RowSpan="1"
+			Grid.Column="0"
+			Grid.ColumnSpan="2"
+			Margin="0,20,0,0"
+			CornerRadius="20">
+			<Border.Background>
+				<ImageBrush
+					ImageSource="pack://application:,,,/BoosterX;component/Resources/Images/InputLag/PurpleBack.jpg"
+					Stretch="UniformToFill" />
+			</Border.Background>
+		</Border>
+		<Image
+			Name="InputImage"
+			Grid.Row="1"
+			Grid.RowSpan="1"
+			Grid.Column="0"
+			Grid.ColumnSpan="2"
+			Margin="0,20,0,0"
+			RenderOptions.BitmapScalingMode="HighQuality"
+			Source="pack://application:,,,/BoosterX;component/Resources/Images/InputLag/Inputen-US.png" />
+		<StackPanel
+			Grid.Row="0"
+			Grid.Column="0"
+			Margin="20"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Orientation="Vertical">
+			<TextBlock
+				FontSize="20"
+				FontWeight="SemiBold"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource InputLagTesterDesc}"
+				TextAlignment="Left"
+				TextWrapping="Wrap" />
+			<TextBlock
+				Margin="0,20,0,0"
+				FontSize="16"
+				FontWeight="Regular"
+				Foreground="#FFFFFFFF"
+				Text="{DynamicResource InputLagTesterDesc2}"
+				TextAlignment="Left"
+				TextWrapping="Wrap" />
+		</StackPanel>
+		<StackPanel
+			Grid.Row="0"
+			Grid.Column="0"
+			Margin="20"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Orientation="Horizontal">
+			<Button
+				Height="40"
+				Style="{StaticResource ApplyButtonStyle}">
+				<StackPanel
+					Margin="20,0,20,0"
+					Orientation="Horizontal">
+					<TextBlock
+						FontSize="16"
+						FontWeight="Medium"
+						Foreground="#FFFFFFFF"
+						Text="{DynamicResource continue}"
+						TextAlignment="Left"
+						TextWrapping="Wrap" />
+				</StackPanel>
+			</Button>
+			<CheckBox
+				Margin="10,0,0,0"
+				Content="{DynamicResource DoNotShow}"
+				IsChecked="False"
+				Style="{StaticResource RealCheckBoxStyle}" />
+		</StackPanel>
+		<Button
+			Margin="20"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Bottom"
+			Content="{DynamicResource ILMethodTitle}"
+			FontSize="14"
+			FontWeight="Medium"
+			Style="{DynamicResource VioletSimpleTextBtn}" />
+	</Grid>
+</liiil1:dje_z9DL9HRJ5NJS2KUNGS9G5P7PUH4NWFDYGS7DJ2RQ8TR4A3V748LWUYZQ38EGP4HKRK3_ejd>
